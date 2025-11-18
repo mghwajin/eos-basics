@@ -9,18 +9,22 @@ TO DO (20251117)
 This example guide\* contains basic troubleshooting, system maintenance, and setup guides for beginner to intermediate users of [Endeavour OS](https://endeavouros.com/).
 
 \*For my personal reference. May contain errors.
+```
+                            [---c o o o o o o o]
+This guide is in progress!! [----Co o o o o o o]
+                            [-----c o o o o o o]
+```
 
 # Contents
----
 - [General information](#general-information)
 
 - [Pacman updates troubleshooting](#pacman-updates-troubleshooting)
 
-  - [GPGME error: No data](#gpgme-error)
+  - [GPGME error: No data](#gpgme-error-no-data)
 
-  - [Errors/Warnings from xyz.abc.mx (mirrorlist)](#mirrorlist-errors)
+  - [Mirrorlist errors/warnings](#mirrorlist-errors-warnings)
 
-  - [/etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew](#pacman-installed-as-pacnew)
+  - [xyz installed as xyz.pacnew](#xyz-installed-as-xyz-pacnew)
 
 - [System maintenance](#system-maintenance)
 
@@ -32,12 +36,11 @@ This example guide\* contains basic troubleshooting, system maintenance, and set
 
   - [Clear unused files](#clear-unused-files)
 
-- [xfce4-screenshooter functionality](#xfce4-screenshooter)
+- [xfce4-screenshooter](#xfce4-screenshooter)
 
 - [Other topics](#other-topics)
 
 # General information
----
 [Endeavour OS](https://endeavouros.com/) (EOS) is an **open-source** and **resource-light** Linux distribution based on [Arch Linux](https://archlinux.org/).
 
 Arch-based distros are **rolling-release** and release small system updates every day. Users can choose when to update and what parts of daily updates they would like to install, encouraging a freer user-customization experience.
@@ -60,19 +63,18 @@ Helpful information on EOS and additional learning resources are available at th
 ---
 
 # Pacman updates troubleshooting
----
 `pacman` is the package manager of Arch Linux and is used to install and update programs.
 
 While `sudo pacman -Syu` performs a full system update and refresh, it may error out or only partially complete the upgrade process. Common errors include:
-- [GPGME error: No data / failed to synchronize all databases](#gpgme-error)
+- [GPGME error: No data / failed to synchronize all databases](#gpgme-error-no-data)
 
-- [Errors/warnings from xyz.abc.mx (mirrorlist)](#mirrorlist-errors)
+- [Mirrorlist errors/warnings](#mirrorlist-errors/warnings)
 
-- [/etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew](#pacman-installed-as-pacnew)
+- [xyz installed as xyz.pacnew](#xyz-installed-as-xyz-pacnew)
 
 ---
 
-## GPGME error: No data/failed to synchronize all databases {#gpgme-error}
+## GPGME error: No data
 After attempting an update with `sudo pacman -Syu`, the terminal may output errors such as:
 
 ```
@@ -99,7 +101,7 @@ In this context, **GPGME** and **GnuPG** are used to securely encrypt/decrypt da
 
 ---
 
-## Errors/warnings from xyz.abc.mx (mirrorlist) {#mirrorlist-errors}
+## Mirrorlist errors/warnings
 **Mirrors** are servers located around the world that store copies of Linux distro software. A wide spread of **mirrors** helps to minimize any interruptions to services, and this information is stored in a **mirrorlist**.
 
 During a `sudo pacman -Syu` update, the terminal may output **mirrorlist** errors or warnings.
@@ -128,7 +130,7 @@ Persistent issues despite re-reranking mirrors indicate an **outdated system**. 
 
 ---
 
-## /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew {#pacman-installed-as-pacnew}
+## xyz installed as xyz.pacnew
 During a `sudo pacman -Syu` update, you may receive an error such as:
 
 ```
@@ -144,21 +146,31 @@ See [Update system: eos-pacdiff](#eos-pacdiff)
 ---
 
 # System maintenance
----
 To keep your EOS system healthy and up-to-date, it is recommended to regularly run maintenance commands. A quick overview of maintenance tasks is provided below.
 
 - [Create system backups](#create-system-backups)
-[sudo timeshift --check or --create](#timeshift)
+
+  - [sudo timeshift --check or --create](#sudo-timeshift-check-or-create)
+  
 - [Update system](#update-system)
-  - [sudo pacman -Syu](#sudo-pacman-syu)
+
+  - [sudo pacman -Syu](#sudo-pacman--syu)
+  
   - [yay](#yay)
+  
   - [eos-pacdiff](#eos-pacdiff)
+  
 - [Update mirrors](#update-mirrors)
-  - [reflector-simple/eos-rankmirrors](#rerank-mirrors)
+
+  - [reflector-simple/eos-rankmirrors](#reflector--simple-eos--rankmirrors)
+  
 - [Clean unused files](#clean-unused-files)
-  - [journalctl](#journal)
-  - [paccache -r](#paccache)
-  - [pacman \-Qdtq | pacman \-Rns \-](#pacman-orphans)
+
+  - [journalctl](#journalctl)
+  
+  - [paccache -r](#paccache--r)
+  
+  - [pacman orphans](#pacman-orphans)
 
 These maintenance tasks are run from the **command-line** and will back up system data, update programs, clean unused files, and more. The **EOS Welcome App** also comes with an assistant to help users easily run key maintenance scripts.
 
@@ -169,7 +181,7 @@ These maintenance tasks are run from the **command-line** and will back up syste
 ---
 
 ## Create system backups
-### sudo timeshift --check or --create {#timeshift}
+### sudo timeshift check or create
 
 *Daily*
 
@@ -188,7 +200,7 @@ In addition to daily backups, it is **highly recommended** to backup **before at
 
 ---
 
-### Current Timeshift settings (personal)
+### Current Timeshift settings
 - **RSYNC snapshots** \- Creates copies of system files and hard-links unchanged files from the previous snapshot
 
 - **Back up location** \- Saves to external /dev/nvme0n1p1 to allow for restore even if system disk is damaged. This is done via a liveboot system and restoring a selected snapshot
@@ -211,9 +223,9 @@ See [Timeshift](https://wiki.archlinux.org/title/Timeshift) | [Cron](https://wik
 ---
 ---
 
-## Update system {#update-system}
+## Update system
 
-- [sudo pacman \-Syu](#sudo-pacman-syu)
+- [sudo pacman -Syu](#sudo-pacman--syu)
 
 - [yay](#yay)
 
@@ -221,7 +233,7 @@ See [Timeshift](https://wiki.archlinux.org/title/Timeshift) | [Cron](https://wik
 
 ---
 
-### sudo pacman -Syu {#sudo-pacman-syu}
+### sudo pacman -Syu
 
 *Daily*
 
@@ -246,7 +258,7 @@ See [Pacman](https://wiki.archlinux.org/title/Pacman)
 
 ---
 
-### yay {#yay}
+### yay
 
 *Weekly*
 
@@ -274,7 +286,7 @@ See [yay](https://aur.archlinux.org/packages/yay)AUR | [Arch User Repository (AU
 
 ---
 
-### eos-pacdiff {#eos-pacdiff}
+### eos-pacdiff
 
 *At system prompt*
 
@@ -302,15 +314,15 @@ Resolve these conflicts with `eos-pacdiff` **ASAP**. Conflicting config files ma
 Refrain from modifying key system files such as `/etc/passwd`, `/etc/group`, and `/etc/shadow` unless you know what you're doing, otherwise you **may lock yourself out of your system.**
 
 
-#### Pacnew & Pacsave {#pacnew-pacsave}
+#### Pacnew and Pacsave
 
 - A `.pacnew` file is created during an upgrade to avoid overwriting the existing configuration file.
 
 - A `.pacsave` file is created during package removal (or an upgrade that first requires removal) and the system indicates that it should also be backed up.
 
-#### Pacdiff & meld {#pacdiff-meld}
+#### Pacdiff and meld
 
-eos-pacdiff combines two tools for ease of use. For non-EOS Arch Linux users, both may be used to resolve conflicting configuration files.
+`eos-pacdiff` combines two tools for ease of use. For non-EOS Arch Linux users, both may be used to resolve conflicting configuration files.
 
 - `pacdiff` \- A utility tool that parses which file information should be merged
 
@@ -321,15 +333,15 @@ See [Pacnew and Pacsave](https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacs
 ---
 ---
 
-## Update mirrors {#update-mirrors}
+## Update mirrors
 
-- [reflector-simple/eos-rankmirrors](#rerank-mirrors)
+- [reflector-simple/eos-rankmirrors](#reflector--simple-eos--rankmirrors)
 
 - [Alternative mirror configurations](#alternative-mirror-configurations)
 
 ---
 
-### reflector-simple/eos-rankmirrors {#rerank-mirrors}
+### reflector-simple/eos-rankmirrors
 
 *Every 1-2 months*
 
@@ -339,7 +351,7 @@ See [Pacnew and Pacsave](https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacs
 
 1. Update Arch mirrors with: `reflector-simple`
 
-2. Running `reflector-simple` on EOS offers GUI functionality with the usual reflector process. By default, the system selects the 20 fastest mirrors based in your set location.
+2. Running `reflector-simple` on EOS offers GUI functionality with the usual `reflector` process. By default, the system selects the 20 fastest mirrors based on your set location.
 <!-- TO INSERT
 *Image: Preference menu that displays when using `reflector-simple`*
 -->
@@ -416,15 +428,15 @@ See [Arch mirrors](https://wiki.archlinux.org/title/Mirrors) | [Official mirror 
 
 ## 🗑️ Clear unused files {#clear-unused-files}
 
-- [journalctl -vacuum-time=6weeks](#journal)
+- [journalctl -vacuum-time=6weeks](#journalctl)
 
-- [paccache -r](#paccache)
+- [paccache -r](#paccache--r)
 
 - [pacman -Qdtq | pacman -Rns -](#pacman-orphans)
 
 ---
 
-### journalctl --vacuum-time=6weeks  {#journal}
+### journalctl
 
 *Every 1-2 months*
 
@@ -457,7 +469,7 @@ See [Pacman: Cleaning the cache](https://wiki.archlinux.org/title/Pacman#Cleanin
 
 ---
 
-### pacman -Qdtq | pacman -Rns -  {#pacman-orphans}
+### pacman orphans
 
 *Every 1-2 months*
 
@@ -487,15 +499,15 @@ See [Pacman Tips and Tricks: Orphans](https://wiki.archlinux.org/title/Pacman/Ti
 ---
 ---
 
-# xfce4-screenshooter functionality {#xfce-screenshooter}
+# xfce4-screenshooter
 
-- [Cursor selection to clipboard](#mouse-selection-to-clipboard)
+- [Cursor selection to clipboard](#cursor-selection-to-clipboard)
 
 - [Auto-save fullscreen screenshot](#auto-save-fullscreen-screenshot)
 
 ---
 
-## Cursor selection to clipboard {#cursor-selection-to-clipboard}
+## Cursor selection to clipboard
 
 This function copies a selected area directly to the clipboard without saving a file. In Windows OS, this is the Win+Shift+S shortcut.
 
@@ -522,7 +534,7 @@ See [xfce4-screenshooter documentation](https://docs.xfce.org/apps/xfce4-screens
 
 ---
 
-## Auto-save fullscreen screenshot {#auto-save-fullscreen-screenshot}
+## Auto-save fullscreen screenshot
 
 ```
 In progress... [----C o  o  o  o  o  o  o ]
@@ -540,15 +552,15 @@ Progress notes:  However, the command instead saves a file named `$(date +%Y-%m-
 
 # Other topics
 
-- [git clone into a specified location](#git-clone)
+- [git clone to location](#git-clone-to-location)
 
-- [Change login screen background](#login-background)
+- [Change login background](#chain-login-background)
 
-- [Nvidia-settings configuration not saving](#nvidia-settings-config)
+- [Nvidia-settings config](#nvidia--settings-config)
 
 ---
 
-## git clone into a specified location {#git-clone}
+## git clone to location
 
 By default, repositories are cloned into the current directory (usually `~/home`). You can specify the intended location for a repository using:
 
@@ -566,7 +578,7 @@ Clone the contents into the **current**, non-empty directory:
 
 ---
 
-## Change login screen background {#login-background}
+## Change login background
 
 Background images set in the **Login Window** GUI editor will only display if the system's **display manager** (DM) and/or greeter can access the specified image file.
 
@@ -599,7 +611,7 @@ background=/usr/share/endeavouros/backgrounds/bg-file.png
 
 ---
 
-## Nvidia-settings configuration not saving/applying {#nvidia-settings-config}
+## Nvidia-settings config
 
 `In progress... [----C o  o  o  o  o  o  o ]`
 
