@@ -1,2 +1,5 @@
-# style-guide
-Knowledge articles support end users as “how-to” guides, product manuals, quick reference sheets, and troubleshooting FAQs. This demonstration overviews example workflows, guides to development phases, and a style guide with recommended writing practices.
+# 💻 Endeavour OS Basics
+
+This example guide\* contains basic troubleshooting, system maintenance, and setup guides for beginner to intermediate users of [Endeavour OS](https://endeavouros.com/).
+
+\*For my personal reference. May contain errors.
