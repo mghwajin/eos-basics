@@ -14,8 +14,8 @@
 body {
 	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
 	font-size: var(--vscode-markdown-font-size, 14px);
-	padding: 0 26px;
-	line-height: var(--vscode-markdown-line-height, 22px);
+	padding: 0 24px;
+	line-height: var(--vscode-markdown-line-height, 20px);
 	word-wrap: break-word;
 }
 
@@ -31,13 +31,13 @@ body {
 	background-color:#444444;
 	cursor: pointer;
 	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.4);
 }
 
 #code-csp-warning:hover {
 	text-decoration: none;
 	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
 }
 
 body.scrollBeyondLastLine {
@@ -76,11 +76,11 @@ body.showEditorSelection li.code-line:hover:before {
 }
 
 .vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
+	border-left: 3px solid rgba(225, 225, 225, 0.4);
 }
 
 .vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
+	border-left: 3px solid rgba(225, 225, 225, 0.60);
 }
 
 .vscode-dark.showEditorSelection .code-line .code-line:hover:before {
@@ -88,11 +88,11 @@ body.showEditorSelection li.code-line:hover:before {
 }
 
 .vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
+	border-left: 3px solid rgba(255, 0, 85, 0.7);
 }
 
 .vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
+	border-left: 3px solid rgb(232, 95, 177);
 }
 
 .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
@@ -100,8 +100,10 @@ body.showEditorSelection li.code-line:hover:before {
 }
 
 img {
-	max-width: 100%;
-	max-height: 100%;
+	max-width: 70%;
+	max-height: 65%;
+	margin-left: 10%;
+	margin-right: 10%
 }
 
 a {
@@ -122,19 +124,19 @@ textarea:focus {
 
 hr {
 	border: 0;
-	height: 2px;
+	height: 1px;
 	border-bottom: 2px solid;
 }
 
 h1 {
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 	line-height: 1.2;
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 }
 
 h1, h2, h3 {
-	font-weight: normal;
+	font-weight: bold;
 }
 
 table {
@@ -167,7 +169,7 @@ blockquote {
 code {
 	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
 	font-size: 1em;
-	line-height: 1.357em;
+	line-height: 1.1em;
 }
 
 body.wordWrap pre {
@@ -176,8 +178,8 @@ body.wordWrap pre {
 
 pre:not(.hljs),
 pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
+	padding: 15px;
+	border-radius: 2px;
 	overflow: auto;
 }
 
@@ -189,7 +191,7 @@ pre code {
 /** Theming */
 
 .vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
+	background-color: rgba(210, 210, 210, 0.6); 
 }
 
 .vscode-dark pre {
@@ -221,7 +223,7 @@ pre code {
 .vscode-dark h1,
 .vscode-dark hr,
 .vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
+	border-color: rgba(240, 240, 240, 0.2);
 }
 
 </style>
@@ -234,7 +236,7 @@ pre code {
 /* Tomorrow Comment */
 .hljs-comment,
 .hljs-quote {
-	color: #8e908c;
+	color: #4f4f4f;
 }
 
 /* Tomorrow Red */
@@ -309,11 +311,11 @@ pre code {
 
  body {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
+	padding: 0 8px;
 }
 
 pre {
-	background-color: #f8f8f8;
+	background-color: #9aadc246;
 	border: 1px solid #cccccc;
 	border-radius: 3px;
 	overflow-x: auto;
@@ -322,8 +324,8 @@ pre {
 }
 
 pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
+	padding: 15px;
+	line-height: 18px;
 }
 
 blockquote {
@@ -332,18 +334,19 @@ blockquote {
 }
 
 .emoji {
-	height: 1.4em;
+	height: 1.2em;
 }
 
 code {
 	font-size: 14px;
-	line-height: 19px;
+	line-height: 17px;
 }
 
 /* for inline code */
 :not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
+	color: #1d798c; /* Change the old color so it seems less like an error */
 	font-size: inherit;
+	background-color: #9aadc246;
 }
 
 /* Page Break : use <div class="page"/> to insert page break
@@ -365,7 +368,7 @@ code {
           : 'default'
     });
   </script>
-<p>&gt;&gt; <a href="https://github.com/mghwajin/eos-basics"><strong>GitHub README version here</strong></a> &lt;&lt;</p>
+<p>&gt;&gt; <a href="https://github.com/mghwajin/eos-basics"><strong>GitHub README version </strong></a> | <a href="https://drive.proton.me/urls/HY0DRECH8R#JeoP6zeQBKge"><strong>   Main portfolio</strong></a> &lt;&lt;</p>
 <h1 id="endeavour-os-basics">Endeavour OS Basics</h1>
 <p>This example guide* contains basic command-line interface (CLI) troubleshooting, system maintenance, and setup guides for beginner to intermediate users of <a href="https://endeavouros.com/">Endeavour OS</a>.</p>
 <p>*For my personal reference. May contain errors.</p>
@@ -551,7 +554,7 @@ warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
 <ul>
 <li><a href="#journalctl"><code>journalctl --vacuum-time=6weeks</code></a> - clear journal logs</li>
 <li><a href="#paccache--r"><code>paccache -r</code></a> - clear package cache</li>
-<li><a href="#pacman-orphans"><code>sudo pacman -Qdtq | sudo pacman -Rns -</code></a> - remove orphans <img class="emoji" alt="cry" src="data:image/png;base64,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" /></li>
+<li><a href="#pacman-orphans"><code>sudo pacman -Qdtq | sudo pacman -Rns -</code></a> - remove orphans</li>
 </ul>
 </li>
 </ul>
