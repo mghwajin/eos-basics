@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>eos-basics-combined.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p>&gt;&gt; <a href="https://github.com/mghwajin/eos-basics"><strong>GitHub README version here</strong></a> &lt;&lt;</p>
+<h1 id="endeavour-os-basics">Endeavour OS Basics</h1>
+<p>This example guide* contains basic command-line interface (CLI) troubleshooting, system maintenance, and setup guides for beginner to intermediate users of <a href="https://endeavouros.com/">Endeavour OS</a>.</p>
+<p>*For my personal reference. May contain errors.</p>
+<pre class="hljs"><code><div>                                      [----c o o o o o o o ]
+  This guide is a work <span class="hljs-keyword">in</span> progress!!  [-----Co o o o o o o ]
+                                      [------c o o o o o o ]
+</div></code></pre>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#general-information">General information</a></li>
+<li><a href="#helpful-resources">Helpful resources</a></li>
+<li><a href="#pacman-updates-troubleshooting">Pacman updates troubleshooting</a>
+<ul>
+<li><a href="#gpgme-error-no-data">GPGME error: No data</a></li>
+<li><a href="#mirrorlist-errors-and-warnings">Mirrorlist errors and warnings</a></li>
+<li><a href="#installed-as-pacnew-or-pacsave">Installed as .pacnew or .pacsave</a></li>
+</ul>
+</li>
+<li><a href="#system-maintenance.">System maintenance</a>
+<ul>
+<li><a href="#create-system-backups">Create system backups</a></li>
+<li><a href="#update-system">Update system</a></li>
+<li><a href="#update-mirrors">Update mirrors</a></li>
+<li><a href="#clear-unused-files">Clear unused files</a></li>
+</ul>
+</li>
+<li><a href="#other-topics">Other topics</a></li>
+</ul>
+<hr>
+<h2 id="general-information">General information</h2>
+<p><a href="https://endeavouros.com/"><strong>Endeavour OS</strong></a> (EOS) is an open-source and resource-light Linux distribution based on <a href="https://archlinux.org/">Arch Linux</a>.</p>
+<p>Arch-based distros are <strong>rolling-release</strong> and release small system updates every day. Users can choose when to update and what parts of daily updates they would like to install, encouraging a freer user-customized experience.</p>
+<p>This rolling-release structure additionally means users don't need to install major OS updates 1-2 times a year (as long as they update regularly). <a href="https://endeavouros.com/news/mercury-neo-with-linux-6-13-7-and-arch-mirror-ranking-bug-fix/">Mercury Neo 6.13.7</a>, the latest major OS update, was released on March 23, 2025.</p>
+<hr>
+<h2 id="helpful-resources">Helpful resources</h2>
+<p>In-depth information on EOS and additional learning resources are available at the following links:</p>
+<ul>
+<li><a href="https://gitlab.com/endeavouros-filemirror/Important-news/blob/main/README.md">EOS README</a> - Where you can find important news and EOS updates</li>
+<li><a href="https://discovery.endeavouros.com/">EOS knowledge base</a> - A library of various tutorials and introductions to Linux tools</li>
+<li><a href="https://forum.endeavouros.com/">EOS forums</a> - A place to read up on EOS system updates, ask for troubleshooting help, and connect with the community</li>
+<li><a href="https://wiki.archlinux.org/title/Main_page">Arch Linux wiki</a> - A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes</li>
+</ul>
+<hr>
+<hr>
+<h2 id="pacman-updates-troubleshooting">Pacman updates troubleshooting</h2>
+<p><strong><code>pacman</code></strong> is the package manager of Arch Linux and is used to install and update programs.</p>
+<p>While <code>sudo pacman -Syu</code> performs a full system update and refresh, it may error out or only partially complete the update process.</p>
+<ul>
+<li><a href="#gpgme-error-no-data">GPGME error: No data / failed to synchronize all databases</a>
+<ul>
+<li><a href="#remove-and-refresh-pacman-sync-file">Remove and refresh <code>pacman sync</code> file</a></li>
+<li><a href="#gpgme-and-gnupg">GPGME and GnuPG</a></li>
+</ul>
+</li>
+<li><a href="#mirrorlist-errors-and-warnings">Mirrorlist errors and warnings</a>
+<ul>
+<li><a href="#re-rank-mirrors">Re-rank mirrors</a></li>
+</ul>
+</li>
+<li><a href="#installed-as-pacnew-or-pacsave">Installed as .pacnew or .pacsave</a></li>
+</ul>
+<hr>
+<h3 id="gpgme-error-no-data">GPGME error: No data</h3>
+<p>After attempting an update with <code>sudo pacman -Syu</code>, the terminal may output errors such as:</p>
+<pre class="hljs"><code><div>error: GPGME error: No data
+  // or
+error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+</div></code></pre>
+<p>These errors indicate that there is either an issue with the database itself, or that the system was unable to verify encryption keys of the package database.</p>
+<p><strong>Remove and refresh the <code>pacman sync</code> file</strong> to fix this issue.</p>
+<hr>
+<h4 id="remove-and-refresh-pacman-sync-file">Remove and refresh pacman sync file</h4>
+<ol>
+<li>
+<p>Open a terminal and remove the <code>pacman sync</code> file by entering:</p>
+<pre class="hljs"><code><div>sudo rm -R /var/lib/pacman/sync
+</div></code></pre>
+</li>
+<li>
+<p>Refresh the local cache (i.e. rebuild the deleted file) with:</p>
+<pre class="hljs"><code><div>sudo pacman -Syy
+</div></code></pre>
+</li>
+<li>
+<p>Lastly, reattempt the update:</p>
+<pre class="hljs"><code><div>sudo pacman -Syu
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h4 id="gpgme-and-gnupg">GPGME and GnuPG</h4>
+<p><strong>GPGME</strong> and <strong>GnuPG</strong> are used to securely encrypt/decrypt data that the <code>pacman</code> installer pulls from the package databases.</p>
+<ul>
+<li>
+<p>The <a href="https://www.gnupg.org/software/gpgme/index.html">GPGME</a> library is used to provide applications easier access to GnuPG functions.</p>
+</li>
+<li>
+<p><a href="https://www.gnupg.org/download/index.html">GnuPG</a> is a command-line interface (CLI) tool. As a <strong>universal crypto engine</strong>, it is often used as the <strong>crypto backend</strong> for many applications.</p>
+</li>
+</ul>
+<hr>
+<h3 id="mirrorlist-errors-and-warnings">Mirrorlist errors and warnings</h3>
+<p><strong>Mirrors</strong> are servers located around the world that store copies of Linux distro software. A wide spread of <strong>mirrors</strong> helps to minimize any interruptions to services, as the system will utilize multiple while upgrading packages.</p>
+<p>The list of mirrors and their information is stored in a <strong>mirrorlist</strong>.</p>
+<p>During a <code>sudo pacman -Syu</code> update, the terminal may output <strong>mirrorlist</strong> errors or warnings.</p>
+<pre class="hljs"><code><div>error: failed retrieving file <span class="hljs-string">'wine-10.17-1-x86\_64.pkg.tar.zst'</span> from arch.jsc.mx : The requested URL returned error: 404
+  // or
+warning: too many errors from arch.jsc.mx, skipping <span class="hljs-keyword">for</span> the remainder of this transaction
+</div></code></pre>
+<p>These issues are usually caused by outdated mirrors and/or slow connections.</p>
+<p><strong>Re-rank</strong> the mirrors to prioritize mirrors that were recently-updated and have faster connection.</p>
+<hr>
+<h4 id="re-rank-mirrors">Re-rank mirrors</h4>
+<ol>
+<li>
+<p>Update <strong>Arch</strong> mirrors with:</p>
+<pre class="hljs"><code><div>reflector-simple
+</div></code></pre>
+<ul>
+<li>In the GUI tool, you can choose mirror preferences, such as location, max amount, and seconds for connection timeout.</li>
+</ul>
+</li>
+<li>
+<p>After saving a new mirrorlist configuration, always <strong>refresh your system</strong> with:</p>
+<pre class="hljs"><code><div>yay -Syyu
+</div></code></pre>
+</li>
+<li>
+<p>Update <strong>EOS</strong> mirrors with:</p>
+<pre class="hljs"><code><div>eos-rankmirrors
+</div></code></pre>
+<ul>
+<li>Information displays in the terminal (no GUI tool).</li>
+</ul>
+</li>
+<li>
+<p>Always <strong>refresh your system</strong> with <code>yay -Syyu</code> after updating a mirrorlist.</p>
+</li>
+</ol>
+<p>Persistent issues despite re-reranking mirrors indicate an <strong>outdated system</strong>.</p>
+<blockquote>
+<p>See <a href="#update-mirrors">Update mirrors (detailed guide)</a> | <a href="#update-system">System maintenance: Update system</a></p>
+</blockquote>
+<hr>
+<h3 id="installed-as-pacnew-or-pacsave">Installed as .pacnew or .pacsave</h3>
+<p>During a <code>sudo pacman -Syu</code> update, you may receive errors such as:</p>
+<pre class="hljs"><code><div>warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
+  // or
+warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
+</div></code></pre>
+<p><strong>Resolve conflicting configuration files</strong> by running:</p>
+<pre class="hljs"><code><div>eos-pacdiff
+</div></code></pre>
+<p>It is highly recommended to resolve the conflicts ASAP to prevent further issues. Misconfigured files have the potential to break your system!</p>
+<blockquote>
+<p>See <a href="#eos-pacdiff">System maintenance: <code>eos-pacdiff</code></a> <br>
+<a href="#pacman-updates-troubleshooting">Top of section</a> | <a href="#endeavour-os-basics">Back to top</a></p>
+</blockquote>
+<hr>
+<hr>
+<h2 id="system-maintenance">System maintenance</h2>
+<p>To keep your EOS system healthy and up-to-date, it is recommended to regularly run system maintenance commands. A quick overview of maintenance tasks and commands is provided below.</p>
+<ul>
+<li><a href="#create-system-backups">Create system backups</a>
+<ul>
+<li><a href="#sudo-timeshift-check-or-create"><code>sudo timeshift --check</code>/<code>--create</code></a> - backup system settings</li>
+</ul>
+</li>
+<li><a href="#update-system">Update system</a>
+<ul>
+<li><a href="#sudo-pacman--syu"><code>sudo pacman -Syu</code></a> - update and refresh system</li>
+<li><a href="#yay"><code>yay</code></a> - update core packages</li>
+<li><a href="#eos-pacdiff"><code>eos-pacdiff</code></a> - resolve conflicting configs</li>
+</ul>
+</li>
+<li><a href="#update-mirrors">Update mirrors</a>
+<ul>
+<li><a href="#reflector-simple"><code>reflector-simple</code></a> - Arch mirrors</li>
+<li><a href="#eos-rankmirrors"><code>eos-rankmirrors</code></a> - EOS mirrors</li>
+</ul>
+</li>
+<li><a href="#clean-unused-files">Clean unused files</a>
+<ul>
+<li><a href="#journalctl"><code>journalctl --vacuum-time=6weeks</code></a> - clear journal logs</li>
+<li><a href="#paccache--r"><code>paccache -r</code></a> - clear package cache</li>
+<li><a href="#pacman-orphans"><code>sudo pacman -Qdtq | sudo pacman -Rns -</code></a> - remove orphans <img class="emoji" alt="cry" src="data:image/png;base64,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" /></li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>These maintenance tasks are run from the <strong>command-line interface</strong> (CLI) and will back up system data, update programs, clean unused files, and more. The <strong>EOS Welcome App</strong> also comes with an assistant to help users easily run key maintenance scripts.</p>
+<p><img src="./eos-basics-images/eos-welcome.png" alt="EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab."></p>
+<hr>
+<h3 id="create-system-backups">Create system backups</h3>
+<h4 id="sudo-timeshift-check-or-create">sudo timeshift check or create</h4>
+<p><em>Daily</em></p>
+<p><a href="https://wiki.archlinux.org/title/Timeshift"><strong><code>timeshift</code></strong></a> creates a snapshot of <strong>system files and settings</strong>. It can be used to restore the system to a prior state if the current state becomes unbootable/unusable.</p>
+<p>To save disk space, timeshift does not save any user files unless specifically directed to do so. Setting Timeshift to regularly save <strong>non-system files will use a very large amount of disk space</strong>.</p>
+<p>Create a snapshot on demand (unscheduled) by using:</p>
+<pre class="hljs"><code><div>sudo timeshift --create
+</div></code></pre>
+<p>To create a snapshot only if a scheduled one is due, use:</p>
+<pre class="hljs"><code><div>sudo timeshift --check
+</div></code></pre>
+<blockquote>
+<p><strong>Important!</strong> <br>
+In addition to daily backups, it is highly recommended to <strong>backup before attempting to make any changes to the system.</strong></p>
+<p>It is also helpful to save the backups to an external drive (or an internal drive that is separate from the root). This eases the process of recovering a previous state when the current one is unbootable.</p>
+</blockquote>
+<p><img src="./eos-basics-images/timeshift.png" alt="Terminal output of Timeshift (v25.07.7) listing its syntax and CLI options"></p>
+<hr>
+<h4 id="current-timeshift-settings">Current Timeshift settings</h4>
+<ul>
+<li>
+<p><strong>RSYNC snapshots</strong> - Creates copies of system files and hard-links unchanged files from the previous snapshot</p>
+</li>
+<li>
+<p><strong>Back up location</strong> - Saves to external /dev/nvme0n1p1 to allow for restore even if system disk is damaged. This is done via a liveboot system and restoring a selected snapshot</p>
+</li>
+<li>
+<p><strong>Saved data</strong> - Files/directories excluded to save disk space</p>
+</li>
+<li>
+<p><strong><code>cron</code> scheduler</strong> (<a href="https://archlinux.org/packages/extra/x86_64/cronie/"><code>cronie</code></a>) - Automatically takes snapshots when due, saving up to the designated number of snapshots per category.</p>
+<ul>
+<li>
+<p>The scheduling daemon must be <strong>manually enabled</strong> by running:</p>
+<pre class="hljs"><code><div>sudo systemctl <span class="hljs-built_in">enable</span> cronie.service
+</div></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Snapshot limits</strong> - Once the number of snapshots reaches the set limit, timeshift deletes the oldest snapshot in the list. Current limits set to:</p>
+<ul>
+<li>4 monthly</li>
+<li>4 weekly</li>
+<li>7 daily</li>
+<li>5 hourly</li>
+<li>5 boot</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h5 id="disable-cronieservice">Disable cronie.service</h5>
+<p>To disable the <code>cron</code> scheduler process, follow the steps below:</p>
+<ol>
+<li>
+<p>Stop the system daemon by entering:</p>
+<pre class="hljs"><code><div>systemctl stop cronie.service
+</div></code></pre>
+</li>
+<li>
+<p>Verify that the process is inactive with:</p>
+<pre class="hljs"><code><div>systemctl status cronie.service
+</div></code></pre>
+</li>
+</ol>
+<p><img src="./eos-basics-images/systemctl-status-cronie.png" alt="Terminal output after running  showing the daemon's active status."></p>
+<ol start="3">
+<li>
+<p>Then disable the <strong>inactive</strong> process from starting on boot:</p>
+<pre class="hljs"><code><div>systemctl <span class="hljs-built_in">disable</span> cronie.service
+</div></code></pre>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note</strong> <br>
+System processes (daemons) are often needed for essential services on the system. These should only be disabled when they are <strong>inactive</strong>, otherwise the computer system may become very unstable and not function properly.</p>
+</blockquote>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Timeshift"><strong><code>Timeshift</code></strong></a> | <a href="https://wiki.archlinux.org/title/Cron#Configuration"><strong><code>cron</code></strong></a> | <a href="https://man.archlinux.org/man/daemon.7.en">daemon (manpage)</a></p>
+</blockquote>
+<hr>
+<h3 id="update-system">Update system</h3>
+<ul>
+<li><a href="#sudo-pacman--syu"><code>sudo pacman -Syu</code></a> - update and refresh system</li>
+<li><a href="#yay"><code>yay</code></a> - update core packages
+<ul>
+<li><a href="#what-is-yay">What is <code>yay</code>?</a></li>
+<li><a href="#which-update-command-should-i-run">Which update command should I run?</a></li>
+</ul>
+</li>
+<li><a href="#eos-pacdiff"><code>eos-pacdiff</code></a> - resolve conflicting configs
+<ul>
+<li><a href="#pacnew-and-pacsave">Pacnew and pacsave</a></li>
+<li><a href="#pacdiff-and-meld">Pacdiff and meld</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="sudo-pacman--syu">sudo pacman -Syu</h4>
+<p><em>Daily</em></p>
+<p><strong><code>pacman</code></strong> is the package manager used to install and update programs in Arch Linux.</p>
+<p><code>sudo pacman -Syu</code> performs a <strong>full system update and refresh</strong>. It is recommended to run this daily, though user preference will vary.</p>
+<p><img src="./eos-basics-images/sudo-pacman--syu.png" alt="A Terminal running  waiting for user confirmation (Y/n) to proceed with installation."></p>
+<p>Other basic <code>pacman</code> commands include:</p>
+<ul>
+<li><code>pacman -S package-name</code> -  install specific package</li>
+<li><code>pacman -Rs package-name</code> - removes package and its unused dependencies</li>
+<li><code>pacman -Syy</code> - sync local database with online repositories before upgrading packages</li>
+<li><code>pacman -Syyu</code> - sync repositories and update system simultaneously</li>
+</ul>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Pacman"><strong><code>pacman</code></strong></a></p>
+</blockquote>
+<hr>
+<h4 id="yay">yay</h4>
+<p><em>Weekly</em></p>
+<p>Update the system's native and AUR packages (Arch User Repository) with one of the following:</p>
+<pre class="hljs"><code><div>yay 
+  // or
+eos-update --aur
+</div></code></pre>
+<hr>
+<h5 id="what-is-yay">What is yay?</h5>
+<p><a href="https://aur.archlinux.org/packages/yay"><strong><code>yay</code></strong></a><sup>AUR</sup> stands for &quot;yet another yogurt&quot; and it is one of the most popular <strong>AUR helpers</strong>.</p>
+<p><strong>AUR helpers</strong> simplify the process of downloading, installing, updating, and removing AUR software.</p>
+<hr>
+<h5 id="which-update-command-should-i-run">Which update command should I run?</h5>
+<p>This is up to personal preference. The most beginner-friendly option is <code>eos-update --aur</code> or <code>eos-update</code>. Some members of the EOS community also recommend using <code>eos-update</code> for a quick fix to the system.</p>
+<p>Others prefer to run <code>yay</code> since it does all that is required without the additional script processes used in <code>eos-update --aur</code>.</p>
+<blockquote>
+<p>See <a href="https://aur.archlinux.org/packages/yay"><strong><code>yay</code></strong></a><sup>AUR</sup>| <a href="https://aur.archlinux.org/">Arch User Repository (AUR)</a> | <a href="https://wiki.archlinux.org/title/AUR_helpers">AUR helpers</a></p>
+</blockquote>
+<hr>
+<h4 id="eos-pacdiff">eos-pacdiff</h4>
+<p><em>At system prompt</em></p>
+<p>The system notifies you whenever it detects <strong>conflicting configuration files</strong>.</p>
+<pre class="hljs"><code><div>warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
+  // or
+warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
+</div></code></pre>
+<p>These conflicts are generated when <code>pacman</code> creates copies of config files and prevents overwrite by appending <code>.pacsave</code> or <code>.pacnew</code> to the filename.</p>
+<p><strong>Resolve these conflicts ASAP!!</strong></p>
+<p>Conflicting config files may prevent a program from functioning properly, or altogether, and will only get messier the longer they remain unfixed.</p>
+<ol>
+<li>
+<p>When notified by the system about conflicting config files, run:</p>
+<pre class="hljs"><code><div>eos-pacdiff
+</div></code></pre>
+</li>
+<li>
+<p>Select <code>V(iew)</code> to compare the config files side-by-side</p>
+</li>
+<li>
+<p>Review the files for significant changes.</p>
+</li>
+<li>
+<p><code>R(emove)</code>, <code>O(verwrite)</code>, or <code>M(erge)</code> the differing lines as necessary.</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Important!</strong> <br>
+Always review files carefully before merging config files.
+<strong>Incorrect configurations may break your system.</strong></p>
+<p>Refrain from modifying key system files such as <code>/etc/passwd</code>, <code>/etc/group</code>, and <code>/etc/shadow</code> unless you know what you're doing, otherwise you <strong>may lock yourself out of your system.</strong></p>
+</blockquote>
+<hr>
+<h5 id="pacnew-and-pacsave">Pacnew and Pacsave</h5>
+<ul>
+<li>
+<p>A <code>.pacnew</code> file is created during an upgrade to avoid overwriting the existing configuration file.</p>
+</li>
+<li>
+<p>A <code>.pacsave</code> file is created during package removal (or an upgrade that first requires removal) and the system indicates that it should also be backed up.</p>
+</li>
+</ul>
+<hr>
+<h5 id="pacdiff-and-meld">Pacdiff and meld</h5>
+<p><code>eos-pacdiff</code> combines two tools for ease of use. For non-EOS Arch Linux users, both are run to resolve conflicting configuration files.</p>
+<ul>
+<li>
+<p><code>pacdiff</code> - A utility tool that parses which file information should be merged</p>
+</li>
+<li>
+<p><code>meld</code> - A GUI tool that provide more visual context for merging changes lines into a config file</p>
+</li>
+</ul>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacsave">Pacnew and Pacsave</a> | <a href="https://man.archlinux.org/man/pacdiff.8.en">Pacdiff (manpage)</a></p>
+</blockquote>
+<hr>
+<h3 id="update-mirrors">Update mirrors</h3>
+<p><em>Every 1-2 months</em></p>
+<p><strong>Mirror issues</strong> are caused when the system cannot access or sync with software repositories, or if the connection is too slow. The &quot;404 not found&quot; error occurs when trying to download or update packages from <strong>outdated mirrors</strong>.</p>
+<ul>
+<li><a href="#reflector-simple"><code>reflector-simple</code></a> - Arch mirrors</li>
+<li><a href="#eos-rankmirrors"><code>eos-rankmirrors</code></a> - EOS mirrors</li>
+<li><a href="#alternative-mirror-configurations">Alternative mirror configurations</a></li>
+</ul>
+<hr>
+<h4 id="reflector-simple">reflector-simple</h4>
+<p><code>Reflector-simple</code> is a quick custom script that updates Arch mirrors with a GUI tool.</p>
+<ol>
+<li>
+<p>Update Arch mirrors by running the command:</p>
+<pre class="hljs"><code><div>reflector-simple
+</div></code></pre>
+</li>
+<li>
+<p>By default, <code>reflector-simple</code> selects the 20 fastest mirrors based on your set location. You can adjust these preferences in the GUI tool.</p>
+<p><img src="./eos-basics-images/reflector-simple-1.png" alt="A GUI Preference menu that displays after running , displaying options such as region, filter by, and amount."></p>
+</li>
+<li>
+<p>Hit OK to confirm the selection and run the process. It is normal to see warnings as <code>reflector</code> tests various mirrors for connectivity speed and age.</p>
+</li>
+<li>
+<p>The system will notify you once the new <strong>mirrorlist</strong> has been generated. Save to apply the configuration changes.</p>
+<p><img src="./eos-basics-images/reflector-simple-2.png" alt="New mirrorlist output from  listing 20 U.S. mirrors ranked by speed."></p>
+</li>
+<li>
+<p>Refresh the system with:</p>
+<pre class="hljs"><code><div>yay -Syyu
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h4 id="eos-rankmirrors">eos-rankmirrors</h4>
+<p>Endeavour OS has its own distro-unique packages that are modified from the original Arch packages. Thus, EOS mirrors are updated with a separate command.</p>
+<ol>
+<li>
+<p>Update EOS mirrors from the terminal by entering:</p>
+<pre class="hljs"><code><div>eos-rankmirrors
+</div></code></pre>
+</li>
+<li>
+<p>The <code>eos-rankmirrors</code> process does not have a GUI tool and will only display output in the terminal.</p>
+</li>
+<li>
+<p>It is normal to see various warnings as the system tests various mirrors for connectivity and speed. It may take a few minutes before the output shows.</p>
+<p><img src="./eos-basics-images/eos-rankmirrors-1.png" alt=" terminal output listing timed-out mirrors and the new mirrorlist."></p>
+</li>
+<li>
+<p>The terminal output will display a list of the fastest 20 mirrors, relevant information, and the original mirrorlist.</p>
+<p><img src="./eos-basics-images/eos-rankmirrors-2.png" alt="Continuation of  terminal output displaying the original mirrorlist prior to the update."></p>
+</li>
+<li>
+<p>To confirm the mirrorlist changes, enter your system's root password to save the configuration.</p>
+<p><img src="./eos-basics-images/eos-rankmirrors-3.png" alt="Bottom of  terminal output waiting for root password confirmation to save the mirrorlist."></p>
+</li>
+<li>
+<p>If you do not wish to make the mirrorlist changes, stop the terminal process. By default, this shortcut is bound to <code>Ctrl+C</code> in the terminal.</p>
+</li>
+<li>
+<p>After confirming any mirrorlist changes, refresh the system with:</p>
+<pre class="hljs"><code><div>yay -Syyu
+</div></code></pre>
+</li>
+</ol>
+<hr>
+<h4 id="alternative-mirror-configurations">Alternative mirror configurations</h4>
+<p>The Arch wiki <a href="https://wiki.archlinux.org/title/Mirrors">page on mirrors</a> lists popular mirror configuration alternatives for simpler management. When configured properly, some can automate the mirror re-ranking process.</p>
+<p>By default, EOS uses <code>reflector</code> as its mirror management program. Specific CLI commands can be used instead of the <code>reflector-simple</code> script if desired.</p>
+<h5 id="reflector">Reflector</h5>
+<p><strong><code>reflector</code></strong><sup><a href="https://archlinux.org/packages/?name=reflector">AUR</a></sup> (<a href="https://wiki.archlinux.org/title/Reflector">wiki</a> | <a href="https://xyne.dev/projects/reflector/">repo</a>) provides automation with a <code>systemd</code> service and timer. Running the program will:</p>
+<ol>
+<li>
+<p>Retrieve the latest mirrorlist from the <a href="https://archlinux.org/mirrors/status/">Mirror Status page</a></p>
+</li>
+<li>
+<p>Filter/rank the mirrors by speed</p>
+</li>
+<li>
+<p>Then overwrite the current <code>/etc/pacman.d/mirrorlist</code> config file</p>
+</li>
+</ol>
+<p>To update to and save the <strong>latest 20 mirrors</strong> sorted by <strong>speed</strong>, enter:</p>
+<pre class="hljs"><code><div>reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
+</div></code></pre>
+<hr>
+<h5 id="ghostmirror">Ghostmirror</h5>
+<p><code>ghostmirror</code><sup><a href="https://aur.archlinux.org/packages/ghostmirror/">AUR</a></sup> (<a href="https://wiki.archlinux.org/title/Ghostmirror">wiki</a> | <a href="https://github.com/vbextreme/ghostmirro">repo</a>) is another mirror management software which can automate the process with proper configuration.</p>
+<ol>
+<li>
+<p>Checks that mirrors are <strong>synchronized</strong></p>
+</li>
+<li>
+<p>Performs <strong>download speed tests</strong> on top of the usual ping test</p>
+</li>
+<li>
+<p>Automates the process via <code>systemd</code></p>
+</li>
+</ol>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Mirrors">Arch mirrors</a> | <a href="https://archlinux.org/mirrors/status/">Official mirror status</a> | <a href="https://wiki.archlinux.org/title/Reflector"><strong><code>reflector</code></strong></a> | <a href="https://wiki.archlinux.org/title/Ghostmirror"><strong><code>Ghostmirror</code></strong></a></p>
+</blockquote>
+<hr>
+<h3 id="clear-unused-files">Clear unused files</h3>
+<ul>
+<li><a href="#journalctl"><code>journalctl --vacuum-time=6weeks</code></a> - clear journal logs</li>
+<li><a href="#paccache--r"><code>paccache -r</code></a> - clear package cache</li>
+<li><a href="#pacman-orphans"><code>sudo pacman -Qdtq | sudo pacman -Rns -</code></a> - remove orphans</li>
+</ul>
+<hr>
+<h4 id="journalctl">journalctl</h4>
+<p><em>Every 1-2 months</em></p>
+<p><strong><code>systemd</code></strong> logs system activity in the journal and is used to troubleshoot issues. Open the journal by entering <code>journalctl</code> in a terminal.</p>
+<p>To maintain a log of the past 6 weeks while clearing excess logs, run:</p>
+<pre class="hljs"><code><div>journalctl --vacuum-time=6weeks
+</div></code></pre>
+<p>It is recommended to keep 4 weeks as a minimum, but the number of weeks can be adjusted to personal preference. By default, the journal can only contain up to 4 GB of information.</p>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Systemd/Journal"><strong><code>systemd journal</code></strong></a></p>
+</blockquote>
+<hr>
+<h4 id="paccache--r">paccache -r</h4>
+<p><em>Every 1-2 months</em></p>
+<p>By default, <code>pacman</code> keeps 3 versions of package files in the <code>/var/cache/pacman/pkg</code> cache.</p>
+<p>To clear the cache and maintain the 3 most recent versions, run:</p>
+<pre class="hljs"><code><div>paccache -r
+</div></code></pre>
+<p>It is generally <strong>not recommended</strong> to delete all past versions unless disk space is really needed. Keeping previous versions may prevent redundant downloads when downgrading or reinstalling packages.</p>
+<ul>
+<li>
+<p>To clear the cache of <strong>all versions</strong> of uninstalled packages, run:</p>
+<pre class="hljs"><code><div>paccache -ruk0
+</div></code></pre>
+</li>
+<li>
+<p>To clear the cache of all uninstalled packages <strong>and</strong> unused <code>pacman sync</code> databases, run:</p>
+<pre class="hljs"><code><div>pacman -Sc
+</div></code></pre>
+</li>
+</ul>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Pacman#Cleaning_the_package_cache">Pacman: Cleaning the package cache</a></p>
+</blockquote>
+<hr>
+<h4 id="pacman-orphans">pacman orphans</h4>
+<p><em>Every 1-2 months</em></p>
+<p><strong>Orphans</strong> are dependencies that are <strong>no longer needed</strong> by any program. These accumulate on the system when:</p>
+<ul>
+<li>
+<p>Packages are uninstalled with <code>pacman -R package-name</code> instead of <strong><code>-Rs</code></strong></p>
+</li>
+<li>
+<p>A new package version no longer requires a dependency it originally used/was installed with</p>
+</li>
+</ul>
+<hr>
+<p>This command recursively removes <strong>orphans</strong> (unused packages) along with their configuration files:</p>
+<pre class="hljs"><code><div>sudo pacman -Qdtq | sudo pacman -Rns -
+</div></code></pre>
+<ul>
+<li>
+<p>If there are orphans listed that you wish to <strong>keep</strong>, specify the orphans to exclude from removal using this command:</p>
+<pre class="hljs"><code><div>sudo pacman -D --asexplicit package-name
+</div></code></pre>
+</li>
+<li>
+<p>Enter <code>Y</code> to remove the packages listed after running the command.</p>
+<p><img src="./eos-basics-images/remove-orphans.png" alt="Terminal output listing an orphan after running "></p>
+</li>
+</ul>
+<p>If the terminal outputs <code>error: argument '-' specified with empty stdin</code>, this means there are <strong>no orphans</strong> to remove.</p>
+<blockquote>
+<p>See <a href="https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_(orphans)">Pacman Tips and Tricks: Orphans</a><br>
+<a href="#system-maintenance">Top of section</a> | <a href="#endeavour-os-basics">Back to top</a></p>
+</blockquote>
+<hr>
+<hr>
+<h2 id="other-topics">Other topics</h2>
+<ul>
+<li><a href="#git-clone-to-location"><code>git clone</code> to location</a></li>
+<li><a href="#change-login-background">Change login background</a></li>
+<li><a href="#cursor-selection-to-clipboard">Cursor selection to clipboard</a></li>
+</ul>
+<hr>
+<h3 id="git-clone-to-location">git clone to location</h3>
+<p>By default, <strong><code>git</code></strong> repositories are cloned into the <strong>current</strong> directory (usually <code>~/home</code>). You can specify the intended location for a repository using:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> &lt;repository-url&gt; &lt;destination-folder&gt;
+</div></code></pre>
+<ul>
+<li>
+<p>Clone into a <strong>new</strong> directory:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> &lt;https://github.com/myuser/example-repo.git&gt; /desired/directory/path
+</div></code></pre>
+</li>
+<li>
+<p>Clone into an <strong>existing, empty</strong> directory:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> &lt;repo-url&gt; /existing/folder
+</div></code></pre>
+</li>
+<li>
+<p>Clone the contents into the <strong>current</strong>, non-empty directory:</p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> &lt;repo-url&gt; .
+</div></code></pre>
+<ul>
+<li>Remember, this command clones the repository <strong>contents</strong> into the <strong>current directory</strong>. It is important to <code>cd</code> to the appropriate working directory first, lest files explode everywhere.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>See <a href="https://git-scm.com/about"><strong><code>git</code></strong></a> | <a href="https://git-scm.com/docs/git"><strong><code>git</code></strong> documentation</a> | <a href="https://man.archlinux.org/man/cd.n"><strong><code>cd</code></strong> (manpage)</a></p>
+</blockquote>
+<hr>
+<h3 id="change-login-background">Change login background</h3>
+<p>Background images set in the <strong>Login Window</strong> GUI editor will only display if the system's <strong><code>display manager</code></strong> (DM) and/or <strong><code>greeter</code></strong> can access the specified image file.</p>
+<p><img src="./eos-basics-images/login-window-gui.png" alt="Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections."></p>
+<p>If the image cannot be accessed, the login screen will display only the background color that was set.</p>
+<p>By default, the DM and <code>greeter</code> can access:</p>
+<ul>
+<li>
+<p><code>/usr/share/endeavouros/backgrounds</code> - for default EOS backgrounds</p>
+</li>
+<li>
+<p><code>/usr/share/backgrounds/xfce</code> - for users using the XFCE desktop environment (DE)</p>
+</li>
+</ul>
+<hr>
+<p>To create access without changing permission settings, move the desired image into the appropriate backgrounds folder.</p>
+<ol>
+<li>
+<p><strong>As root</strong>, move the intended background file into the display manager's background folder:</p>
+<pre class="hljs"><code><div>sudo pacman mv /your/<span class="hljs-built_in">bg</span>-file.png /usr/share/endeavouros/backgrounds
+</div></code></pre>
+</li>
+<li>
+<p>Then, use <code>sudo nano</code> to edit the <code>slick-greeter</code> config file. If this file doesn't exist, a new one will be created:</p>
+<pre class="hljs"><code><div>sudo nano /etc/lightdm/slick-greeter.conf
+</div></code></pre>
+</li>
+<li>
+<p>Apply the changes in the section with the <code>[Greeter]</code> heading.</p>
+<pre class="hljs"><code><div>[Greeter]
+draw-grid=<span class="hljs-literal">false</span>
+background=/usr/share/endeavouros/backgrounds/<span class="hljs-built_in">bg</span>-file.png
+</div></code></pre>
+</li>
+<li>
+<p>Press <code>Ctrl+X</code> to quit, then press <code>Y</code> to save the file.</p>
+</li>
+<li>
+<p><strong>Reboot the computer</strong> for the changes to take place.</p>
+</li>
+</ol>
+<hr>
+<h3 id="cursor-selection-to-clipboard">Cursor selection to clipboard</h3>
+<p>This function copies a selected area directly to the clipboard without saving a file. In Windows OS, this is the <code>Win+Shift+S</code> shortcut.</p>
+<ol>
+<li>
+<p>Open the <strong>Application Shortcuts</strong> tab in your Keyboard application.</p>
+<p><img src="./eos-basics-images/xfce-shortcut-1.png" alt="EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/"></p>
+</li>
+<li>
+<p>Click on the <strong>Add</strong> or <strong>Edit</strong> button to add/edit a shortcut.</p>
+</li>
+<li>
+<p>Enter the following script into the command field:</p>
+<pre class="hljs"><code><div>xfce4-screenshooter -rc
+</div></code></pre>
+<p><img src="./eos-basics-images/xfce-shortcut-2.png" alt="EOS keyboard app dialogue window waiting to record keyboard input for the command field."></p>
+</li>
+<li>
+<p>When prompted, enter the shortcut to assign to <code>xcfe4-screenshooter -rc</code> (ex. <code>Ctrl+Alt+S</code>)</p>
+</li>
+<li>
+<p>The command and its assigned shortcut will appear in the <strong>Application Shortcuts</strong> list and can be edited as needed.</p>
+<p><img src="./eos-basics-images/xfce-shortcut-3.png" alt="EOS keyboard application on the shortcuts tab with the new  shortcut selected."></p>
+</li>
+</ol>
+<blockquote>
+<p>See <a href="https://docs.xfce.org/apps/xfce4-screenshooter/usage"><strong><code>xfce4-screenshooter</code></strong> usage</a> <br>
+<a href="#other-topics">Top of section</a> | <a href="#endeavour-os-basics">Back to top</a></p>
+</blockquote>
+<hr>
+<hr>
+
+</body>
+</html>

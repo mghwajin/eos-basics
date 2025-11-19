@@ -1,4 +1,3 @@
-
 # xfce4-screenshooter
 
 - [Cursor selection to clipboard](#cursor-selection-to-clipboard)
@@ -31,7 +30,7 @@ This function copies a selected area directly to the clipboard without saving a 
 
     ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](../eos-basics-images/xfce-shortcut-3.png)
 
-See [**`xfce4-screenshooter`** usage documentation](https://docs.xfce.org/apps/xfce4-screenshooter/usage) for additional functions.
+> See [**`xfce4-screenshooter`** usage documentation](https://docs.xfce.org/apps/xfce4-screenshooter/usage)
 
 ---
 
@@ -50,6 +49,6 @@ xfce4-screenshooter -f -s "$HOME/Desktop/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).p
 Progress notes:  However, the command instead saves a file named `$(date +%Y-%m-%d_%H-%M-%S).png`, which means the shell command is not being accepted as one.
 -->
 
-[Back to top](#xfce4-screenshooter) | [Back to README](../README.md)
+> [Top of section](#xfce4-screenshooter) | [Back to README](../README.md)
 
 ---

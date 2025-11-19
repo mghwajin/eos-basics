@@ -1,10 +1,7 @@
-
 # Other topics
 
 - [`git clone` to location](#git-clone-to-location)
-
 - [Change login background](#change-login-background)
-
 - [`Nvidia-settings` config issues](#nvidia-settings-config-issues)
 
 ---
@@ -34,9 +31,9 @@ git clone <repository-url> <destination-folder>
   ```bash
   git clone <repo-url> .
   ```
-  - Remember, this command clones the repository **contents** into the **current directory**. It is important to `cd` to the appropriate working directory first, lest files explode everywhere. 💥💥💥
+  - Remember, this command clones the repository **contents** into the **current directory**. It is important to `cd` to the appropriate working directory first, lest files explode everywhere.
 
-See [about **`git`**](https://git-scm.com/about) | [**`git`** documentation](https://git-scm.com/docs/git) | [**`cd`** - Change working directory (manpage)](https://man.archlinux.org/man/cd.n)
+> See [**`git`**](https://git-scm.com/about) | [**`git`** documentation](https://git-scm.com/docs/git) | [**`cd`** (manpage)](https://man.archlinux.org/man/cd.n)
 
 ---
 
@@ -53,6 +50,8 @@ By default, the DM and `greeter` can access:
 - `/usr/share/endeavouros/backgrounds` \- for default EOS backgrounds
 
 - `/usr/share/backgrounds/xfce` \- for users using the XFCE desktop environment (DE)
+
+---
 
 To create access without changing permission settings, move the desired image into the appropriate backgrounds folder.
 
@@ -95,12 +94,7 @@ Progress notes: Potentially an issue of the Nvidia GPU not properly loading upon
 Need to set up force early load (**dracut**, not mkinitcpio).
 -->
 
-- [Nvidia ArchWiki page](https://wiki.archlinux.org/title/NVIDIA#NVIDIA_Settings)
-
-- [Troubleshooting forum](https://forum.endeavouros.com/t/nvidia-settings-isnt-remembering-my-config-changes/3089/6)
-
----
-
-[Back to top](#other-topics) | [README](../README.md)
+> See [Nvidia ArchWiki page](https://wiki.archlinux.org/title/NVIDIA#NVIDIA_Settings) |  [Troubleshooting forum](https://forum.endeavouros.com/t/nvidia-settings-isnt-remembering-my-config-changes/3089/6) \
+> [Top of section](#other-topics) | [Back to README](../README.md)
 
 ---

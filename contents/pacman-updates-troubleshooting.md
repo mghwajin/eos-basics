@@ -1,4 +1,3 @@
-
 # Pacman updates troubleshooting
 
 **`pacman`** is the package manager of Arch Linux and is used to install and update programs.
@@ -6,15 +5,10 @@
 While `sudo pacman -Syu` performs a full system update and refresh, it may error out or only partially complete the update process. 
 
 - [GPGME error: No data / failed to synchronize all databases](#gpgme-error-no-data)
-
   - [Remove and refresh `pacman sync` file](#remove-and-refresh-pacman-sync-file)
-  
   - [GPGME and GnuPG](#gpgme-and-gnupg)
-
 - [Mirrorlist errors and warnings](#mirrorlist-errors-and-warnings)
-
   - [Re-rank mirrors](#re-rank-mirrors)
-
 - [Installed as .pacnew or .pacsave](#installed-as-pacnew-or-pacsave)
 
 ---
@@ -32,6 +26,8 @@ error: failed to synchronize all databases (invalid or corrupted database (PGP s
 These errors indicate that there is either an issue with the database itself, or that the system was unable to verify encryption keys of the package database.
 
 **Remove and refresh the `pacman sync` file** to fix this issue.
+
+---
 
 ### Remove and refresh pacman sync file
 
@@ -79,9 +75,11 @@ error: failed retrieving file 'wine-10.17-1-x86\_64.pkg.tar.zst' from arch.jsc.m
 warning: too many errors from arch.jsc.mx, skipping for the remainder of this transaction
 ```
 
-These issues are usually caused by **outdated** mirrors and/or **slow connections**.
+These issues are usually caused by outdated mirrors and/or slow connections.
 
 **Re-rank** the mirrors to prioritize mirrors that were recently-updated and have faster connection.
+
+---
 
 ### Re-rank mirrors
 
@@ -90,7 +88,6 @@ These issues are usually caused by **outdated** mirrors and/or **slow connection
     ```bash
     reflector-simple
     ```
-
    - In the GUI tool, you can choose mirror preferences, such as location, max amount, and seconds for connection timeout.
 
 2. After saving a new mirrorlist configuration, always **refresh your system** with:
@@ -98,7 +95,6 @@ These issues are usually caused by **outdated** mirrors and/or **slow connection
     ```bash
     yay -Syyu
     ```
-
 3. Update **EOS** mirrors with:
 
     ```bash
@@ -109,9 +105,9 @@ These issues are usually caused by **outdated** mirrors and/or **slow connection
 
 4. Always **refresh your system** with `yay -Syyu` after updating a mirrorlist.
 
-For a more detailed guide, see [System maintenance: Update mirrors](../contents/system-maintenance.md#update-mirrors).
+Persistent issues despite re-reranking mirrors indicate an **outdated system**. 
 
-Persistent issues despite re-reranking mirrors indicate an **outdated system**.  See [System maintenance: Update system](../contents/system-maintenance.md#update-system) to review how to keep your system up-to-date.
+> See [Update mirrors (detailed guide)](../contents/system-maintenance.md#update-mirrors) | [System maintenance: Update system](../contents/system-maintenance.md#update-system)
 
 ---
 
@@ -133,6 +129,5 @@ eos-pacdiff
 
 It is highly recommended to resolve the conflicts ASAP to prevent further issues. Misconfigured files have the potential to break your system!
 
-See [System maintenance: eos-pacdiff](../contents/system-maintenance.md#eos-pacdiff)
-
-[Back to top](#pacman-updates-troubleshooting) | [README](../README.md)
+> See [System maintenance: `eos-pacdiff`](../contents/system-maintenance.md#eos-pacdiff) \
+> [Top of section](#pacman-updates-troubleshooting) | [Back to README](../README.md)
