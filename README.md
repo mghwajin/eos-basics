@@ -117,16 +117,13 @@ These issues are usually caused by **outdated mirrors** and can be fixed by **re
 
   - Refresh your system after updating the mirrorlist with `yay -Syyu`
 
-<!-- TO INSERT
-*Image:Preference menu GUI that displays when using reflector-simple*
-*Image: Preference menu that displays when using reflector-simple* 
--->
-
 2. Run `eos-rankmirrors` to update EOS-specific mirrors. Information will display in the terminal.
 
   - Always refresh your system after updating the mirrorlist with `yay -Syyu`
 
-Persistent issues despite re-reranking mirrors indicate an **outdated system**.  See [System maintenance: Update system](#update-system) to review how to keep your system up-to-date (ex. [`yay`](#yay)).
+For a more detailed guide, see [Update system: Update mirrors](#update-mirrors).
+  
+Persistent issues despite re-reranking mirrors indicate an **outdated system**.  See [System maintenance: Update system](#update-system) to review how to keep your system up-to-date.
 
 ---
 
@@ -138,7 +135,7 @@ warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
 warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
 ```
 
-Resolve the conflicting configuration files with `eos-pacdiff`. It is highly recommended to resolve the conflicts ASAP to prevent further issues.
+Resolve the conflicting configuration files with `eos-pacdiff`. It is highly recommended to resolve the conflicts ASAP to prevent further issues. Misconfigured files have the potential to break your system!
 
 See [Update system: eos-pacdiff](#eos-pacdiff)
 
@@ -172,11 +169,10 @@ To keep your EOS system healthy and up-to-date, it is recommended to regularly r
   
   - [pacman orphans](#pacman-orphans)
 
-These maintenance tasks are run from the **command-line** and will back up system data, update programs, clean unused files, and more. The **EOS Welcome App** also comes with an assistant to help users easily run key maintenance scripts.
+These maintenance tasks are run from the **command-line interface** (CLI) and will back up system data, update programs, clean unused files, and more. The **EOS Welcome App** also comes with an assistant to help users easily run key maintenance scripts.
 
-<!-- TO INSERT
-*Image: EOS Welcome program v25.10.3-1 on the Assistant tab*
--->
+![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./eos-basics-images/eos-welcome.png)
+
 ---
 ---
 
@@ -241,9 +237,8 @@ See [Timeshift](https://wiki.archlinux.org/title/Timeshift) | [Cron](https://wik
 
 `sudo pacman -Syu` performs a **full system update and refresh**. It is recommended to run this daily, though user preference will vary.
 
-<!-- TO INSERT
-*Image: A terminal running sudo pacman -Syu, waiting for user confirmation to update packages*
--->
+![A Terminal running `sudo pacman -Syu` waiting for user confirmation (Y/n) to proceed with installation.](./eos-basics-images/sudo-pacman--syu.png)
+
 Other basic `pacman` commands include:
 
 - `pacman -S package-name` \-  install specific package
@@ -352,16 +347,14 @@ See [Pacnew and Pacsave](https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacs
 1. Update Arch mirrors with: `reflector-simple`
 
 2. Running `reflector-simple` on EOS offers GUI functionality with the usual `reflector` process. By default, the system selects the 20 fastest mirrors based on your set location.
-<!-- TO INSERT
-*Image: Preference menu that displays when using `reflector-simple`*
--->
+
+![A GUI Preference menu that displays after running `reflector-simple`, displaying options such as region, filter by, and amount.](./eos-basics-images/reflector-simple-1.png)
 
 3. Adjust the settings to your preference, then hit OK to run the process. It is normal to see warnings as `reflector` tests various mirrors for connectivity speed and age.
 
 4. The system will notify you once the new **mirrorlist** has been generated. Save to apply the settings.
-<!-- TO INSERT
-*Image: New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed*
--->
+
+![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](./eos-basics-images/reflector-simple-2.png)
 
 5. Refresh the system with: `yay -Syyu`
 
@@ -374,19 +367,16 @@ Endeavour OS has its own distro-unique packages that are modified from the origi
 2. The `eos-rankmirrors` process runs entirely in the terminal (no GUI tool). It may take a few minutes for the terminal to display output.
 
 3. It is normal to see warnings as the system tests various mirrors for connectivity and speed.
-<!-- TO INSERT
-*Image: eos-rankmirrors Terminal output listing timed-out mirrors and the new mirrorlist*
--->
+
+![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](./eos-basics-images/eos-rankmirrors-1.png)
 
 4. The terminal output will display a list of the fastest 20 mirrors, relevant information, and the original mirrorlist.
-<!-- TO INSERT
-*Image: eos-rankmirrors Terminal output displaying the original mirrorlist prior to the update*
--->
+
+![Continuation of `eos-rankmirrors` terminal output displaying the original mirrorlist prior to the update.](./eos-basics-images/eos-rankmirrors-2.png)
 
 5. To confirm the mirrorlist changes, enter your system's root password to save the configuration.
-<!-- TO INSERT
-*Image: eos-rankmirrors Terminal output displaying the original mirrorlist prior to the update*
--->
+
+![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](./eos-basics-images/eos-rankmirrors-3.png)
 
 6. If you do not wish to make the mirrorlist changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.
 
@@ -426,7 +416,7 @@ See [Arch mirrors](https://wiki.archlinux.org/title/Mirrors) | [Official mirror 
 ---
 ---
 
-## 🗑️ Clear unused files {#clear-unused-files}
+## Clear unused files {#clear-unused-files}
 
 - [journalctl -vacuum-time=6weeks](#journalctl)
 
@@ -482,9 +472,7 @@ See [Pacman: Cleaning the cache](https://wiki.archlinux.org/title/Pacman#Cleanin
 This command recursively removes **orphans** (unused packages) along with their configuration files:
 `sudo pacman -Qdtq | sudo pacman -Rns -`
 
-<!-- TO INSERT
-*Image: Terminal output listing an orphan after running sudo pacman -Qdtq | sudo pacman -Rns -
--->
+![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](./eos-basics-images/remove-orphans.png)
 
 Enter `Y` to remove the packages listed after running the command.
 
@@ -512,23 +500,20 @@ See [Pacman Tips and Tricks: Orphans](https://wiki.archlinux.org/title/Pacman/Ti
 This function copies a selected area directly to the clipboard without saving a file. In Windows OS, this is the Win+Shift+S shortcut.
 
 1. Open your Keyboard application and its Application Shortcuts tab
-<!-- TO INSERT
-Image: EOS keyboard application on the application shortcuts tab, with a red box highlighting the Add and Edit options
--->
+
+![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](./eos-basics-images/xfce-shortcut-1.png)
 
 2. Add a shortcut (or edit an existing one)
 
 3. Enter `xfce4-screenshooter -rc` into the command field
-<!-- TO INSERT
-EOS keyboard app dialogue window waiting on input for the command field
--->
+
+![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](./eos-basics-images/xfce-shortcut-2.png)
 
 4. When prompted, enter the shortcut (ex. `Ctrl+Alt+S`) to run `xcfe4-screenshooter -rc`
 
 5. The command and its assigned shortcut will appear in the Application Shortcuts list and can be edited as needed
-<!-- TO INSERT
-Image: EOS keyboard application on the application shortcuts tab. The "xfce4-screenshooter -rc" command is selected, and a red box highlights the Add, Edit, and Remove options
--->
+
+![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](./eos-basics-images/xfce-shortcut-3.png)
 
 See [xfce4-screenshooter documentation](https://docs.xfce.org/apps/xfce4-screenshooter/usage) for additional functions.
 
