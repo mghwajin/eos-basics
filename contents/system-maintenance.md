@@ -225,7 +225,7 @@ Conflicting config files may prevent a program from functioning properly, or alt
 
 3. Review the files for significant changes.
 
-4. `R(emove), `O(verwrite)`, or `M(erge)` the differing lines as necessary.
+4. `R(emove)`, `O(verwrite)`, or `M(erge)` the differing lines as necessary.
 
 **! ----- IMPORTANT ----- !**
 **Always review files carefully before merging config files. Incorrect configurations may break your system.**

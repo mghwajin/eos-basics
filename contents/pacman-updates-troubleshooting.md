@@ -67,7 +67,9 @@ These errors indicate that there is either an issue with the database itself, or
 
 ## Mirrorlist errors and warnings
 
-**Mirrors** are servers located around the world that store copies of Linux distro software. A wide spread of **mirrors** helps to minimize any interruptions to services, and this information is stored in a **mirrorlist**.
+**Mirrors** are servers located around the world that store copies of Linux distro software. A wide spread of **mirrors** helps to minimize any interruptions to services, as the system will utilize multiple while upgrading packages. 
+
+The list of mirrors and their information is stored in a **mirrorlist**.
 
 During a `sudo pacman -Syu` update, the terminal may output **mirrorlist** errors or warnings.
 
