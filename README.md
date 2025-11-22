@@ -14,7 +14,7 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 
 - [Introduction](#introduction)
 - [Resources](#resources)
-- [`Pacman` troubleshooting](contents/pacman-updates-troubleshooting.md)
+- [**`Pacman`** troubleshooting](contents/pacman-troubleshooting.md)
 - [System maintenance guide](contents/system-maintenance-guide.md)
 - [Other topics](contents/other-topics.md)
 <!-- TO DO:
