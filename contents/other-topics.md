@@ -2,7 +2,8 @@
 
 - [`git clone` to location](#git-clone-to-location)
 - [Change login background](#change-login-background)
-- [`Nvidia-settings` config issues](#nvidia-settings-config-issues)
+- [`xfce4-screenshooter`](#xfce4-screenshooter)
+<!-- TO DO: - [`Nvidia-settings` config issues](#nvidia-settings-config-issues) -->
 
 ---
 
@@ -81,20 +82,79 @@ To create access without changing permission settings, move the desired image in
 
 ---
 
-## Nvidia-settings config issues
+## xfce4-screenshooter
 
-```bash
-Work in progress... [----C o  o  o  o  o  o  o ]
-```
-<!-- 
-Progress notes: Potentially an issue of the Nvidia GPU not properly loading upon boot, which would prevent the nvidia-settings configs from applying.
-[eoswiki](https://discovery.endeavouros.com/nvidia/nvidia-optional-enhancements-and-troubleshooting/2021/03/)
-[archwiki](https://wiki.archlinux.org/title/NVIDIA#Early_loading)
+- [Cursor selection to clipboard](#cursor-selection-to-clipboard)
+<!-- TO DO - [Auto-save fullscreen screenshot](#autosave-fullscreen-screenshot)-->
 
-Need to set up force early load (**dracut**, not mkinitcpio).
--->
+### Cursor selection to clipboard
 
-> See [Nvidia ArchWiki page](https://wiki.archlinux.org/title/NVIDIA#NVIDIA_Settings) |  [Troubleshooting forum](https://forum.endeavouros.com/t/nvidia-settings-isnt-remembering-my-config-changes/3089/6) \
-> [Top of section](#other-topics) | [Back to README](../README.md)
+You can set up a keyboard shortcut that copies a selected area to the clipboard without saving a file. In Windows OS, this is the `Win+Shift+S` shortcut.
+
+1. Open the **Application Shortcuts** tab in your Keyboard application.
+    
+    ![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](../eos-basics-images/xfce-shortcut-1.png)
+
+2. Click on the **Add** or **Edit** button to add/edit a shortcut.
+
+3. Enter the following script into the command field:
+
+    ```bash
+    xfce4-screenshooter -rc
+    ```
+
+    ![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](../eos-basics-images/xfce-shortcut-2.png)
+
+4. When prompted, enter the shortcut to assign to `xcfe4-screenshooter -rc` (ex. `Ctrl+Alt+S`) 
+
+5. The command and its assigned shortcut will appear in the **Application Shortcuts** list and can be edited as needed.
+
+    ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](../eos-basics-images/xfce-shortcut-3.png)
 
 ---
+
+This shortcut runs the `xfce4-screenshooter` program when the shortcut is pressed with the additional `-r` and `-c` options.
+- `-r / --region` \- Left-click a corner of the region and **while holding the mouse button**, drag the cursor to the opposite corner. Release the button to finish the selection.
+- `-c / --clipboard` \- Copy the screenshot to the clipboard
+
+To see the full list of `xfce4-screenshooter` options in the terminal, enter:
+  ```bash
+  xfce4-screenshooter --help
+  ```
+
+> See [**`xfce4-screenshooter`** usage](https://docs.xfce.org/apps/xfce4-screenshooter/usage) \
+>  [Top of page](#other-topics) | [Back to README](../README.md)
+
+---
+<!-- TO DO LIST
+#########################################
+### Autosave fullscreen screenshot
+
+The command to automatically save a fullscreen screenshot without being prompted to enter a filename is:
+  ```bash
+  xfce4-screenshooter -f -s "$HOME/Desktop/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
+  ```
+
+Issue
+  However, the command instead saves a file named `$(date +%Y-%m-%d_%H-%M-%S).png`, which means the shell command is not being accepted as one.
+---
+
+##########################################
+## Nvidia-settings config issues
+
+Issue
+  Running nvidia-settings and selecting options does not save and apply the settings to the next login session (even when saving config files as root)
+  
+  This is potentially an issue of the Nvidia GPU not properly loading upon boot, which would prevent the nvidia-settings configs from applying. 
+
+Solution(?)
+  Need to set up force early load (**dracut**, not mkinitcpio).
+
+Resources
+  - [eoswiki](https://discovery.endeavouros.com/nvidia/nvidia-optional-enhancements-and-troubleshooting/2021/03/)
+  - [archwiki](https://wiki.archlinux.org/title/NVIDIA#Early_loading)
+  - [Nvidia ArchWiki page](https://wiki.archlinux.org/title/NVIDIA#NVIDIA_Settings)
+  - [Troubleshooting forum](https://forum.endeavouros.com/t/nvidia-settings-isnt-remembering-my-config-changes/3089/6)
+---
+
+END TO DO LIST-->
