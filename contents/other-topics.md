@@ -155,6 +155,7 @@ Resources
   - [archwiki](https://wiki.archlinux.org/title/NVIDIA#Early_loading)
   - [Nvidia ArchWiki page](https://wiki.archlinux.org/title/NVIDIA#NVIDIA_Settings)
   - [Troubleshooting forum](https://forum.endeavouros.com/t/nvidia-settings-isnt-remembering-my-config-changes/3089/6)
----
+--- 
+--> 
 
-END TO DO LIST-->
+<!-- EOF -->
