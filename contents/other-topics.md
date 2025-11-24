@@ -7,7 +7,7 @@
 
 ---
 
-## git clone to location
+## `git clone` to location
 
 By default, **`git`** repositories are cloned into the **current** directory (usually `~/home`). You can specify the intended location for a repository using:
 
@@ -82,7 +82,11 @@ To create access without changing permission settings, move the desired image in
 
 ---
 
-## xfce4-screenshooter
+## `xfce4-screenshooter`
+
+The XFCE Desktop Environment (DE) comes with `xfce4-screenshooter` screenshot utility tool. This is an alternative to `screengrab` or other adjacent screenshotting tools.
+
+Specific options can be combined to user needs.
 
 - [Cursor selection to clipboard](#cursor-selection-to-clipboard)
 <!-- TO DO - [Auto-save fullscreen screenshot](#autosave-fullscreen-screenshot)-->

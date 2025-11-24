@@ -1,6 +1,6 @@
 # System maintenance guide
 
-Arch-based distro like EOS have **rolling release** updates to keep up with the latest feature releases. Users should regularly update and run maintenance tasks to keep a healthy and up-to-date system.
+Arch-based distro like EOS have **rolling release** updates to keep up with the latest feature releases. Users should regularly update and run maintenance tasks to keep the system healthy and up-to-date.
 
 Here is an overview of update and maintenance command prompts:
 
@@ -30,7 +30,7 @@ Alternatively, the [**EOS Welcome App**](https://discovery.endeavouros.com/endea
 
 ## Create system backups
 
-### sudo timeshift \-\-check or \-\-create
+### `sudo timeshift check` or `create`
 
 *Daily*
 
@@ -123,20 +123,22 @@ To create a snapshot only if a **scheduled one is due**, use:
 
 ---
 
-### sudo pacman -Syu
+### `sudo pacman -Syu`
 
 *Daily*
 
 **`pacman`** is the package manager used to install and update programs in Arch Linux.
 
-`sudo pacman -Syu` performs a **full system update and refresh**. It is recommended to run this daily, though user preference will vary.
+**`sudo pacman -Syu`** performs a **full system update and refresh**. It is recommended to run this daily, though user preference will vary.
 
 ![A Terminal running `sudo pacman -Syu` waiting for user confirmation (Y/n) to proceed with installation.](../eos-basics-images/sudo-pacman--syu.png)
 
 Other basic `pacman` commands include: 
 
-- `pacman -S package-name` \-  install specific package
-- `pacman -Rs package-name` \- removes package and its unused dependencies
+- `pacman -S <package-name>` \-  install a specified package
+- `pacman -Rs <package-name>` \- removes package and its unused dependencies
+- `pacman -Ss <package-name>` \- search for a package
+- `pacman -Qi <package-name>` \- retrieve a dependencies list for a package
 
 <br/>
 <details><br/> <!--###### pacman -Syu options ##### --> 
@@ -167,11 +169,11 @@ Other basic `pacman` commands include:
 
 ---
 
-### yay
+### `yay`
 
 *Weekly*
 
-Update the system's native and AUR packages (Arch User Repository) with one of the following commands:
+Update the system's native and Arch User Repository (AUR) packages with one of the following commands:
 
   ```bash
   yay  # or
@@ -196,13 +198,47 @@ Update the system's native and AUR packages (Arch User Repository) with one of t
 
   Others prefer to run `yay` since it does all that is required without the additional script processes used in `eos-update --aur`.
 </details> <!-- ##### END ##### -->
-<br/> 
+
+<details><br/> <!-- ##### What is AUR? ##### -->
+  <summary><b>What is the AUR?</b></summary>
+  
+  AUR stands for the *Arch User Repository*, which is a large library of user-produced packages for Arch Linux. You can find many useful tools here that are created and maintained by the Arch community.
+  
+  Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
+
+  Downloading and building an AUR package is fairly simple:
+  
+  1. Clone the `git` repository listed on the package's AUR page:
+   
+      ```bash
+      git clone https://aur.archlinux.org/package-name.git
+      ```
+
+  2. Change into the package directory:
+   
+      ```bash
+      cd <package-name>
+      ```
+
+  3. **Always review the installation files (i.e. `PKGBUILD`) for any malicious commands!!** Good standing is required for users publishing packages to AUR, but this is not a foolproof screening method.
+
+  4. Build and install the package with:
+      ```bash
+      makepkg -si
+      # or
+      pacman -U package_name-version-1.0.1.pkg.tar.zst
+      ```
+
+  > See [Arch User Repository (AUR) homepage](https://aur.archlinux.org/) | [AUR packages](https://aur.archlinux.org/packages) | [AUR wiki](https://wiki.archlinux.org/title/Arch_User_Repository)
+
+</details> <!-- ##### END ##### -->
+<br/>
 
 > See [**`yay`**](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>| [Arch User Repository (AUR)](https://aur.archlinux.org/) | [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
 
 ---
 
-### eos-pacdiff
+### `eos-pacdiff`
 
 *At system prompt*
 
@@ -232,7 +268,7 @@ The system notifies you whenever it detects **conflicting configuration files**.
 > 
 > Refrain from modifying key system files such as `/etc/passwd`, `/etc/group`, and `/etc/shadow`, otherwise you **may lock yourself out of your system.**
 
-<br/><details><br/> <!-- ##### Pacnew and pacsave ##### -->
+<details><br/> <!-- ##### Pacnew and pacsave ##### -->
   <summary><b>What are <code>.pacnew</code> and <code>.pacsave</code> files?</b></summary>
 
 These conflicts are generated when `pacman` creates copies of config files and prevents overwrite by appending `.pacsave` or `.pacnew` to the filename.
@@ -257,13 +293,13 @@ These conflicts are generated when `pacman` creates copies of config files and p
   DIFFPROG=meld pacdiff -s
   ```
 
-  Here is an example of how a file comparison looks like in `meld`:
+  Here is an example of how a file comparison looks like in **`meld`**:
     ![A side-by-side visual comparison of an example script file in the `meld` GUI from the LinuxOpSys website](https://linuxopsys.com/wp-content/uploads/2024/03/basic_usages_1.png)
     *Image credit: LinuxOpSys article - How to use Meld diff tool in Linux*
   </details> <!-- ##### END ##### -->
 <br/>
 
-> See [Pacnew and Pacsave](https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacsave) | [Pacdiff (manpage)](https://man.archlinux.org/man/pacdiff.8.en)
+> See [Pacnew and Pacsave](https://wiki.archlinux.org/title/Pacman/Pacnew_and_Pacsave) | [**`Pacdiff`** (manpage)](https://man.archlinux.org/man/pacdiff.8.en)
 
 ---
 
@@ -279,7 +315,7 @@ These conflicts are generated when `pacman` creates copies of config files and p
 
 ---
 
-### reflector-simple
+### `reflector-simple`
 
 `Reflector-simple` is a quick custom script that updates Arch mirrors with a GUI tool.
 
@@ -303,11 +339,13 @@ These conflicts are generated when `pacman` creates copies of config files and p
 
     ```bash
     yay -Syyu
+    # or
+    pacman -Syyu
     ```
 
 ---
 
-### eos-rankmirrors
+### `eos-rankmirrors`
 
 Endeavour OS has its own distro-unique packages that are modified from the original Arch packages. Thus, EOS mirrors are updated with a separate command.
 
@@ -335,6 +373,8 @@ Endeavour OS has its own distro-unique packages that are modified from the origi
 
     ```bash
     yay -Syyu
+    # or
+    pacman -Syyu
     ```
 
 <br/>
@@ -386,7 +426,7 @@ Endeavour OS has its own distro-unique packages that are modified from the origi
 
 ---
 
-### journalctl
+### `journalctl`
 
 *Every 1-2 months*
 
@@ -403,7 +443,7 @@ It is recommended to keep 4 weeks as a minimum, but the number of weeks can be a
 
 ---
 
-### paccache -r
+### `paccache -r`
 
 *Every 1-2 months*
 
@@ -433,7 +473,7 @@ It is generally **not recommended** to delete all past versions unless disk spac
 
 ---
 
-### pacman orphans
+### `pacman` orphans
 
 *Every 1-2 months*
 
@@ -465,4 +505,4 @@ If the terminal outputs `error: argument '-' specified with empty stdin`, this m
 >  [Top of page](#system-maintenance-guide) | [Back to README](../README.md)
 
 ---
-<!-- ##### System maintenance guide END ##### -->
+<!-- EOF -->
