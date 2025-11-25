@@ -22,7 +22,7 @@ These maintenance tasks are run in the **command-line interface** (CLI) and will
 
 Alternatively, the [**EOS Welcome App**](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) Assistant can help users easily run maintenance scripts\. 
 
-![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](../eos-basics-images/eos-welcome.png)
+![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./images/eos-welcome.png)
 
 > See [EOS Welcome App](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) 
 
@@ -55,7 +55,7 @@ To create a snapshot only if a **scheduled one is due**, use:
 <details><br/> <!-- ##### Timeshift screenshot ##### -->
   <summary><b>Example terminal output of <code>timeshift --help</code></b></summary>
 
-  ![Terminal output of Timeshift (v25.07.7) listing its syntax and CLI options](../eos-basics-images/timeshift.png)
+  ![Terminal output of Timeshift (v25.07.7) listing its syntax and CLI options](./images/timeshift.png)
 </details> <!-- ##### END ##### -->
 
 <details><br/> <!-- ##### Timeshift settings ##### -->
@@ -132,7 +132,7 @@ To create a snapshot only if a **scheduled one is due**, use:
 
 **`sudo pacman -Syu`** performs a **full system update and refresh**. It is recommended to run this daily, though user preference will vary.
 
-![A Terminal running `sudo pacman -Syu` waiting for user confirmation (Y/n) to proceed with installation.](../eos-basics-images/sudo-pacman--syu.png)
+![A Terminal running `sudo pacman -Syu` waiting for user confirmation (Y/n) to proceed with installation.](./images/sudo-pacman--syu.png)
 
 Other basic `pacman` commands include: 
 
@@ -328,13 +328,13 @@ These conflicts are generated when `pacman` creates copies of config files and p
 
 2. By default, `reflector-simple` selects the 20 fastest mirrors based on your set location. You can adjust these preferences in the GUI tool.
  
-    ![A GUI Preference menu that displays after running `reflector-simple`, displaying options such as region, filter by, and amount.](../eos-basics-images/reflector-simple-1.png)
+    ![A GUI Preference menu that displays after running `reflector-simple`, displaying options such as region, filter by, and amount.](./images/reflector-simple-1.png)
 
 3. Hit OK to confirm the selection and run the process. It is normal to see warnings as `reflector` tests various mirrors for connectivity speed and age.
 
 4. The system will notify you once the new **mirrorlist** has been generated. Save to apply the configuration changes.
    
-   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](../eos-basics-images/reflector-simple-2.png)
+   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](./images/reflector-simple-2.png)
 
 5. Refresh the system with:
 
@@ -360,13 +360,13 @@ Endeavour OS has its own distro-unique packages that are modified from the origi
 
 3. It is normal to see various warnings as the system tests various mirrors for connectivity and speed. It may take a few minutes before the output shows.
    
-   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](../eos-basics-images/eos-rankmirrors-1.png)
+   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](./images/eos-rankmirrors-1.png)
 
 4. By default, the terminal will display a list of the fastest 20 mirrors, relevant information, and the original mirrorlist.
 
 5. To confirm and save the mirrorlist changes, enter your system's root password.
    
-   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](../eos-basics-images/eos-rankmirrors-3.png)
+   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](./images/eos-rankmirrors-3.png)
 
 6. If you do not wish to make the mirrorlist changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.
 
@@ -498,7 +498,7 @@ sudo pacman -Qdtq | sudo pacman -Rns -
 
 - Enter `Y` to remove the packages listed after running the command.
   
-  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](../eos-basics-images/remove-orphans.png)
+  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](./images/remove-orphans.png)
 
 If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 

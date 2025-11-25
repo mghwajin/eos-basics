@@ -22,6 +22,8 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 
 ## Introduction
 
+![Endeavour OS logo and text for a dark background](wiki/images/endeavouros-dark.svg)
+
 [**Endeavour OS**](https://endeavouros.com/) (EOS) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
 [Mercury Neo 6.13.7](https://endeavouros.com/news/mercury-neo-with-linux-6-13-7-and-arch-mirror-ranking-bug-fix/) is the most recent OS update released on March 23, 2025.

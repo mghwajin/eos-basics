@@ -42,7 +42,7 @@ git clone <repository-url> <destination-folder>
 
 Background images set in the **Login Window** GUI editor will only display if the system's **`display manager`** (DM) and/or **`greeter`** can access the specified image file.
 
-![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.](../eos-basics-images/login-window-gui.png)
+![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.](./images/login-window-gui.png)
 
 If the image cannot be accessed, the login screen will display only the background color that was set.
 
@@ -97,7 +97,7 @@ You can set up a keyboard shortcut that copies a selected area to the clipboard 
 
 1. Open the **Application Shortcuts** tab in your Keyboard application.
     
-    ![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](../eos-basics-images/xfce-shortcut-1.png)
+    ![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](./images/xfce-shortcut-1.png)
 
 2. Click on the **Add** or **Edit** button to add/edit a shortcut.
 
@@ -107,13 +107,13 @@ You can set up a keyboard shortcut that copies a selected area to the clipboard 
     xfce4-screenshooter -rc
     ```
 
-    ![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](../eos-basics-images/xfce-shortcut-2.png)
+    ![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](./images/xfce-shortcut-2.png)
 
 4. When prompted, enter the shortcut to assign to `xcfe4-screenshooter -rc` (ex. `Ctrl+Alt+S`) 
 
 5. The command and its assigned shortcut will appear in the **Application Shortcuts** list and can be edited as needed.
 
-    ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](../eos-basics-images/xfce-shortcut-3.png)
+    ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](./images/xfce-shortcut-3.png)
 
 ---
 
