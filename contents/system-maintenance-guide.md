@@ -88,7 +88,11 @@ To create a snapshot only if a **scheduled one is due**, use:
 <details><br/> <!-- ##### cron scheduler setup ##### -->
   <summary><b>How do I manually enable/disable the <code>cron/cronie</code> scheduler?</b></summary>
 
-  The scheduling daemon must be **manually enabled** by running:
+  System processes (`daemons`) like `cron`/`cronie` are often needed for essential services on the system. These should **INACTIVE** before you disable them, otherwise the system may become unstable.
+
+  Some `daemons` come disabled by default and must be **manually enabled**.
+  
+  To enable the scheduling service, run:
   ```bash
   sudo systemctl enable cronie.service
   ```
@@ -103,11 +107,8 @@ To create a snapshot only if a **scheduled one is due**, use:
   # If the process is *INACTIVE*, set to disable on boot
   systemctl disable cronie.service
   ```
-
-  > **Note** \
-    > System processes (daemons) are often needed for essential services on the system. These should **INACTIVE** before you disable them, otherwise the system may become very unstable and not function properly.
-    >
-    > See [daemon (manpage)](https://man.archlinux.org/man/daemon.7.en)
+  
+  > See [daemon (manpage)](https://man.archlinux.org/man/daemon.7.en)
   </details> <!-- ##### END ###### -->
   <br/> 
 
