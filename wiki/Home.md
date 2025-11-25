@@ -1,5 +1,5 @@
 <!-- TO DO: -->
-#  Endeavour OS Basics
+#  EOS Basics Wiki
 
 This example guide\* contains basic command-line interface (CLI) troubleshooting, system maintenance, and setup guides for beginner to intermediate users of [Endeavour OS](https://endeavouros.com/) \
 <sub>\*For my personal reference. May contain errors.</sub>
