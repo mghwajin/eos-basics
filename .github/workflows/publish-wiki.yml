@@ -3,7 +3,8 @@ on:
   push:
     branches: [main]
     paths:
-      - contents/**
+      - wiki/**
+      - README.md
       - .github/workflows/publish-wiki.yml
 concurrency:
   group: publish-wiki
