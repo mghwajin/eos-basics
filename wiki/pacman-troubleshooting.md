@@ -1,4 +1,4 @@
-# Pacman  troubleshooting
+# Pacman troubleshooting
 
 **`pacman`** is the package manager of Arch Linux and is used to install and update programs.
 
@@ -104,7 +104,7 @@ warning: too many errors from arch.jsc.mx, skipping for the remainder of this tr
 
 Persistent issues despite re-reranking mirrors indicate an **outdated system**. 
 
-> See [Update mirrors (detailed guide)](../contents/system-maintenance-guide.md#update-mirrors) | [System maintenance: Update system](../contents/system-maintenance-guide.md#update-system)
+> See [Update mirrors (detailed guide)](./system-maintenance-guide#update-mirrors) | [System maintenance: Update system](./system-maintenance-guide#update-system)
 
 ---
 
@@ -126,5 +126,5 @@ eos-pacdiff
 
 It is highly recommended to resolve the conflicts **ASAP** to prevent further issues. Misconfigured files have the potential to break your system!
 
-> See [System maintenance: **`eos-pacdiff`**](../contents/system-maintenance-guide.md#eos-pacdiff) \
-> [Top of page](#pacman-troubleshooting) | [Back to README](../README.md)
+> See [System maintenance: **`eos-pacdiff`**](./system-maintenance-guide#eos-pacdiff) \
+> [Top of page](#pacman-troubleshooting)

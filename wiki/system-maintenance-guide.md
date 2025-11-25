@@ -1,4 +1,4 @@
-# System maintenance guide
+# System Maintenance Guide
 
 Arch-based distro like EOS have **rolling release** updates to keep up with the latest feature releases. Users should regularly update and run maintenance tasks to keep the system healthy and up-to-date.
 
@@ -502,8 +502,7 @@ sudo pacman -Qdtq | sudo pacman -Rns -
 
 If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 
-> See [Pacman Tips and Tricks: Orphans](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_\(orphans\))\
->  [Top of page](#system-maintenance-guide) | [Back to README](../README.md)
-
+> See [Pacman Tips and Tricks: Orphans](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_\(orphans\))
+> 
 ---
 <!-- EOF -->

@@ -14,11 +14,11 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 
 - [Introduction](#introduction)
 - [Resources](#resources)
-- [**`Pacman`** troubleshooting](wiki/pacman-troubleshooting.md)
-- [System maintenance guide](wiki/system-maintenance-guide.md)
-- [Other topics](wiki/other-topics.md)
+- [**`Pacman`** troubleshooting](wiki/pacman-troubleshooting)
+- [System maintenance guide](wiki/system-maintenance-guide)
+- [Other topics](wiki/other-topics)
 <!-- TO DO:
-<!-- [Install Endeavour OS](wiki/install-eos.md) -->
+<!-- [Install Endeavour OS](wiki/install-eos) -->
 
 ## Introduction
 
