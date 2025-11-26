@@ -126,5 +126,6 @@ eos-pacdiff
 
 It is highly recommended to resolve the conflicts **ASAP** to prevent further issues. Misconfigured files have the potential to break your system!
 
-> See [System maintenance: **`eos-pacdiff`**](./system-maintenance-guide#eos-pacdiff) \
-> [Top of page](#pacman-troubleshooting)
+> See [System maintenance: **`eos-pacdiff`**](./system-maintenance-guide#eos-pacdiff)
+ 
+[Top of page](#pacman-troubleshooting)

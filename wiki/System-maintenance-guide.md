@@ -147,11 +147,14 @@ Other basic `pacman` commands include:
 
   Here are some helpful excerpts from the [`pacman` manpage](https://man.archlinux.org/man/pacman.8) defining each operation:
   ```bash
-  -S, --sync        # Synchronize packages. Packages are installed directly from the remote repositories, including all dependencies requires to run the packages.
+  -S, --sync        # Synchronize packages. Packages are installed directly from the remote
+                    # repositories, including all dependencies required to run the packages.
 
-  -y, --refresh     # Download a fresh copy of the master package databases from the servers. This should typically be used each time you use --sysupgrade or -u.
+  -y, --refresh     # Download a fresh copy of the master package databases from the servers.
+                    # This should typically be used each time you use --sysupgrade or -u.
 
-  -u, --sysupgrade  # Upgrades all packages that are out-of-date. Each currently-installed package will be examined and upgraded if a newer package exists.
+  -u, --sysupgrade  # Upgrades all packages that are out-of-date. Each currently-installed
+                    # package will be examined and upgraded if a newer package exists.
   ```
 </details> <!-- ##### END ##### -->
 
@@ -503,6 +506,8 @@ sudo pacman -Qdtq | sudo pacman -Rns -
 If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 
 > See [Pacman Tips and Tricks: Orphans](https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#Removing_unused_packages_\(orphans\))
-> 
+
+[Top of page](#system-maintenance-guide)
+
 ---
 <!-- EOF -->

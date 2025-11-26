@@ -39,5 +39,7 @@ Additional information and learning resources are available at the following lin
 - [Arch Linux wiki](https://wiki.archlinux.org/title/Main_page) \- A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
 
+[Top of page](#eos-basics-wiki)
+
 ---
 <!-- EOF -->

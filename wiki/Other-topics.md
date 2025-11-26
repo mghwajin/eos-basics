@@ -128,6 +128,9 @@ To see the full list of `xfce4-screenshooter` options in the terminal, enter:
 
 > See [**`xfce4-screenshooter`** usage](https://docs.xfce.org/apps/xfce4-screenshooter/usage)
 
+[Top of page](#other-topics)
+
+
 ---
 <!-- TO DO LIST
 #########################################
