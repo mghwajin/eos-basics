@@ -117,16 +117,21 @@ You can set up a keyboard shortcut that copies a selected area to the clipboard 
 
 ---
 
-This shortcut runs the `xfce4-screenshooter` program when the shortcut is pressed with the additional `-r` and `-c` options.
-- `-r / --region` \- Left-click a corner of the region and **while holding the mouse button**, drag the cursor to the opposite corner. Release the button to finish the selection.
-- `-c / --clipboard` \- Copy the screenshot to the clipboard
+This shortcut runs the `xfce4-screenshooter` program when the shortcut is pressed with the additional `-r` and `-c` options. From the [`xfce4-screenshooter` manpage](https://man.archlinux.org/man/xfce4-screenshooter.1):
+
+```bash
+Application Options:
+  -r, --region        Select a region to be captured by clicking a point of the screen without releasing the mouse button, dragging your mouse to the other corner of the region, and releasing the mouse button.
+
+  -c, --clipboard     Copy the screenshot to the clipboard
+```
 
 To see the full list of `xfce4-screenshooter` options in the terminal, enter:
   ```bash
   xfce4-screenshooter --help
   ```
 
-> See [**`xfce4-screenshooter`** usage](https://docs.xfce.org/apps/xfce4-screenshooter/usage)
+> See [**`xfce4-screenshooter`** usage](https://docs.xfce.org/apps/xfce4-screenshooter/usage) | [**`xfce4-screenshooter`** (manpage)](https://man.archlinux.org/man/xfce4-screenshooter.1)
 
 [Top of page](#other-topics)
 
