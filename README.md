@@ -32,7 +32,7 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 
 Additional information and learning resources are available at the following links:
 
-- [EOS Welcome App](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) \- This handy app guides you through the installation process and is can quickly run useful maintenance operations.
+- [EOS Welcome App](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) \- This handy app guides you through the installation process and can quickly run useful maintenance operations.
 - [EOS README](https://gitlab.com/endeavouros-filemirror/Important-news/blob/main/README.md) \- Where you can find important news and EOS updates
 - [EOS knowledge base](https://discovery.endeavouros.com/) \- A library of various tutorials and introductions to Linux tools
 - [EOS forums](https://forum.endeavouros.com/) \- A place to read up on EOS system updates, ask for troubleshooting help, and connect with the community
