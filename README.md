@@ -14,9 +14,9 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 
 - [Introduction](#introduction)
 - [Resources](#resources)
-- [**`Pacman`** troubleshooting](wiki/Pacman-troubleshooting)
-- [System maintenance guide](wiki/System-maintenance-guide)
-- [Other topics](wiki/Other-topics)
+- [**`Pacman`** troubleshooting](https://github.com/mghwajin/eos-basics/wiki/pacman-troubleshooting)
+- [System maintenance guide](https://github.com/mghwajin/eos-basics/wiki/System-maintenance-guide)
+- [Other topics](https://github.com/mghwajin/eos-basics/wiki/Other-topics)
 <!-- TO DO:
 <!-- [Install Endeavour OS](wiki/install-eos) -->
 
@@ -38,6 +38,8 @@ Additional information and learning resources are available at the following lin
 - [EOS forums](https://forum.endeavouros.com/) \- A place to read up on EOS system updates, ask for troubleshooting help, and connect with the community
 - [Arch Linux wiki](https://wiki.archlinux.org/title/Main_page) \- A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
+
+[Top of page](#endeavour-os-basics)
 
 ---
 <!-- EOF -->
