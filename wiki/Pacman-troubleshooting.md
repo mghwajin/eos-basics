@@ -1,82 +1,85 @@
-# Pacman troubleshooting
+# Common Issues
+This page overviews common errors that prevent `pacman` from completing a full system upgrade and refresh.
 
-**`pacman`** is the package manager of Arch Linux and is used to install and update programs.
+The terminal command `sudo pacman -Syu` is used to update and refresh Arch Linux systems. During the update process, `pacman` may run into issues that prevent it from finishing updates. These errors or warnings are logged in the specific errors in the terminal.
 
-While `sudo pacman -Syu` performs a full system update and refresh, it may error out or only partially complete the update process. 
+<!-- ### sudo pacman -Syu overview ### -->
+<details>
+    <summary><span style="color:#7F7FFF;">
+    <b>Quick overview of <code>sudo pacman -Syu</code></b>
+    </summary>
 
-- [`GPGME error: No data` or failed to synchronize all databases](#gpgme-error-no-data)
-- [Mirrorlist errors and warnings](#mirrorlist-errors-and-warnings)
-- [Installed as `.pacnew` or `.pacsave`](#installed-as-pacnew-or-pacsave)
-
----
-
-## GPGME error: No data
-
-After attempting an update with `sudo pacman -Syu`, the terminal may output errors such as:
-
+## Quick overview of `sudo pacman -Syu`
+**`pacman`** is the package manager of Arch Linux and is used to install and update packages. To update and refresh the system, open a terminal and enter:
 ```bash
-error: GPGME error: No data
-#  or
-error: failed to synchronize all databases (invalid or corrupted database (PGP signature))
+sudo pacman -Syu
 ```
 
-These errors indicate that there is either an issue with the database itself, or that the system was unable to verify encryption keys of the package database.
+1. When prompted with the above command, `pacman` syncs to Arch/EOS package databases and detects whether there are any new versions for installed packages and dependencies.
+   
+2. The terminal outputs a list of the updateable packages with a comparison of the old and new versions.
 
-**Remove and refresh the `pacman sync` file** to fix this issue.
+3. `pacman` waits for user permission to proceed with the update. If proceeding, user is required to enter the system's root password.
 
----
+4. After initiating the update, `pacman` downloads new package files, installs them, and deletes old versions.
+</details>
+<!-- ### end overview ### -->
 
-### Remove and refresh pacman sync file
-
-1. Open a terminal and remove the `pacman sync` file by entering:
-
-    ```bash
-    sudo rm -R /var/lib/pacman/sync
-    ```
-
-2. Refresh the local cache (i.e. rebuild the deleted file) with:
-
-    ```bash
-    sudo pacman -Syy
-    ```
-
-3. Lastly, reattempt the update:
-
-    ```bash
-    sudo pacman -Syu
-    ```
-
-<br/>
-<details><br/> <!-- ##### What is GPGME? ##### -->
- <summary><b>What is GPGME?</b></summary>
- 
- **GPGME** and **GnuPG** are used to securely encrypt/decrypt data that the `pacman` installer pulls from the package databases.
-
- - The [GPGME](https://www.gnupg.org/software/gpgme/index.html) library is used to provide applications easier access to GnuPG functions.
-
- - [GnuPG](https://www.gnupg.org/download/index.html) is a command-line interface (CLI) tool. As a **universal crypto engine**, it is often used as the **crypto backend** for many applications.
-  
-  > See [GPGME GitHub mirror](https://github.com/gpg/gpgme) | [GnuPG documentation](https://www.gnupg.org/documentation/index.html)
-</details> <!-- ##### END ##### -->
-<br/>
-
----
-
-## Mirrorlist errors and warnings
-
-**Mirrors** are servers located around the world that store copies of software. A wide range (which is stored in a `mirrorlist`) lets the system shift to another mirror if one is outdated or has a slow connection.
-
-During a `sudo pacman -Syu` update, the terminal may output **mirrorlist** errors or warnings.
+<!-- ### example pacman -Syu terminal output ### -->
+<details> 
+    <summary><b><code>sudo pacman -Syu</code> terminal output example:</b></summary>
 
 ```bash
-error: failed retrieving file 'wine-10.17-1-x86\_64.pkg.tar.zst' from arch.jsc.mx : The requested URL returned error: 404
-# or
-warning: too many errors from arch.jsc.mx, skipping for the remainder of this transaction
-```
+[user@home ~] $ sudo pacman -Syu
+[sudo password for user]:
 
-**Re-rank the mirrors** to prioritize mirrors that were recently-updated and/or have faster connection.
+:: Synchronizing package databases...
+endeavouros                 17.0 KiB  3.17 KiB/s 00:05 [--------------------] 100%
+core                       117.4 KiB  23.3 KiB/s 00:05 [--------------------] 100%
+extra                        8.0 MiB  1447 KiB/s 00:06 [--------------------] 100%
+multilib                   125.4 KiB   416 KiB/s 00:00 [--------------------] 100%
+: Starting full system upgrade...
+resolving dependencies...
+looking for conflicting packages...
+
+Package (2)                 Old Version  New Version  Net Change  Download Size
+
+endeavouros/package-1       25.11-1      25.11.1-1      0.00 MiB       0.02 MiB
+endeavouros/package-2       12.5.2-2     12.5.3-1       0.02 MiB       3.20 MiB
+
+Total Download Size:   3.21 MiB
+Total Installed Size:  9.42 MiB
+Net Upgrade Size:      0.02 MiB
+
+:: Proceed with installation? [Y/n]
+```
+</details>
+<!-- ### end example terminal output ### -->
 
 ---
+
+## Mirror and GPGME errors
+**Mirrors** are servers located around the world that store copies of software packages. A **`mirrorlist`** stores information on multiple mirrors, allowing the system to shift between them in case one is outdated or has poor connection.
+
+<details open>
+    <summary>Attempting system updates with **out-of-date** or **out-of-sync** mirrors may result in the following errors or warnings:
+    </summary>
+
+| Terminal message  | Probable cause         |
+|:------------------|:-----------------------|
+| `error: GPGME error: No data` | Files from the package database are outdated or corrupt | 
+| `error: failed to synchronize all databases (invalid or corrupted database (PGP signature))` | Outdated mirrors - not in sync with package databases |
+| `error: failed retrieving file 'package-version.pkg' from arch.mirror.mx : The requested URL returned error: 404` | Mirror cannot be reached, or package files are not available | 
+| `error: failed to commit transaction (failed to retrieve some files)` | Mirror cannot be reached, or package files are not available |
+| `warning: too many errors from arch.mirror.mx, skipping for the remainder of this transaction` | Slow/unstable mirror connection (timed out) or network issues | 
+
+</details>
+
+<br/>
+<details>
+    <summary><span style="color:#7F7FFF;">
+    <b>Re-rank mirrors to update the <code>mirrorlist</code> with up-to-date/synchronized mirrors</b>
+    </summary>
 
 ### Re-rank mirrors
 
@@ -102,13 +105,16 @@ warning: too many errors from arch.jsc.mx, skipping for the remainder of this tr
 
 4. Always **refresh your system** with `yay -Syyu` after updating a mirrorlist.
 
-Persistent issues despite re-reranking mirrors indicate an **outdated system**. 
+> [!WARNING]
+> Persistent issues despite re-reranking mirrors indicate an **outdated system**.
+>
+> Refer to the detailed guides on [How to update mirrors](./system-maintenance-guide#update-mirrors) and [How to update system](./system-maintenance-guide#update-system)
 
-> See [Update mirrors (detailed guide)](./system-maintenance-guide#update-mirrors) | [System maintenance: Update system](./system-maintenance-guide#update-system)
+</details><br/>
 
 ---
 
-## Installed as .pacnew or .pacsave
+## `pacdiff` files
 
 During a `sudo pacman -Syu` update, you may receive errors such as:
 
@@ -124,8 +130,20 @@ warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
 eos-pacdiff
 ```
 
-It is highly recommended to resolve the conflicts **ASAP** to prevent further issues. Misconfigured files have the potential to break your system!
+> [!CAUTION]
+> It is highly recommended to resolve the conflicts **ASAP** to prevent further issues. Misconfigured files have the potential to break your system!
 
 > See [System maintenance: **`eos-pacdiff`**](./system-maintenance-guide#eos-pacdiff)
+
+---
+
+
+> [!TIP] What is GPGME?
+> The [GPGME](https://www.gnupg.org/software/gpgme/index.html) library is used to provide applications easier access to GnuPG functions.
+> 
+>[GnuPG](https://www.gnupg.org/download/index.html) is a command-line interface (CLI) tool. As a **universal crypto engine**, it is often used as the **crypto backend** for many applications.
+> - See: [GPGME GitHub mirror](https://github.com/gpg/gpgme), [GnuPG documentation](https://www.gnupg.org/documentation/index.html)
+> 
+
  
 [Top of page](#pacman-troubleshooting)

@@ -25,6 +25,8 @@ Alternatively, the [**EOS Welcome App**](https://discovery.endeavouros.com/endea
 ![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./images/eos-welcome.png)
 
 > See [EOS Welcome App](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) 
+>
+> - [EOS Welcome App](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) \- This handy app guides you through the installation process and can quickly run useful maintenance operations.
 
 ---
 

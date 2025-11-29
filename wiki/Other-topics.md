@@ -32,7 +32,10 @@ git clone <repository-url> <destination-folder>
   ```bash
   git clone <repo-url> .
   ```
-  - Remember, this command clones the repository **contents** into the **current directory**. It is important to `cd` to the appropriate working directory first, lest files explode everywhere.
+
+> [!NOTE] 
+> Remember, this command clones the repository **contents** into the **current directory**. It is important to change into the appropriate working directory first with `cd`, lest files explode everywhere.
+:::
 
 > See [**`git`**](https://git-scm.com/about) | [**`git`** documentation](https://git-scm.com/docs/git) | [**`cd`** (manpage)](https://man.archlinux.org/man/cd.n)
 
