@@ -47,7 +47,7 @@ sudo pacman -Syu
                                       # enter Y to confirm the updates
  :: Proceed with installation? [Y/n]   # enter n to cancel the operation  
  ```
- </details>
+</details>
 <br/>
 
 Other basic `pacman` commands include: 
@@ -109,7 +109,7 @@ The terminal will list the packages available to upgrade and may ask for the use
  > As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
  > 
  > Additionally, AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
- </details>
+</details>
 
 ---
 
@@ -151,7 +151,7 @@ eos-update
  - Updates AUR packages (with option --helper, see Usage below).
  - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
  ```
- </details>
+</details>
 
 > [!TIP]
 > `eos-update` can be used in place of `yay` or `sudo pacman -Syu`.
