@@ -7,6 +7,8 @@
 
 This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system by  using **terminal commands** in the **command-line interface** (CLI).
 
+https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html
+
 ## Contents
 - [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 - System maintenance guides
@@ -15,12 +17,12 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
   - [Create system backups with `timeshift`](https://mghwajin.github.io/eos-basics/system-maintenance/create-system-backups-with-timeshift.html)
   - [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)
   - [Mirror maintenance guide](https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html)
-  - [Resolve conflicting config files](https://mghwajin.github.io/eos-basics/system-maintenance/resolve-conflicting-config-files.html)
+  - [Resolve conflicting config files](https://github.com/mghwajin/eos-basics/docs/System-maintenance/resolve-conflicting-config-files)
 - User tools and setup manuals
-  - [Change login background](https://mghwajin.github.io/eos-basics/user-tools-and-setup/change-login-background.html)
-  - [Copy cursor selection to clipboard](https://mghwajin.github.io/eos-basics/user-tools-and-setup/copy-cursor-selection-to-clipboard.html)
-  - [Enable the `cron` scheduler](https://mghwajin.github.io/eos-basics/user-tools-and-setup/enable-the-cron-scheduler.html)
-  - [`git clone` to location](https://mghwajin.github.io/eos-basics/user-tools-and-setup/git-clone-to-location.html)
+  - [Change login background](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/change-login-background)
+  - [Copy cursor selection to clipboard](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/copy-cursor-selection-to-clipboard)
+  - [Enable the `cron` scheduler](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/enable-the-cron-scheduler)
+  - [`git clone` to location](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:

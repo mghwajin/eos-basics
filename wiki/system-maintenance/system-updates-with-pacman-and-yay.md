@@ -170,7 +170,7 @@ For the purposes of this example guide, the update errors are caused by issues w
 > [!WARNING]
 > Outdated package databases will cause errors when `pacman` tries to retrieve the latest package files. This can be fixed through regular mirror maintenance.
 > 
-> See: [Mirror maintenance guide](https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html)
+> See: [Mirror maintenance guide](mirror-maintenance-guide)
 
 ---
 

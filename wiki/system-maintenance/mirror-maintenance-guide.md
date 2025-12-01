@@ -119,7 +119,7 @@ If `pacman` runs into these errors during a system update, **be sure to [re-rank
 > [!WARNING]
 > If these errors/warnings persist despite re-reranking mirrors, this indicates **outdated core system packages**.
 >
-> See: [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)
+> See: [System updates with `pacman` and `yay`](system-updates-with-pacman-and-yay)
 
 ---
 
@@ -151,6 +151,7 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 
 ---
 
+<!-- TOC ignore:true -->
 ### What is GPGME?
  **GnuPG** and **GPGME** are two tools are used to safely encrypt/decrypt the package files that `pacman` retrieves from package databases. If mirrors cannot access package databases (or are out of sync), you may see `GPGME` or `PGP` related errors.
 - The [GPGME](https://www.gnupg.org/software/gpgme/index.html) library is used to provide applications easier access to GnuPG functions.
@@ -159,6 +160,7 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 
 ---
 
+<!-- TOC ignore:true -->
 ### How do I use `reflector` instead of `reflector-simple`?
 EOS uses uses `reflector` as its default mirror management program.`reflector-simple` provides a GUI tool, but it is possible to use specific CLI commands and options for the same result.
   
@@ -181,6 +183,7 @@ reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 
 ---
 
+<!-- TOC ignore:true -->
 ### Are there mirror management alternatives?
 Popular alternatives to mirror management are listed on the Arch [mirrors wiki](https://wiki.archlinux.org/title/Mirrors). Some programs can automate mirror management when configured properly.
 
