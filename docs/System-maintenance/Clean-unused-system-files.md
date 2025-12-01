@@ -25,6 +25,39 @@ It is recommended to keep 4 weeks as a minimum, but the number of weeks can be a
 
 ## `paccache -r`
 
+`yay -Yc` 
+
+```shell
+[kain@malice ~]$ yay -Sc
+[sudo] password for kain: 
+Packages to keep:
+  All locally installed packages
+
+Cache directory: /var/cache/pacman/pkg/
+:: Do you want to remove all other packages from cache? [Y/n] y
+removing old packages from cache...
+
+Database directory: /var/lib/pacman/
+:: Do you want to remove unused repositories? [Y/n] y
+removing unused sync repositories...
+
+Build directory: /home/kain/.cache/yay
+:: Do you want to remove all other AUR packages from cache? [Y/n] y
+removing AUR packages from cache...
+:: Do you want to remove ALL untracked AUR files? [Y/n] y
+removing untracked AUR files from cache...
+Removing gtk-engine-murrine-0.98.2-5-x86_64.pkg.tar.zst
+Removing gtk2-engines-murrine_0.98.2-4.debian.tar.xz
+Removing murrine-0.98.2.tar.xz
+Removing code-1.106.3-url-handler.desktop.in
+Removing code-1.106.3-workspace.xml.in
+Removing code-1.106.3.desktop.in
+Removing code_x64_1.106.3.tar.gz
+Removing visual-studio-code-bin-1.106.3-1-x86_64.pkg.tar.zst
+
+
+```
+
 *Every 1-2 months*
 
 By default, `pacman` keeps 3 versions of package files in the `/var/cache/pacman/pkg` cache.
