@@ -38,11 +38,10 @@ Additional information and learning resources are available at the following lin
 > [!NOTE]
 > 
 > ```shell
->                                     [----c o o o o o o ]
-> This guide is a work in progress!!  [-----Co o o o o o ]
->                                     [------c o o o o o ]
+>                                    [----c o o o o o o ]
+> This guide is a work in progress!! [-----Co o o o o o ]
+>                                    [------c o o o o o ]
 > ```
-
 
 **README Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge

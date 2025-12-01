@@ -26,6 +26,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 ### Re-rank Arch mirrors
 > [!IMPORTANT] 
+> 
 > Re-rank Arch mirrors at least **every 1-2 months**.
 > 
 > Arch packages are updated on a frequent and unscheduled rolling-release basis. Your Arch `mirrorlist` configuration should be updated regularly so your system can access up-to-date package databases.
@@ -54,6 +55,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 ---
 
 > [!CAUTION] 
+> 
 > Do NOT run `yay` with root permissions.
 > 
 > As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
@@ -93,6 +95,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
     ```
 
 > [!CAUTION] 
+> 
 > Do NOT run `yay` with root permissions.
 > 
 > As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
@@ -117,6 +120,7 @@ Common error or warning messages include:
 If `pacman` runs into these errors during a system update, **be sure to [re-rank the mirrors](#re-rank-mirrors)**.
 
 > [!WARNING]
+> 
 > If these errors/warnings persist despite re-reranking mirrors, this indicates **outdated core system packages**.
 >
 > See: [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)
@@ -175,6 +179,7 @@ reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
    3. Then overwrite the current `/etc/pacman.d/mirrorlist` config file
 
 > [!NOTE]
+> 
 > Refer to the [`reflector` manpage](https://man.archlinux.org/man/reflector.1) documentation for detailed usage. 
 >
 > This information can also be accessed offline by running `reflector --help` in the terminal.
@@ -192,6 +197,7 @@ One such example is `ghostmirror`, which:
    3. Automates the process via `systemd`
 
 > [!NOTE]
+> 
 > See: `ghostmirror`<sup>[AUR](https://aur.archlinux.org/packages/ghostmirror/)</sup>, [`ghostmirror` wiki](https://wiki.archlinux.org/title/Ghostmirror) 
 
 <!-- EOF -->

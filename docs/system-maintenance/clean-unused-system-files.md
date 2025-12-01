@@ -68,6 +68,7 @@ yay -Sc
 </details>
 
 > [!NOTE]
+> 
 > See: [`yay` commands](https://linuxcommandlibrary.com/man/yay)
 
 
@@ -109,6 +110,7 @@ After running `sudo pacman -Qdtq | sudo pacman -Rns -`, enter `Y` to confirm rem
 ---
 
 > [!TIP]
+> 
 > If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 
 If there are orphan dependencies that you wish to **keep**, specify beforehand which ones should be excluded from removal with this command:

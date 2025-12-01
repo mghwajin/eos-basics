@@ -4,7 +4,7 @@
 
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
-This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system with **command-line interface** (CLI).
+This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system with the **command-line interface** (CLI).
 
 ## Contents
 [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
@@ -37,12 +37,15 @@ Additional information and learning resources are available at the following lin
 - [Arch Linux wiki](https://wiki.archlinux.org/title/Main_page) \- A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
 
-```shell
-                                    [----c o o o o o o ]
-This guide is a work in progress!!  [-----Co o o o o o ]
-                                    [------c o o o o o ]
-```
 ---
+
+> [!NOTE]
+> 
+> ```shell
+>                                    [----c o o o o o o ]
+> This guide is a work in progress!! [-----Co o o o o o ]
+>                                    [------c o o o o o ]
+> ```
 
 **Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge

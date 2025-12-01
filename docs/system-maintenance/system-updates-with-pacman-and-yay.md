@@ -61,6 +61,7 @@ Other basic `pacman` commands include:
 ---
 
 > [!NOTE]
+> 
 > See: [`pacman` (manpage)](https://man.archlinux.org/man/pacman.8), [`pacman` wiki](https://wiki.archlinux.org/title/Pacman)
 
 <!------------------------------------------------------>

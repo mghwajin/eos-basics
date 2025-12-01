@@ -16,6 +16,7 @@ sudo pacman -Syu
 ```
 
 > [!IMPORTANT]
+> 
 > It is recommended to **update your system daily**. This ensures that system packages are up to date, especially if a previous update's issues were fixed or reverted.
 
 <details open> 
@@ -61,6 +62,7 @@ Other basic `pacman` commands include:
 ---
 
 > [!NOTE]
+> 
 > See: [`pacman` (manpage)](https://man.archlinux.org/man/pacman.8), [`pacman` wiki](https://wiki.archlinux.org/title/Pacman)
 
 <!------------------------------------------------------>
@@ -73,7 +75,8 @@ To update the system's native and AUR packages, run:
 yay
 ```
 > [!IMPORTANT]
-It is recommended to run `yay` at least **every 1-2 weeks**.
+> 
+> It is recommended to run `yay` at least **every 1-2 weeks**.
 
 The terminal will list the packages available to upgrade and may ask for the user to select:
   1. Which package provider should be used (where to download files from)
@@ -114,6 +117,7 @@ The terminal will list the packages available to upgrade and may ask for the use
 ---
 
 > [!NOTE]
+> 
 > See: [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>, [`yay` commands](https://linuxcommandlibrary.com/man/yay), [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
 
 
@@ -154,6 +158,7 @@ eos-update
 </details>
 
 > [!TIP]
+> 
 > `eos-update` can be used in place of `yay` or `sudo pacman -Syu`.
 
 User preference for update commands varies greatly. `eos-update` performs the same tasks as `yay` and `pacman -Syu` with an added layer of options.
@@ -168,6 +173,7 @@ Notably, running `eos-update` may be more helpful for users needing a quick fix 
 For the purposes of this example guide, the update errors are caused by issues with mirrors and `mirrorlist` configurations. These issues can be fixed by re-ranking mirrors to update the `mirrorlist` configuration.
 
 > [!WARNING]
+> 
 > Outdated package databases will cause errors when `pacman` tries to retrieve the latest package files. This can be fixed through regular mirror maintenance.
 > 
 > See: [Mirror maintenance guide](mirror-maintenance-guide)
@@ -184,6 +190,7 @@ Here are some excerpts from the `pacman` manpage:
 | `-u, --sysupgrade` | Upgrades all packages that are out-of-date. Each currently-installed package will be examined and upgraded if a newer package exists. |
 
 > [!NOTE]
+> 
 > See: [`pacman` manpage](https://man.archlinux.org/man/pacman.8)
 
 ---
@@ -194,6 +201,7 @@ The `-Syyu` option forces a refresh of all package databases, even if they appea
 However, it is not necessary to use "double" `pacman` commands in most circumstances. In the interest of keeping mirror bandwidth free for other users, they should only be used when necessary.
 
 > [!NOTE]
+> 
 > See [Mirrors: force `pacman` to refresh the package lists](https://wiki.archlinux.org/title/Mirrors#Force_pacman_to_refresh_the_package_lists)
 
 ---
@@ -226,7 +234,8 @@ Popular and well-maintained packages are voted on by the community to include in
       pacman -U package_name-version-1.0.1.pkg.tar.zst
       ```
 
-> [!WARNING] 
+> [!WARNING]
+> 
 > **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages on AUR, but is not a foolproof screening method.
 
 <!-- EOF -->

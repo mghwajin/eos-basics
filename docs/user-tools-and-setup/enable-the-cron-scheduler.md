@@ -6,6 +6,7 @@
 Notably, setting up `cronie` is important for setting up automatic system backups through `timeshift`. This ensures the system automatically creates snapshots on system boot, every hour, etc.
 
 > [!NOTE]
+> 
 > See [`cron` guide](https://wiki.gentoo.org/wiki/Cron), [`cronie` repository](https://github.com/cronie-crond/cronie/)
 
 <!------------------------------------------->
@@ -27,6 +28,7 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
 
 ## Disable `cronie`
 > [!WARNING]
+> 
 > Make sure that system daemons are **inactive** before disabling them.
 >
 > `daemons` such as `cronie` are often needed for essential services. Forcibly disabling them while they are still active (and possibly running jobs) may cause the system to become unstable.
@@ -65,6 +67,7 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
 `cronie` comes with the `anacron` utility enabled by default, which will run backlogged jobs for systems not continuously running (ex. personal computers).
 
 > [!NOTE]
+> 
 > See [`cron` guide](https://wiki.gentoo.org/wiki/Cron), [`cronie` repository](https://github.com/cronie-crond/cronie/)
 
 <!-- EOF -->

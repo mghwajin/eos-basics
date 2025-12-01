@@ -33,6 +33,7 @@ Below is a quick reference table of common maintenance commands and the recommen
 ---
 
 > [!TIP] 
+> 
 > For users unfamiliar with terminal usage or needing quick system fixes, the [**EOS Welcome App**](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) Assistant is a helpful alternative to running maintenance tasks.
 
 Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command.

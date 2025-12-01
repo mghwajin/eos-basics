@@ -17,6 +17,7 @@ To first check if a snapshot is due, then create one if needed, use:
   ```
 
 > [!IMPORTANT]
+> 
 >  It is highly recommended to create **daily backups** and **before attempting system changes**.
 >
 > See: [`Timeshift` wiki](https://wiki.archlinux.org/title/Timeshift), [Restore system with snapshot](https://itsfoss.gitlab.io/post/how-to-use-timeshift-to-backup-and-restore-linux-system/#restoring-your-linux-system-with-timeshift) 
@@ -33,6 +34,7 @@ To first check if a snapshot is due, then create one if needed, use:
   - BTRFS snapshots can only be saved onto the same device that the system's root partition is located on.
   
 > [!WARNING]
+> 
 > While you can select the specific drive/device to save snapshots to,`timeshift`'s default directory path on the device **cannot be changed**.
 
 **Saved data** 
@@ -51,6 +53,7 @@ To first check if a snapshot is due, then create one if needed, use:
   -  When configured, the system automatically takes scheduled snapshots up to the set limit, and deletes old snapshots.
 
 > [!TIP]
+> 
 > You can set up an automated process to take snapshots at scheduled intervals by enabling the `cron` scheduler. This must be manually enabled.
 >
 > See: [Enable the `cron` scheduler](enable-the-cron-scheduler)
