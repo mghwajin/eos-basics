@@ -5,6 +5,10 @@
 Background images set in the **Login Window GUI editor** will only display if the system's `display manager` (DM) and/or `greeter` can access the specified image file.
 - i.e. Setting the background image to a file some other "Pictures" folder may not work.
 
+<!-- HTML for 70% max width
+<img src="../images/login-window-gui.png" alt="Large Image" style="max-width: 70%;">
+-->
+
 ![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.](../images/login-window-gui.png)
 
 If the image cannot be accessed, the login screen will display only the background color that was set.
