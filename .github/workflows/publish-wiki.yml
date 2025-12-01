@@ -5,6 +5,7 @@ on:
     paths:
       - docs/**
       - README.md
+      - endeavouros-logo-text-dark.svg
       - .github/workflows/publish-wiki.yml
 concurrency:
   group: publish-wiki
