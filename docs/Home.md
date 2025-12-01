@@ -1,4 +1,4 @@
-#  Endeavour OS Beginner Basics
+# EndeavourOS Beginner's Basics
 
 ## Introduction
 <div style="text-align: center;">
@@ -9,7 +9,7 @@
 
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
-This intermediate-beginner's guide covers the basics of how to update and maintain [**Endeavour OS**](https://endeavouros.com/) using **terminal commands** in the **command-line interface** (CLI).
+This beginner-to-intermediate user's guide covers the basics of how to update and maintain [**Endeavour OS**](https://endeavouros.com/) using **terminal commands** in the **command-line interface** (CLI).
 
 Review the [additional resources section](#additional-resources) for links to official documentation on Endeavour OS, community forums, and relevant wikis.
 
@@ -36,7 +36,7 @@ Additional information and learning resources are available at the following lin
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
 
 
-```bash
+```console
                                     [----c o o o o o o ]
 This guide is a work in progress!!  [-----Co o o o o o ]
                                     [------c o o o o o ]

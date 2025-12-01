@@ -1,4 +1,4 @@
-## Clear unused files
+# Clear unused system files
 
 - [`journalctl --vacuum-time=6weeks`](#journalctl) \- clear journal logs
 - [`paccache -r`](#paccache--r) \- clear package cache
@@ -6,14 +6,14 @@
 
 ---
 
-### `journalctl`
+## `journalctl`
 
 *Every 1-2 months*
 
 **`systemd`** logs system activity in the journal and is used to troubleshoot issues. Open the journal by entering `journalctl` in a terminal.
 
 To maintain a log of the past 6 weeks while clearing excess logs, run:
-  ```bash
+  ```shell
   journalctl --vacuum-time=6weeks
   ```
 
@@ -23,7 +23,7 @@ It is recommended to keep 4 weeks as a minimum, but the number of weeks can be a
 
 ---
 
-### `paccache -r`
+## `paccache -r`
 
 *Every 1-2 months*
 
@@ -31,7 +31,7 @@ By default, `pacman` keeps 3 versions of package files in the `/var/cache/pacman
 
 To clear the cache and maintain the 3 most recent versions, run:
 
-```bash
+```shell
 paccache -r
 ```
 
@@ -39,13 +39,13 @@ It is generally **not recommended** to delete all past versions unless disk spac
 
 - To clear the cache of **all versions** of uninstalled packages, run:
 
-  ```bash
+  ```shell
   paccache -ruk0
   ```
 
 - To clear the cache of all uninstalled packages **and** unused `pacman sync` databases, run:
 
-  ```bash
+  ```shell
   pacman -Sc
   ```
 
@@ -67,17 +67,17 @@ It is generally **not recommended** to delete all past versions unless disk spac
 
 This command recursively removes **orphans** (unused packages) along with their configuration files:
 
-```bash
+```shell
 sudo pacman -Qdtq | sudo pacman -Rns -
 ```
 - If there are orphans listed that you wish to **keep**, specify the orphans to exclude from removal using this command:
-  ```bash
+  ```shell
   sudo pacman -D --asexplicit package-name
   ```
 
 - Enter `Y` to remove the packages listed after running the command.
   
-  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](./images/remove-orphans.png)
+  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](../images/remove-orphans.png)
 
 If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 

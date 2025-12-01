@@ -3,7 +3,7 @@
 *At system prompt*
 
 The system notifies you whenever it detects **conflicting configuration files**.
-  ```bash
+  ```shell
   warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
   # or
   warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
@@ -13,7 +13,7 @@ The system notifies you whenever it detects **conflicting configuration files**.
 
 1. When notified by the system about conflicting config files, run:
 
-    ```bash
+    ```shell
     eos-pacdiff
     ```
 
@@ -48,7 +48,7 @@ These conflicts are generated when `pacman` creates copies of config files and p
   - `meld` \- A GUI tool that helps users view the comparisons between config files
 
   To run the process manually, run:
-  ```bash
+  ```shell
   # do NOT run as root
   DIFFPROG=meld pacdiff -s
   ```

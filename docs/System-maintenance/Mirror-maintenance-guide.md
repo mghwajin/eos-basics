@@ -5,6 +5,7 @@ This is a beginner's guide that overviews the definitions of mirrors and `mirror
 - [Re-rank mirrors](#re-rank-mirrors)
 - [Common issues: outdated mirrors](#common-issues-outdated-mirrors)
 - [FAQs](#faqs)
+- 
 <!---------------------------------------------------------->
 
 ## Overview
@@ -14,8 +15,8 @@ A well-maintained `mirrorlist` ensures that the `pacman` package manager can acc
 
 To update a `mirrorlist` configuration, users should run commands to **re-rank mirrors**.
 
-> [!IMPORTANT] <span><b>Keep a regular update schedule!</b></span>
-> As a general rule, `mirrorlists` should be **updated every 1-2 months** with re-ranked mirrors.
+> [!IMPORTANT] <span>Keep a regular update schedule!</span>
+> As a general rule, mirrors should be re-ranked **every 1-2 months**.
 > 
 > Outdated mirrors can prevent `pacman` from updating applications, including the system's **core packages**.
 
@@ -25,17 +26,17 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 `mirrorlists` are configured separately for **Arch** mirrors and **EndeavourOS** mirrors. The process is the same, but different commands are used.
 
 ### Re-rank Arch mirrors
-> [!NOTE] <span><b>Re-rank Arch mirrors at least <u>every 1-2 months.</u></b> </span>
+> [!NOTE] <span>Re-rank Arch mirrors at least <b>every 1-2 months.</b></span>
 > Arch packages are updated on a frequent and unscheduled rolling-release basis. Your Arch `mirrorlist` configuration should be updated regularly so your system can access up-to-date package databases.
 
 1. Update the Arch `mirrorlist` by running the command:
-    ```bash
+    ```shell
     reflector-simple
     ```
 
 2. By default, `reflector-simple` selects the **20 fastest** mirrors based on your set location. You can adjust these preferences in the GUI tool.
  
-    ![A GUI Preference menu that displays after running `reflector-simple`, displaying settings such as region, filter by options, and amount.](./images/reflector-simple-1.png)
+    ![A GUI Preference menu that displays after running `reflector-simple`, displaying settings such as region, filter by options, and amount.](../images/reflector-simple-1.png)
 
    - The `reflector-simple` GUI tool allows easy customization of mirror regions, amount, and ranking priority (latest, fastest, etc.)
 
@@ -43,15 +44,15 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 4. The system will notify you once the new Arch `mirrorlist` has been generated. **Save** to apply the configuration changes.
    
-   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](./images/reflector-simple-2.png)
+   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](../images/reflector-simple-2.png)
 
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
-    ```bash
+    ```shell
     yay -Syyu
     ```
 ---
 
-> [!CAUTION] <span><b>Do NOT run <code>yay</code> with root permissions</b>.</span>
+> [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
 > As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
 > 
 > AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
@@ -61,12 +62,12 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 ### Re-rank EndeavourOS mirrors
 **EndeavourOS** has its own **distro-unique packages** (modified versions or additional) that are distinct from Arch packages. These are stored in EOS-specific mirrors.
 
-> [!NOTE] <span><b>Re-rank EOS mirrors at least <u>every 2-3 months.</u></b></span>
+> [!NOTE] <span>Re-rank EOS mirrors at least <b>every 2-3 months.</b></span>
 > 
 > EndeavourOS mirrors are updated less frequently than Arch mirrors. As long as you maintain a regular update schedule, the EOS `mirrorlist` typically does not require monthly updates.
 
 1. Update the EndeavourOS ` mirrorlist` by entering:
-    ```bash
+    ```shell
     eos-rankmirrors
     ```
 
@@ -74,23 +75,23 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 3. The terminal may display errors/warnings as the system tests various mirrors for connectivity and speed. It may take a few minutes to find the requisite amount of mirrors.
    
-   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](./images/eos-rankmirrors-1.png)
+   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](../images/eos-rankmirrors-1.png)
 
 4. By default, the `eos-rankmirrors` script generates a new `mirrorlist` containing the 20 fastest EOS mirrors. These are listed along with the original `mirrorlist`.
 
 5. To confirm and save the changes, enter your system's root password.
    
-   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](./images/eos-rankmirrors-3.png)
+   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](../images/eos-rankmirrors-3.png)
 
 6. If you do **NOT** wish to make the  `mirrorlist` changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.
 
 7. After confirming any mirrorlist changes, refresh the system with:
-    ```bash
+    ```shell
     yay -Syyu
     ```
 
 
-> [!CAUTION] <span><b>Do NOT run <code>yay</code> with root permissions</b>.</span>
+> [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
 > As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
 > 
 > AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
@@ -162,7 +163,7 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 EOS uses uses `reflector` as its default mirror management program.`reflector-simple` provides a GUI tool, but it is possible to use specific CLI commands and options for the same result.
   
 To update to and save the **latest 20 mirrors** sorted by **speed**, enter:
-```bash
+```shell
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 

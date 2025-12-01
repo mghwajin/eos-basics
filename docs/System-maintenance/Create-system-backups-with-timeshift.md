@@ -1,4 +1,6 @@
-### `sudo timeshift check` or `create`
+# Create system backups with `timeshift`
+
+`sudo timeshift check` or `create`
 
 *Daily*
 
@@ -6,13 +8,13 @@
 
 Create a snapshot **on demand** (unscheduled) by using:
 
-  ```bash
+  ```shell
   sudo timeshift --create
   ```
 
 To create a snapshot only if a **scheduled one is due**, use:
 
-  ```bash
+  ```shell
   sudo timeshift --check
   ```
 
@@ -23,7 +25,7 @@ To create a snapshot only if a **scheduled one is due**, use:
 <details><br/> <!-- ##### Timeshift screenshot ##### -->
   <summary><b>Example terminal output of <code>timeshift --help</code></b></summary>
 
-  ![Terminal output of Timeshift (v25.07.7) listing its syntax and CLI options](./images/timeshift.png)
+  ![Terminal output of Timeshift (v25.07.7) listing its syntax and CLI options](../images/timeshift.png)
 </details> <!-- ##### END ##### -->
 
 <details><br/> <!-- ##### Timeshift settings ##### -->
@@ -53,3 +55,8 @@ To create a snapshot only if a **scheduled one is due**, use:
     - 5 hourly
     - 5 boot
 </details> <!-- ##### END ##### -->
+
+
+
+
+> See [**`Timeshift`** wiki](https://wiki.archlinux.org/title/Timeshift) | [**`cron`** wiki](https://wiki.archlinux.org/title/Cron#Configuration) | [Restore system with snapshot](https://itsfoss.gitlab.io/post/how-to-use-timeshift-to-backup-and-restore-linux-system/#restoring-your-linux-system-with-timeshift) 

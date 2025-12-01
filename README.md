@@ -1,4 +1,3 @@
-<!-- TO DO: -->
 #  Endeavour OS Basics
 
 This example guide\* contains basic command-line interface (CLI) troubleshooting, system maintenance, and setup guides for beginner to intermediate users of [Endeavour OS](https://endeavouros.com/) \
