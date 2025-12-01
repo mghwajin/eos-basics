@@ -3,8 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - wiki/**
+      - docs/**
       - README.md
+      - endeavouros-logo-text-dark.svg
       - .github/workflows/publish-wiki.yml
 concurrency:
   group: publish-wiki
