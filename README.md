@@ -5,23 +5,22 @@
 
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
-This beginner-to-intermediate user's guide covers the basics of how to update and maintain [**Endeavour OS**](https://endeavouros.com/) using **terminal commands** in the **command-line interface** (CLI).
+This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system by  using **terminal commands** in the **command-line interface** (CLI).
 
-## Table of Contents
-
-- README
+## Contents
+- [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 - System maintenance guides
-  - Overview
-  - Clean unused system files
-  - Create system backups with `timeshift`
-  - System updates with `pacman` and `yay`
-  - Mirror maintenance guide
-  - Resolve conflicting config files
+  - [Overview](https://github.com/mghwajin/eos-basics/docs/System-maintenance/System-maintenance-overview)
+  - [Clean unused system files](https://github.com/mghwajin/eos-basics/docs/System-maintenance/clean-unused-system-files)
+  - [Create system backups with `timeshift`](https://github.com/mghwajin/eos-basics/docs/System-maintenance/create-system-backups-with-timeshift)
+  - [System updates with `pacman` and `yay`](https://github.com/mghwajin/eos-basics/docs/System-maintenance/system-updates-with-pacman-and-yay)
+  - [Mirror maintenance guide](https://github.com/mghwajin/eos-basics/docs/System-maintenance/mirror-maintenance-guide)
+  - [Resolve conflicting config files](https://github.com/mghwajin/eos-basics/docs/System-maintenance/resolve-conflicting-config-files)
 - User tools and setup manuals
-  - Change login background
-  - Copy cursor selection to clipboard
-  - Enable the `cron` scheduler
-  - `git clone` to a location
+  - [Change login background](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/change-login-background)
+  - [Copy cursor selection to clipboard](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/copy-cursor-selection-to-clipboard)
+  - [Enable the `cron` scheduler](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/enable-the-cron-scheduler)
+  - [`git clone` to location](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:
@@ -33,7 +32,7 @@ Additional information and learning resources are available at the following lin
 - [Arch Linux wiki](https://wiki.archlinux.org/title/Main_page) \- A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
 
-```console
+```shell
                                     [----c o o o o o o ]
 This guide is a work in progress!!  [-----Co o o o o o ]
                                     [------c o o o o o ]
