@@ -14,6 +14,7 @@
 By default, `pacman` stores package files in the `/var/cache/pacman/pkg` cache. This is a system-wide cache that can be accessed by helpers such as `yay`.
 
 The `paccache` utility tool is used to remove old packages from the `pacman` cache while retaining the 3 most recent versions:
+
 ```shell
 paccache -r
 ```
@@ -38,6 +39,7 @@ It is generally **not recommended** to delete all past versions unless disk spac
 `yay` maintains a separate user-specific cache for AUR packages and their build files. 
 
 Use this command to clear all cached AUR packages and untracked files:
+
 ```shell
 yay -Sc
 ```
@@ -45,7 +47,8 @@ yay -Sc
 `yay` will confirm which files of the cache it should remove. By default, it keeps all locally installed packages. `yay -Sc` is considered an extended `pacman` command and can also clear the `pacman` cache at the same time.
 
 <details open>
-  <summary>Example <code>yay -Sc</code> output below: </summary>
+ <summary>Example <code>yay -Sc</code> output below:
+ </summary>
  
  ```shell
  Packages to keep:
@@ -71,16 +74,16 @@ yay -Sc
 > 
 > See: [`yay` commands](https://linuxcommandlibrary.com/man/yay)
 
-
 <!------------------------------------------>
 
 ## Clear `systemd` journal
 `systemd` logs system activity in the journal and is used to troubleshoot issues. Open the journal by entering `journalctl` in a terminal.
 
 To maintain a log of the past 6 weeks while clearing excess logs, run:
-  ```shell
-  journalctl --vacuum-time=6weeks
-  ```
+
+```shell
+journalctl --vacuum-time=6weeks
+```
 
 It is recommended to **keep 4 weeks of logs at minimum**, but the number of weeks can be adjusted to personal preference. By default, the journal can only contain up to 4 GB of information.
 
@@ -99,6 +102,7 @@ It is recommended to **keep 4 weeks of logs at minimum**, but the number of week
 - A new package version no longer requires a dependency it originally used or was installed with.
 
 This combined command will list orphans (unused package dependencies). After user confirmation, and recursively removes them along with their configuration files:
+
 ```shell
 sudo pacman -Qdtq | sudo pacman -Rns -
 ```
@@ -117,7 +121,6 @@ If there are orphan dependencies that you wish to **keep**, specify beforehand w
 ```shell
 sudo pacman -D --asexplicit <package-name>
 ```
-
 
 | Terminal command | Description | 
 |:-----------------|:------------|

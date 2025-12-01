@@ -9,9 +9,10 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
 ## Contents
 [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 
-[GitHub pages index](https://mghwajin.github.io/eos-basics/index.html)
-
 [Wiki home](https://github.com/mghwajin/eos-basics/wiki)
+<!--
+[GitHub pages index](https://mghwajin.github.io/eos-basics/index.html)
+-->
 
 **System maintenance guides**
 - [Overview](https://github.com/mghwajin/eos-basics/wiki/system-maintenance-overview)

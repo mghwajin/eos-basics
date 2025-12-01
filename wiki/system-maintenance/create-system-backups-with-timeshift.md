@@ -4,17 +4,17 @@
 These snapshots can be used to restore the system to a prior state if the current state becomes unbootable/unusable.
 
 ## Create a snapshot
-
-
 Create a snapshot **on demand** (unscheduled) by using:
-  ```shell
-  sudo timeshift --create
-  ```
+
+```shell
+sudo timeshift --create
+```
 
 To first check if a snapshot is due, then create one if needed, use:
-  ```shell
-  sudo timeshift --check
-  ```
+
+```shell
+sudo timeshift --check
+```
 
 > [!IMPORTANT]
 > 
@@ -24,7 +24,6 @@ To first check if a snapshot is due, then create one if needed, use:
 
 
 ## `timeshift` options
-
 **Snapshot type**
   - **RSYNC** snapshots are incremental copies of changed system files, while keeping hard-links for files unchanged from the previous snapshot. These take up more space but are much more simple to set up.
   - **BTRFS** snapshots are only available on systems that are set up with a BTRFS file system. These snapshots are much quicker and space-efficient, but properly configuring these settings requires more technical knowledge of Linux file systems.

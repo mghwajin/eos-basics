@@ -21,6 +21,7 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
 
 ## `eos-pacdiff`
 1. When notified by the system about conflicting config files, run:
+   
     ```shell
     eos-pacdiff
     ```
@@ -47,6 +48,7 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
  - `meld` \- A GUI tool that helps users view the comparisons between config files
 
 To run the process manually, use:
+
 ```shell
 DIFFPROG=meld pacdiff -s
 ```

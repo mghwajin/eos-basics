@@ -4,6 +4,7 @@
 You can set up a keyboard shortcut that copies a selected area to the clipboard without saving a file. In Windows OS, this is the `Win+Shift+S` shortcut.
 
 This shortcut runs the `xfce4-screenshooter` program and applies the additional `-r` and `-c` options:
+
 ```shell
 xfce-screenshooter -rc
 ```
@@ -23,6 +24,7 @@ xfce-screenshooter -rc
 2. Click on the **Add** or **Edit** button to add/edit a shortcut.
 
 3. Enter the following script into the command field:
+
     ```shell
     xfce4-screenshooter -rc
     ```

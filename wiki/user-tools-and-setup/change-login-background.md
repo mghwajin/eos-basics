@@ -25,27 +25,29 @@ By default, the EndeavourOS with an `xfce` desktop environment (DE) uses the fol
 
 To create access without changing permission settings, move the desired image into the appropriate backgrounds folder.
 
-  1. **As root**, move the intended background file into the display manager's background folder:
-      ```shell
-      sudo pacman mv /my/bg-file.png /usr/share/endeavouros/backgrounds
-      ```
+1. **As root**, move the intended background file into the display manager's background folder:
+   
+   ```shell
+   sudo pacman mv /my/bg-file.png /usr/share/endeavouros/backgrounds
+   ```
 
-  2. Then, use `sudo nano` to edit the `slick-greeter` config file. If this file doesn't exist, a new one will be created:
+2. Then, use `sudo nano` to edit the `slick-greeter` config file. If this file doesn't exist, a new one will be created:
 
-      ```shell
-      sudo nano /etc/lightdm/slick-greeter.conf
-      ```
+    ```shell
+    sudo nano /etc/lightdm/slick-greeter.conf
+    ```
 
-  3. Apply the changes in the section with the `[Greeter]` heading.
-     ```shell
-     [Greeter]
-     draw-grid=false
-     background=/usr/share/endeavouros/backgrounds/bg-file.png
-     ```
+3. Apply the changes in the section with the `[Greeter]` heading.
+   
+    ```shell
+    [Greeter]
+    draw-grid=false
+    background=/usr/share/endeavouros/backgrounds/bg-file.png
+    ```
 
-  4. Press `Ctrl+X` to quit the editor, then press `Y` to save the file.
+4. Press `Ctrl+X` to quit the editor, then press `Y` to save the file.
 
-  5. **Reboot the computer** for the changes to take place.
+5. **Reboot the computer** for the changes to take place.
 
 ---
 

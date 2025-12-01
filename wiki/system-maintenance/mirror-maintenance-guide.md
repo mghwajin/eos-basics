@@ -32,6 +32,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 > Arch packages are updated on a frequent and unscheduled rolling-release basis. Your Arch `mirrorlist` configuration should be updated regularly so your system can access up-to-date package databases.
 
 1. Update the Arch `mirrorlist` by running the command:
+   
     ```shell
     reflector-simple
     ```
@@ -49,10 +50,10 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
    ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](./images/reflector-simple-2.png)
 
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
+   
     ```shell
     yay -Syyu
     ```
----
 
 > [!CAUTION] 
 > 
@@ -72,6 +73,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 > EndeavourOS mirrors are updated less frequently than Arch mirrors. As long as you maintain a regular update schedule, the EOS `mirrorlist` typically does not require monthly updates.
 
 1. Update the EndeavourOS ` mirrorlist` by entering:
+   
     ```shell
     eos-rankmirrors
     ```
@@ -91,6 +93,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 6. If you do **NOT** wish to make the  `mirrorlist` changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.
 
 7. After confirming any mirrorlist changes, refresh the system with:
+   
     ```shell
     yay -Syyu
     ```
@@ -136,9 +139,6 @@ Useful links:
 - [Official Arch mirror status](https://archlinux.org/mirrors/status/)
 - `reflector`<sup>[AUR](https://archlinux.org/packages/?name=reflector)</sup> | [`reflector` wiki](https://wiki.archlinux.org/title/Reflector)
 
----
-
-<!-- TOC ignore:true -->
 ### How does running `sudo pacman -Syu` use mirrors?
 When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package manager begins the process to **sync** (`-S`), refresh (`-y`), and update (`-u`) the system.
 
@@ -156,7 +156,6 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 
 ---
 
-<!-- TOC ignore:true -->
 ### What is GPGME?
  **GnuPG** and **GPGME** are two tools are used to safely encrypt/decrypt the package files that `pacman` retrieves from package databases. If mirrors cannot access package databases (or are out of sync), you may see `GPGME` or `PGP` related errors.
 - The [GPGME](https://www.gnupg.org/software/gpgme/index.html) library is used to provide applications easier access to GnuPG functions.
@@ -165,21 +164,21 @@ When the user enters `sudo pacman -Syu` into a terminal, the `pacman` package ma
 
 ---
 
-<!-- TOC ignore:true -->
 ### How do I use `reflector` instead of `reflector-simple`?
 EOS uses uses `reflector` as its default mirror management program.`reflector-simple` provides a GUI tool, but it is possible to use specific CLI commands and options for the same result.
   
 To update to and save the **latest 20 mirrors** sorted by **speed**, enter:
+
 ```shell
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
-  This process will:
-   1. Retrieve the latest mirrorlist from the [Arch mirror status page](https://archlinux.org/mirrors/status/).
+This process will:
+1. Retrieve the latest mirrorlist from the [Arch mirror status page](https://archlinux.org/mirrors/status/).
 
-   2. Filter/rank the mirrors by speed (until it has found 20, or the listed amount).
+2. Filter/rank the mirrors by speed (until it has found 20, or the listed amount).
 
-   3. Then overwrite the current `/etc/pacman.d/mirrorlist` config file
+3. Then overwrite the current `/etc/pacman.d/mirrorlist` config file
 
 > [!NOTE]
 > 
@@ -189,16 +188,16 @@ reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 
 ---
 
-<!-- TOC ignore:true -->
 ### Are there mirror management alternatives?
 Popular alternatives to mirror management are listed on the Arch [mirrors wiki](https://wiki.archlinux.org/title/Mirrors). Some programs can automate mirror management when configured properly.
 
 One such example is `ghostmirror`, which:
-   1. Checks that mirrors are **synchronized**
+
+1. Checks that mirrors are **synchronized**
    
-   2. Performs **download speed tests** on top of the usual ping test
+2. Performs **download speed tests** on top of the usual ping test
    
-   3. Automates the process via `systemd`
+3. Automates the process via `systemd`
 
 > [!NOTE]
 > 

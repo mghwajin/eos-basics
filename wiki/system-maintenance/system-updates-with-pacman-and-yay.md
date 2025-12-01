@@ -11,6 +11,7 @@ There are 3 basic commands that EndeavourOS users should regularly run to keep t
 
 ## `sudo pacman -Syu`
 `pacman` is the package manager used to install and update programs in Arch Linux. To perform a **full system update and refresh**, run:
+
 ```shell
 sudo pacman -Syu
 ```
@@ -20,9 +21,8 @@ sudo pacman -Syu
 > It is recommended to **update your system daily**. This ensures that system packages are up to date, especially if a previous update's issues were fixed or reverted.
 
 <details open> 
-    <summary>
-    <code>sudo pacman -Syu</code> terminal output example:
-    </summary>
+ <summary><code>sudo pacman -Syu</code> terminal output example:
+ </summary>
 
  ```shell
  [user@computer ~] $ sudo pacman -Syu
@@ -85,9 +85,8 @@ The terminal will list the packages available to upgrade and may ask for the use
   4. Etc.
 
 <details open> 
-    <summary>
-    Example terminal output of <code>yay</code> waiting for user selection:
-    </summary>
+ <summary>Example terminal output of <code>yay</code> waiting for user selection:
+ </summary>
  
  ```shell
  [user@computer ~]$ yay
@@ -132,9 +131,8 @@ eos-update
 ```
 
 <details> 
-  <summary><span>
-  Here is a summary provided by running <code>eos-update --help</code> in the terminal:
-  </summary>
+ <summary><span>Here is a summary provided by running <code>eos-update --help</code> in the terminal:
+ </summary>
 
  ```shell
  eos-update is a package updater for EndeavourOS and Arch.
@@ -218,16 +216,19 @@ Popular and well-maintained packages are voted on by the community to include in
   Downloading and building an AUR package is fairly simple:
   
   1. Clone the `git` repository listed on the package's AUR page:
+   
       ```shell
       git clone https://aur.archlinux.org/package-name.git
       ```
 
   2. Change into the package directory:
+   
       ```shell
       cd <package-name>
       ```
 
   3. Build and install the package with:
+   
       ```shell
       makepkg -si
       # or
