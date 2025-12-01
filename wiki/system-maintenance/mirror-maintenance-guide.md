@@ -37,7 +37,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 2. By default, `reflector-simple` selects the **20 fastest** mirrors based on your set location. You can adjust these preferences in the GUI tool.
  
-    ![A GUI Preference menu that displays after running `reflector-simple`, displaying settings such as region, filter by options, and amount.](../images/reflector-simple-1.png)
+    ![A GUI Preference menu that displays after running `reflector-simple`, displaying settings such as region, filter by options, and amount.](./images/reflector-simple-1.png)
 
    - The `reflector-simple` GUI tool allows easy customization of mirror regions, amount, and ranking priority (latest, fastest, etc.)
 
@@ -45,7 +45,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 4. The system will notify you once the new Arch `mirrorlist` has been generated. **Save** to apply the configuration changes.
    
-   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](../images/reflector-simple-2.png)
+   ![New mirrorlist output from `reflector-simple` listing 20 U.S. mirrors ranked by speed.](./images/reflector-simple-2.png)
 
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
     ```shell
@@ -77,13 +77,13 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 3. The terminal may display errors/warnings as the system tests various mirrors for connectivity and speed. It may take a few minutes to find the requisite amount of mirrors.
    
-   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](../images/eos-rankmirrors-1.png)
+   ![`eos-rankmirrors` terminal output listing timed-out mirrors and the new mirrorlist.](./images/eos-rankmirrors-1.png)
 
 4. By default, the `eos-rankmirrors` script generates a new `mirrorlist` containing the 20 fastest EOS mirrors. These are listed along with the original `mirrorlist`.
 
 5. To confirm and save the changes, enter your system's root password.
    
-   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](../images/eos-rankmirrors-3.png)
+   ![Bottom of `eos-rankmirrors` terminal output waiting for root password confirmation to save the mirrorlist.](./images/eos-rankmirrors-3.png)
 
 6. If you do **NOT** wish to make the  `mirrorlist` changes, stop the terminal process. By default, this shortcut is bound to `Ctrl+C` in the terminal.
 
