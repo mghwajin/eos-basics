@@ -23,30 +23,30 @@ sudo pacman -Syu
     <code>sudo pacman -Syu</code> terminal output example:
     </summary>
 
-```shell
-[user@computer ~] $ sudo pacman -Syu
-[sudo password for user]:
+ ```shell
+ [user@computer ~] $ sudo pacman -Syu
+ [sudo password for user]:
+ 
+ :: Synchronizing package databases...
+ endeavouros                 17.0 KiB  3.17 KiB/s 00:05 [--------------------] 100%
+ core                       117.4 KiB  23.3 KiB/s 00:05 [--------------------] 100%
+ extra                        8.0 MiB  1447 KiB/s 00:06 [--------------------] 100%
+ multilib                   125.4 KiB   416 KiB/s 00:00 [--------------------] 100%
+ :: Starting full system upgrade...
+ resolving dependencies...
+ looking for conflicting packages...
+ 
+ Package (2)                 Old Version  New Version  Net Change  Download Size
 
-:: Synchronizing package databases...
-endeavouros                 17.0 KiB  3.17 KiB/s 00:05 [--------------------] 100%
-core                       117.4 KiB  23.3 KiB/s 00:05 [--------------------] 100%
-extra                        8.0 MiB  1447 KiB/s 00:06 [--------------------] 100%
-multilib                   125.4 KiB   416 KiB/s 00:00 [--------------------] 100%
-: Starting full system upgrade...
-resolving dependencies...
-looking for conflicting packages...
+ endeavouros/package-1       25.11-1      25.11.1-1      0.00 MiB       0.02 MiB
+ endeavouros/package-2       12.5.2-2     12.5.3-1       0.02 MiB       3.20 MiB
 
-Package (2)                 Old Version  New Version  Net Change  Download Size
-
-endeavouros/package-1       25.11-1      25.11.1-1      0.00 MiB       0.02 MiB
-endeavouros/package-2       12.5.2-2     12.5.3-1       0.02 MiB       3.20 MiB
-
-Total Download Size:   3.21 MiB
-Total Installed Size:  9.42 MiB
-Net Upgrade Size:      0.02 MiB
+ Total Download Size:   3.21 MiB
+ Total Installed Size:  9.42 MiB
+ Net Upgrade Size:      0.02 MiB
                                       # enter Y to confirm the updates
-:: Proceed with installation? [Y/n]   # enter n to cancel the operation  
-```
+ :: Proceed with installation? [Y/n]   # enter n to cancel the operation  
+ ```
  </details>
 <br/>
 
@@ -86,29 +86,29 @@ The terminal will list the packages available to upgrade and may ask for the use
     Example terminal output of <code>yay</code> waiting for user selection:
     </summary>
 
-```shell
-[user@computer ~]$ yay
-[sudo] password for user: 
-:: Synchronizing package databases...
- endeavouros is up to date
- core is up to date
- extra is up to date
- multilib is up to date
-:: Searching AUR for updates...
-:: There are 2 providers available for cargo:
-:: Repository extra
-    1) rust 2) rustup 
-
-Enter a number (default=1): 
-==> 
-```
-
-> [!CAUTION] 
-> Do NOT run `yay` with root permissions.
-> 
-> As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
-> 
-> Additionally, AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
+ ```shell
+ [user@computer ~]$ yay
+ [sudo] password for user: 
+ :: Synchronizing package databases...
+  endeavouros is up to date
+  core is up to date
+  extra is up to date
+  multilib is up to date
+ :: Searching AUR for updates...
+ :: There are 2 providers available for cargo:
+ :: Repository extra
+     1) rust 2) rustup 
+ 
+ Enter a number (default=1): 
+ ==> 
+ ```
+ 
+ > [!CAUTION] 
+ > Do NOT run `yay` with root permissions.
+ > 
+ > As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
+ > 
+ > Additionally, AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
  </details>
 
 ---
@@ -131,26 +131,26 @@ eos-update
   <summary><span>
   Here is a summary provided by running <code>eos-update --help</code> in the terminal:
   </summary>
+ 
+ ```shell
+ eos-update is a package updater for EndeavourOS and Arch. 
+ 
+ eos-update is implemented as a wrapper around commands pacman and optionally yay/paru.
+ Essentially runs commands 'pacman -Syu' and optionally 'yay -Sua' or 'paru -Sua'. 
 
-```sh
-eos-update is a package updater for EndeavourOS and Arch.
-
-eos-update is implemented as a wrapper around commands pacman and optionally yay/paru.
-Essentially runs commands 'pacman -Syu' and optionally 'yay -Sua' or 'paru -Sua'.
-
-eos-update includes (by default) special help in the following situations:
-- A dangling pacman db lock file (/var/lib/pacman/db.lck).
-- Disk space availability for updates (with a configurable minimum space).
-- Keyring package updating before updating other packages.
-- Running the 'sync' command after update.
-
-Optional help:
-- Can clear package databases in case of constant problems with them.
-- Can reset keyrings in case of constant problems with them.
-- Can check the validity of the locally configured lists of mirrors.
-- Updates AUR packages (with option --helper, see Usage below).
-- Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
-```
+ eos-update includes (by default) special help in the following situations:
+ - A dangling pacman db lock file (/var/lib/pacman/db.lck).
+ - Disk space availability for updates (with a configurable minimum space).
+ - Keyring package updating before updating other packages.
+ - Running the 'sync' command after update.
+ 
+ Optional help:
+ - Can clear package databases in case of constant problems with them.
+ - Can reset keyrings in case of constant problems with them.
+ - Can check the validity of the locally configured lists of mirrors.
+ - Updates AUR packages (with option --helper, see Usage below).
+ - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
+ ```
  </details>
 
 > [!TIP]

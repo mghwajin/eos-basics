@@ -46,26 +46,26 @@ yay -Sc
 
 <details open>
   <summary>Example <code>yay -Sc</code> output below: </summary>
-
-```shell
-Packages to keep:
+ 
+ ```shell
+ Packages to keep:
   All locally installed packages
 
-Cache directory: /var/cache/pacman/pkg/
-:: Do you want to remove all other packages from cache? [Y/n] y
-removing old packages from cache...
+ Cache directory: /var/cache/pacman/pkg/
+ :: Do you want to remove all other packages from cache? [Y/n] y
+ removing old packages from cache...
 
-Database directory: /var/lib/pacman/
-:: Do you want to remove unused repositories? [Y/n] y
-removing unused sync repositories...
-
-Build directory: /home/kain/.cache/yay
-:: Do you want to remove all other AUR packages from cache? [Y/n] y
-removing AUR packages from cache...
-:: Do you want to remove ALL untracked AUR files? [Y/n] y
-removing untracked AUR files from cache...
-```
-</details>
+ Database directory: /var/lib/pacman/
+ :: Do you want to remove unused repositories? [Y/n] y
+ removing unused sync repositories...
+ 
+ Build directory: /home/kain/.cache/yay
+ :: Do you want to remove all other AUR packages from cache? [Y/n] y
+ removing AUR packages from cache...
+ :: Do you want to remove ALL untracked AUR files? [Y/n] y
+ removing untracked AUR files from cache...
+ ```
+ </details>
 
 > [!NOTE]
 > See: [`yay` commands](https://linuxcommandlibrary.com/man/yay)

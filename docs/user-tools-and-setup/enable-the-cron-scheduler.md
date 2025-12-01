@@ -42,7 +42,7 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
        ```
      
      <details>
-      <summary>Terminal output with active process: </summary>
+       <summary>Terminal output with active process: </summary>
 
         ```shell
         cronie.service - Command Scheduler
@@ -50,7 +50,7 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
           Active: active (running) since Day YYYY-MM-DD HH:MM:SS -timezone; 00h 00min ago
         ...
         ```
-      </details>
+       </details>
 
   3. After verifying that `cronie` is **inactive**, enter:
       ```shell
