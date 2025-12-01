@@ -18,7 +18,7 @@ xfce-screenshooter -rc
 
 1. Open the **Application Shortcuts** tab in your Keyboard application.
 
-    ![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](../images/xfce-shortcut-1.png)
+    ![EOS keyboard application on the shortcuts tab, with a red box highlighting the Add and Edit options/](./images/xfce-shortcut-1.png)
 
 2. Click on the **Add** or **Edit** button to add/edit a shortcut.
 
@@ -27,14 +27,14 @@ xfce-screenshooter -rc
     xfce4-screenshooter -rc
     ```
 
-    ![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](../images/xfce-shortcut-2.png)
+    ![EOS keyboard app dialogue window waiting to record keyboard input for the command field.](./images/xfce-shortcut-2.png)
 
 4. When prompted, enter the shortcut to assign to `xcfe4-screenshooter -rc`
    - ex. Pressing `Ctrl+Alt+S` runs this command
 
 5. The command and its assigned shortcut will appear in the **Application Shortcuts** list and can be edited as needed.
 
-    ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](../images/xfce-shortcut-3.png)
+    ![EOS keyboard application on the shortcuts tab with the new `xfce4-screenshooter -rc` shortcut selected.](./images/xfce-shortcut-3.png)
 
 ---
 

@@ -104,7 +104,7 @@ sudo pacman -Qdtq | sudo pacman -Rns -
 
 After running `sudo pacman -Qdtq | sudo pacman -Rns -`, enter `Y` to confirm removal of the listed orphans.
 
-  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](../images/remove-orphans.png)
+  ![Terminal output listing an orphan after running `sudo pacman -Qdtq | sudo pacman -Rns -`](./images/remove-orphans.png)
 
 ---
 

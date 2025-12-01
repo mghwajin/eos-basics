@@ -151,7 +151,7 @@ Optional help:
 - Updates AUR packages (with option --helper, see Usage below).
 - Ad hoc check for Nvidia GPU driver vs. kernel updates (non-dkms only).
 ```
-</details>
+ </details>
 
 > [!TIP]
 > `eos-update` can be used in place of `yay` or `sudo pacman -Syu`.

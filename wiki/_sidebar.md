@@ -1,3 +1,5 @@
+EndeavourOS Beginner's Basics
+---
 [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 
 System maintenance guides

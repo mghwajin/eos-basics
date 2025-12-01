@@ -38,7 +38,7 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 ```
 ---
 
-**README Revision History**
+**Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge
 
 ---

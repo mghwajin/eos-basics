@@ -9,7 +9,7 @@ Background images set in the **Login Window GUI editor** will only display if th
 <img src="../images/login-window-gui.png" alt="Large Image" style="max-width: 70%;">
 -->
 
-![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.](../images/login-window-gui.png)
+![Login Window GUI editor on the Appearance options tab, which contains options for General, Background, Themes, and Optional pictures selections.](./images/login-window-gui.png)
 
 If the image cannot be accessed, the login screen will display only the background color that was set.
 

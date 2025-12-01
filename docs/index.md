@@ -1,6 +1,6 @@
 # EndeavourOS Beginner's Basics
 
-![Endeavour OS logo and text for a dark background](endeavouros-logo-text-dark.svg)
+![Endeavour OS logo and text for a dark background](images/endeavouros-logo-text-dark.png)
 
 
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
@@ -39,7 +39,7 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 ```
 ---
 
-**README Revision History**
+**Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge
 
 ---

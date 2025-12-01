@@ -37,6 +37,6 @@ Below is a quick reference table of common maintenance commands and the recommen
 
 Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command.
 
-![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](../images/eos-welcome.png)
+![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./images/eos-welcome.png)
 
 <!-- EOF -->
