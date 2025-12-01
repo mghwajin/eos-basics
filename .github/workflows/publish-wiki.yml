@@ -3,7 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - docs/**
+      - wiki/**
+      - wiki/user-tools-and-setup/**
+      - wiki/system-maintenance/**
       - README.md
       - endeavouros-logo-text-dark.svg
       - .github/workflows/publish-wiki.yml
