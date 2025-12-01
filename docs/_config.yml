@@ -1,0 +1,7 @@
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+
+title: [EndeavourOS Beginner's Basics]
+tagline: [A beginner-to-intermediate user's guide to system maintenance in EndeavourOS.]
+description: [This beginner-to-intermediate user's guide covers the basics of maintaining your Endeavour OS system by using terminal commands in the command-line interface (CLI).]
