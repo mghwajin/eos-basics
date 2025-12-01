@@ -11,12 +11,12 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
 - [GitHub pages index](https://mghwajin.github.io/eos-basics/index.html)
 - [Wiki home](https://github.com/mghwajin/eos-basics/wiki)
 - System maintenance guides
-  - [Overview]https://github.com/mghwajin/eos-basics/wiki/system-maintenance-overview)
-  - [Clean unused system files]https://github.com/mghwajin/eos-basics/wiki/clean-unused-system-files)
-  - [Create system backups with `timeshift`]https://github.com/mghwajin/eos-basics/wiki/create-system-backups-with-timeshift)
-  - [System updates with `pacman` and `yay`]https://github.com/mghwajin/eos-basics/wiki/system-updates-with-pacman-and-yay)
-  - [Mirror maintenance guide]https://github.com/mghwajin/eos-basics/wiki/mirror-maintenance-guide)
-  - [Resolve conflicting config files]https://github.com/mghwajin/eos-basics/wiki/resolve-conflicting-config-files)
+  - [Overview](https://github.com/mghwajin/eos-basics/wiki/system-maintenance-overview)
+  - [Clean unused system files](https://github.com/mghwajin/eos-basics/wiki/clean-unused-system-files)
+  - [Create system backups with `timeshift`](https://github.com/mghwajin/eos-basics/wiki/create-system-backups-with-timeshift)
+  - [System updates with `pacman` and `yay`](https://github.com/mghwajin/eos-basics/wiki/system-updates-with-pacman-and-yay)
+  - [Mirror maintenance guide](https://github.com/mghwajin/eos-basics/wiki/mirror-maintenance-guide)
+  - [Resolve conflicting config files](https://github.com/mghwajin/eos-basics/wiki/resolve-conflicting-config-files)
 - User tools and setup manuals
   - [Change login background](https://github.com/mghwajin/eos-basics/wiki/change-login-background)
   - [Copy cursor selection to clipboard](https://github.com/mghwajin/eos-basics/wiki/copy-cursor-selection-to-clipboard)
