@@ -10,7 +10,7 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
 ## Contents
 - [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 - System maintenance guides
-  - [Overview](https://github.com/mghwajin/eos-basics/docs/System-maintenance/System-maintenance-overview)
+  - [Overview](https://mghwajin.github.io/eos-basics/system-maintenance/system-maintenance-overview.html)
   - [Clean unused system files](https://mghwajin.github.io/eos-basics/system-maintenance/clean-unused-system-files.html)
   - [Create system backups with `timeshift`](https://mghwajin.github.io/eos-basics/system-maintenance/create-system-backups-with-timeshift.html)
   - [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)

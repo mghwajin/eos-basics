@@ -2,27 +2,24 @@
 
 ![Endeavour OS logo and text for a dark background](endeavouros-logo-text-dark.svg)
 
-
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
 This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system by  using **terminal commands** in the **command-line interface** (CLI).
 
-https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html
-
 ## Contents
 - [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 - System maintenance guides
-  - [Overview](https://github.com/mghwajin/eos-basics/docs/System-maintenance/System-maintenance-overview)
-  - [Clean unused system files](https://mghwajin.github.io/eos-basics/system-maintenance/clean-unused-system-files.html)
-  - [Create system backups with `timeshift`](https://mghwajin.github.io/eos-basics/system-maintenance/create-system-backups-with-timeshift.html)
-  - [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)
-  - [Mirror maintenance guide](https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html)
-  - [Resolve conflicting config files](https://github.com/mghwajin/eos-basics/docs/System-maintenance/resolve-conflicting-config-files)
+  - [Overview](wiki/system-maintenance/system-maintenance-overview)
+  - [Clean unused system files](wiki/system-maintenance/clean-unused-system-files)
+  - [Create system backups with `timeshift`](wiki/system-maintenance/create-system-backups-with-timeshift)
+  - [System updates with `pacman` and `yay`](wiki/system-maintenance/system-updates-with-pacman-and-yay)
+  - [Mirror maintenance guide](wiki/system-maintenance/mirror-maintenance-guide)
+  - [Resolve conflicting config files](wiki/system-maintenance/resolve-conflicting-config-files)
 - User tools and setup manuals
-  - [Change login background](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/change-login-background)
-  - [Copy cursor selection to clipboard](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/copy-cursor-selection-to-clipboard)
-  - [Enable the `cron` scheduler](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/enable-the-cron-scheduler)
-  - [`git clone` to location](https://github.com/mghwajin/eos-basics/docs/User-tools-and-setup/git-clone-to-location)
+  - [Change login background](wiki/user-tools-and-setup/change-login-background)
+  - [Copy cursor selection to clipboard](wiki/user-tools-and-setup/copy-cursor-selection-to-clipboard)
+  - [Enable the `cron` scheduler](wiki/user-tools-and-setup/enable-the-cron-scheduler)
+  - [`git clone` to location](wiki/user-tools-and-setup/git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:
@@ -49,5 +46,3 @@ This guide is a work in progress!!  [-----Co o o o o o ]
 **Credits**
 - EndeavourOS Branding: https://github.com/endeavouros-team/Branding
 - EndeavourOS Development: https://github.com/endeavouros-team
-
-
