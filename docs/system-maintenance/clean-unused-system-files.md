@@ -65,7 +65,7 @@ removing AUR packages from cache...
 :: Do you want to remove ALL untracked AUR files? [Y/n] y
 removing untracked AUR files from cache...
 ```
-</details>
+ </details>
 
 > [!NOTE]
 > See: [`yay` commands](https://linuxcommandlibrary.com/man/yay)

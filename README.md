@@ -8,18 +8,20 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
 
 ## Contents
 - [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
+- [GitHub pages index](https://mghwajin.github.io/eos-basics/index.html)
+- [Wiki home](https://github.com/mghwajin/eos-basics/wiki)
 - System maintenance guides
-  - [Overview](https://mghwajin.github.io/eos-basics/system-maintenance/system-maintenance-overview.html)
-  - [Clean unused system files](https://mghwajin.github.io/eos-basics/system-maintenance/clean-unused-system-files.html)
-  - [Create system backups with `timeshift`](https://mghwajin.github.io/eos-basics/system-maintenance/create-system-backups-with-timeshift.html)
-  - [System updates with `pacman` and `yay`](https://mghwajin.github.io/eos-basics/system-maintenance/system-updates-with-pacman-and-yay.html)
-  - [Mirror maintenance guide](https://mghwajin.github.io/eos-basics/system-maintenance/mirror-maintenance-guide.html)
-  - [Resolve conflicting config files](https://mghwajin.github.io/eos-basics/system-maintenance/resolve-conflicting-config-files.html)
+  - [Overview]https://github.com/mghwajin/eos-basics/wiki/system-maintenance-overview)
+  - [Clean unused system files]https://github.com/mghwajin/eos-basics/wiki/clean-unused-system-files)
+  - [Create system backups with `timeshift`]https://github.com/mghwajin/eos-basics/wiki/create-system-backups-with-timeshift)
+  - [System updates with `pacman` and `yay`]https://github.com/mghwajin/eos-basics/wiki/system-updates-with-pacman-and-yay)
+  - [Mirror maintenance guide]https://github.com/mghwajin/eos-basics/wiki/mirror-maintenance-guide)
+  - [Resolve conflicting config files]https://github.com/mghwajin/eos-basics/wiki/resolve-conflicting-config-files)
 - User tools and setup manuals
-  - [Change login background](https://mghwajin.github.io/eos-basics/user-tools-and-setup/change-login-background.html)
-  - [Copy cursor selection to clipboard](https://mghwajin.github.io/eos-basics/user-tools-and-setup/copy-cursor-selection-to-clipboard.html)
-  - [Enable the `cron` scheduler](https://mghwajin.github.io/eos-basics/user-tools-and-setup/enable-the-cron-scheduler.html)
-  - [`git clone` to location](https://mghwajin.github.io/eos-basics/user-tools-and-setup/git-clone-to-location.html)
+  - [Change login background](https://github.com/mghwajin/eos-basics/wiki/change-login-background)
+  - [Copy cursor selection to clipboard](https://github.com/mghwajin/eos-basics/wiki/copy-cursor-selection-to-clipboard)
+  - [Enable the `cron` scheduler](https://github.com/mghwajin/eos-basics/wiki/enable-the-cron-scheduler)
+  - [`git clone` to location](https://github.com/mghwajin/eos-basics/wiki/git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:
