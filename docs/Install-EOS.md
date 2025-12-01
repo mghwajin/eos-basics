@@ -21,8 +21,8 @@ Before installing any files, you need to verify that:
 
 These two steps are critically important to do before installing any Linux distribution. 
 
-> See: [How to check and trust key signature for the Endeavour OS ISO?](https://discovery.endeavouros.com/installation/how-to-check-and-trust-key-and-signature-for-the-endeavouros-iso/2025/01/) | 
-> [Customizing the Endeavour OS installation process](https://discovery.endeavouros.com/installation/customizing-the-endeavouros-install-process/2022/03/)
+> [!NOTE]
+> See: [How to check and trust key signature for the Endeavour OS ISO?](https://discovery.endeavouros.com/installation/how-to-check-and-trust-key-and-signature-for-the-endeavouros-iso/2025/01/),  [Customizing the Endeavour OS installation process](https://discovery.endeavouros.com/installation/customizing-the-endeavouros-install-process/2022/03/)
 
 
 <!-- EOF -->

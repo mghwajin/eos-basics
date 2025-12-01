@@ -19,9 +19,8 @@ To first check if a snapshot is due, then create one if needed, use:
 > [!IMPORTANT]
 >  It is highly recommended to create **daily backups** and **before attempting system changes**.
 >
-> You can set up an automated process to take snapshots at scheduled intervals by enabling the `cron` scheduler.
->
-> See:[Enable the `cron` scheduler]()
+> See: [`Timeshift` wiki](https://wiki.archlinux.org/title/Timeshift), [Restore system with snapshot](https://itsfoss.gitlab.io/post/how-to-use-timeshift-to-backup-and-restore-linux-system/#restoring-your-linux-system-with-timeshift) 
+
 
 ## `timeshift` options
 
@@ -31,14 +30,13 @@ To first check if a snapshot is due, then create one if needed, use:
 
 **Back up location**
   - It is recommended to set snapshots to save onto an external drive, or an internal drive separate from the system's boot partition. This eases the process of recovering to a previous state if the current one becomes unbootable.
-  -  Note that while the specific drive/device can be selected, `timeshift`'s default directory path on the device **cannot be changed**.
-  -  Additionally, BTRFS snapshots can only be saved onto the same device that the system's root partition is located on.
+  - BTRFS snapshots can only be saved onto the same device that the system's root partition is located on.
+  
+> [!WARNING]
+> While you can select the specific drive/device to save snapshots to,`timeshift`'s default directory path on the device **cannot be changed**.
 
 **Saved data** 
   - To save disk space, `timeshift` does not save any user files by default. Setting `timeshift` to regularly save **non-system files will use a very large amount of disk space**.
-
-**`cron` scheduler** ([`cronie`](https://archlinux.org/packages/extra/x86_64/cronie/)) 
-  -  Users can set up `cron` to schedule time-based jobs. Setting up a timer/scheduler allows the system to automatically take snapshots when due while saving up to the designated number of snapshots per category. 
 
 **Snapshot limits** 
   - Once the number of snapshots reaches the set limit, `timeshift` deletes the oldest snapshot of that category. The exact amounts vary between users. Here is an example of snapshot limits:
@@ -48,5 +46,13 @@ To first check if a snapshot is due, then create one if needed, use:
     - 5 hourly
     - 5 boot
 
-> [!NOTE]
-> See: [`Timeshift` wiki](https://wiki.archlinux.org/title/Timeshift), [Restore system with snapshot](https://itsfoss.gitlab.io/post/how-to-use-timeshift-to-backup-and-restore-linux-system/#restoring-your-linux-system-with-timeshift) 
+**`cron` scheduler** 
+  -  Users can set up `cron` to schedule time-based jobs. 
+  -  When configured, the system automatically takes scheduled snapshots up to the set limit, and deletes old snapshots.
+
+> [!TIP]
+> You can set up an automated process to take snapshots at scheduled intervals by enabling the `cron` scheduler. This must be manually enabled.
+>
+> See: [Enable the `cron` scheduler](enable-the-cron-scheduler)
+
+<!-- EOF -->

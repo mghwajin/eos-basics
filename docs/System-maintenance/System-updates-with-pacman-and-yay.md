@@ -15,8 +15,8 @@ There are 3 basic commands that EndeavourOS users should regularly run to keep t
 sudo pacman -Syu
 ```
 
-> [!NOTE]
-> It is recommended to **update your system daily** to ensure that packages are on their latest versions. This is especially important if a previous update was causing issues, and was soon patched (or reverted).
+> [!IMPORTANT]
+> It is recommended to **update your system daily**. This ensures that system packages are up to date, especially if a previous update's issues were fixed or reverted.
 
 <details open> 
     <summary>
@@ -72,8 +72,8 @@ To update the system's native and AUR packages, run:
 ```shell
 yay
 ```
-> [!NOTE]
-It is recommended to run `yay` at least every 1-2 weeks.
+> [!IMPORTANT]
+It is recommended to run `yay` at least **every 1-2 weeks**.
 
 The terminal will list the packages available to upgrade and may ask for the user to select:
   1. Which package provider should be used (where to download files from)
@@ -103,23 +103,26 @@ Enter a number (default=1):
 ==> 
 ```
 
-> [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
+> [!CAUTION] 
+> Do NOT run `yay` with root permissions.
+> 
 > As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
 > 
-> Additionally, AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
+> Additionally, AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files for any malicious code before installation.
 </details>
 
 ---
 
 > [!NOTE]
-> See: [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>,  [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
+> See: [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>, [`yay` commands](https://linuxcommandlibrary.com/man/yay), [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
 
 
 
 <!----------------------------------------->
 
 ## `eos-update`
-EndeavourOS provides an optional update script that utilizes `pacman` and `yay`, and provides additional functionalities.
+EndeavourOS provides an optional update script that utilizes `pacman` and `yay` to run basic system updates with additional options.
+
 ```shell
 eos-update
 ```
@@ -151,9 +154,11 @@ Optional help:
 </details>
 
 > [!TIP]
-> `eos-update` can be used in place of running `yay`, but this is up to user preference. Both perform system updates, and `eos-update` adds another layer of options.
-> 
-> For using needing a quick fix to the system, running `eos-update` may be more helpful.
+> `eos-update` can be used in place of `yay` or `sudo pacman -Syu`.
+
+User preference for update commands varies greatly. `eos-update` performs the same tasks as `yay` and `pacman -Syu` with an added layer of options.
+ 
+Notably, running `eos-update` may be more helpful for users needing a quick fix to the system, and/or users who do not update the system frequently.
 
 ---
 
@@ -162,8 +167,10 @@ Optional help:
 ### Why am I getting errors when I try to update?
 For the purposes of this example guide, the update errors are caused by issues with mirrors and `mirrorlist` configurations. These issues can be fixed by re-ranking mirrors to update the `mirrorlist` configuration.
 
-> [!TIP]
-> Refer to the Mirror maintenance guide.
+> [!WARNING]
+> Outdated package databases will cause errors when `pacman` tries to retrieve the latest package files. This can be fixed through regular mirror maintenance.
+> 
+> See: [Mirror maintenance guide](mirror-maintenance-guide)
 
 ---
 
@@ -194,12 +201,11 @@ However, it is not necessary to use "double" `pacman` commands in most circumsta
 ### What is the AUR?
 AUR stands for the *Arch User Repository*, which is a large library of user-produced packages for Arch Linux. You can find many useful tools here that are created and maintained by the Arch community.
   
-  Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
+Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
 
 ---
 
 ### How do I download and install AUR packages?
-
 
   Downloading and building an AUR package is fairly simple:
   
@@ -223,8 +229,6 @@ AUR stands for the *Arch User Repository*, which is a large library of user-prod
       ```
 
 > [!WARNING] 
-> **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages to AUR, but this is not a foolproof screening method.
-
----
+> **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages on AUR, but is not a foolproof screening method.
 
 <!-- EOF -->

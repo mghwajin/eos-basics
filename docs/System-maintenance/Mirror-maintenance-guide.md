@@ -11,14 +11,13 @@ This is a beginner's guide that overviews the definitions of mirrors and `mirror
 ## Overview
 **Mirrors** are servers located around the world that store copies of software packages. When upgrading packages, your EndeavourOS system utilizes multiple mirrors, which are noted in a `mirrorlist`. 
 
-A well-maintained `mirrorlist` ensures that the `pacman` package manager can access the most up-to-date package files when performing system updates. 
+A well-maintained `mirrorlist` ensures that the `pacman` package manager can access the most up-to-date package files when performing system updates. Outdated mirrors can prevent `pacman` from updating applications, including the system's **core packages**.
 
 To update a `mirrorlist` configuration, users should run commands to **re-rank mirrors**.
 
-> [!IMPORTANT] <span>Keep a regular update schedule!</span>
-> As a general rule, mirrors should be re-ranked **every 1-2 months**.
-> 
-> Outdated mirrors can prevent `pacman` from updating applications, including the system's **core packages**.
+> [!IMPORTANT]
+>
+> It is highly recommended to re-rank mirrors at least **every 1-2 months**.
 
 <!---------------------------------------------------------->
 
@@ -26,7 +25,9 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 `mirrorlists` are configured separately for **Arch** mirrors and **EndeavourOS** mirrors. The process is the same, but different commands are used.
 
 ### Re-rank Arch mirrors
-> [!NOTE] <span>Re-rank Arch mirrors at least <b>every 1-2 months.</b></span>
+> [!IMPORTANT] 
+> Re-rank Arch mirrors at least **every 1-2 months**.
+> 
 > Arch packages are updated on a frequent and unscheduled rolling-release basis. Your Arch `mirrorlist` configuration should be updated regularly so your system can access up-to-date package databases.
 
 1. Update the Arch `mirrorlist` by running the command:
@@ -52,17 +53,18 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
     ```
 ---
 
-> [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
-> As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
+> [!CAUTION] 
+> Do NOT run `yay` with root permissions.
 > 
-> AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
+> As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
 
 ---
 
 ### Re-rank EndeavourOS mirrors
 **EndeavourOS** has its own **distro-unique packages** (modified versions or additional) that are distinct from Arch packages. These are stored in EOS-specific mirrors.
 
-> [!NOTE] <span>Re-rank EOS mirrors at least <b>every 2-3 months.</b></span>
+> [!IMPORTANT] 
+> Re-rank EOS mirrors **every 2-3 months**.
 > 
 > EndeavourOS mirrors are updated less frequently than Arch mirrors. As long as you maintain a regular update schedule, the EOS `mirrorlist` typically does not require monthly updates.
 
@@ -90,11 +92,10 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
     yay -Syyu
     ```
 
-
-> [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
-> As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
+> [!CAUTION] 
+> Do NOT run `yay` with root permissions.
 > 
-> AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
+> As an AUR helper, `yay` does not require root permissions to manage packages. This prevents accidental (and potentially fatal) system changes.
 
 ---
 
@@ -116,7 +117,9 @@ Common error or warning messages include:
 If `pacman` runs into these errors during a system update, **be sure to [re-rank the mirrors](#re-rank-mirrors)**.
 
 > [!WARNING]
-> If these errors/warnings persist despite re-reranking mirrors, this indicates **outdated core system packages**. Core packages can be updated by running [System update commands]().
+> If these errors/warnings persist despite re-reranking mirrors, this indicates **outdated core system packages**.
+>
+> See: [System updates with `pacman` and `yay`](system-updates-with-pacman-and-yay)
 
 ---
 
@@ -127,7 +130,6 @@ Useful links:
 - [Arch wiki: Mirrors](https://wiki.archlinux.org/title/Mirrors)
 - [Official Arch mirror status](https://archlinux.org/mirrors/status/)
 - `reflector`<sup>[AUR](https://archlinux.org/packages/?name=reflector)</sup> | [`reflector` wiki](https://wiki.archlinux.org/title/Reflector)
-- `ghostmirror`<sup>[AUR](https://aur.archlinux.org/packages/ghostmirror/)</sup> | [`ghostmirror` wiki](https://wiki.archlinux.org/title/Ghostmirror) 
 
 ---
 
@@ -174,7 +176,7 @@ reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 
    3. Then overwrite the current `/etc/pacman.d/mirrorlist` config file
 
-> [!TIP]
+> [!NOTE]
 > Refer to the [`reflector` manpage](https://man.archlinux.org/man/reflector.1) documentation for detailed usage. 
 >
 > This information can also be accessed offline by running `reflector --help` in the terminal.
@@ -192,6 +194,7 @@ One such example is `ghostmirror`, which:
    
    3. Automates the process via `systemd`
 
----
+> [!NOTE]
+> See: `ghostmirror`<sup>[AUR](https://aur.archlinux.org/packages/ghostmirror/)</sup>, [`ghostmirror` wiki](https://wiki.archlinux.org/title/Ghostmirror) 
 
 <!-- EOF -->

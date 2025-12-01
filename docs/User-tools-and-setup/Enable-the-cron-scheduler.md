@@ -5,11 +5,7 @@
 
 Notably, setting up `cronie` is important for setting up automatic system backups through `timeshift`. This ensures the system automatically creates snapshots on system boot, every hour, etc.
 
-> [!NOTE] <span>What is the difference between <code>cron</code> and <code>cronie</code>?</span>
-> `cron` has several implementations with variations in scheduling and job management.
->
-> `cronie` comes with the `anacron` utility enabled by default, which will run backlogged jobs for systems not continuously running (ex. personal computers).
-> 
+> [!NOTE]
 > See [`cron` guide](https://wiki.gentoo.org/wiki/Cron), [`cronie` repository](https://github.com/cronie-crond/cronie/)
 
 <!------------------------------------------->
@@ -30,7 +26,9 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
 <!------------------------------------------->
 
 ## Disable `cronie`
-> [!WARNING] <span>Make sure that system <code>daemons</code> <b>are inactive</b> before disabling them.</span>
+> [!WARNING]
+> Make sure that system daemons are **inactive** before disabling them.
+>
 > `daemons` such as `cronie` are often needed for essential services. Forcibly disabling them while they are still active (and possibly running jobs) may cause the system to become unstable.
 
   1. Before disabling `cronie`, make sure to stop the process first with:
@@ -46,7 +44,7 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
      <details>
       <summary>Terminal output with active process: </summary>
 
-        ```console
+        ```shell
         cronie.service - Command Scheduler
           Loaded: loaded (/usr/lib/systemd/system/cronie.service; enabled; preset: disabled)
           Active: active (running) since Day YYYY-MM-DD HH:MM:SS -timezone; 00h 00min ago
@@ -60,5 +58,13 @@ If scheduled snapshots have been configured in `timeshift`, the `cronie` schedul
        ```
 
 <!------------------------------------------->
+
+## Differences between `cron` and `cronie`
+`cron` has several implementations with variations in scheduling and job management.
+
+`cronie` comes with the `anacron` utility enabled by default, which will run backlogged jobs for systems not continuously running (ex. personal computers).
+
+> [!NOTE]
+> See [`cron` guide](https://wiki.gentoo.org/wiki/Cron), [`cronie` repository](https://github.com/cronie-crond/cronie/)
 
 <!-- EOF -->
