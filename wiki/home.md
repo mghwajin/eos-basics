@@ -4,22 +4,24 @@
 
 [**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
 
-This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system by  using **terminal commands** in the **command-line interface** (CLI).
+This beginner-to-intermediate user's guide covers the basics of maintaining your [**Endeavour OS**](https://endeavouros.com/) system with the **command-line interface** (CLI).
 
 ## Contents
-- [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
-- System maintenance guides
-  - [Overview](system-maintenance-overview)
-  - [Clean unused system files](clean-unused-system-files)
-  - [Create system backups with `timeshift`](create-system-backups-with-timeshift)
-  - [System updates with `pacman` and `yay`](system-updates-with-pacman-and-yay)
-  - [Mirror maintenance guide](mirror-maintenance-guide)
-  - [Resolve conflicting config files](resolve-conflicting-config-files)
-- User tools and setup manuals
-  - [Change login background](change-login-background)
-  - [Copy cursor selection to clipboard](copy-cursor-selection-to-clipboard)
-  - [Enable the `cron` scheduler](enable-the-cron-scheduler)
-  - [`git clone` to location](git-clone-to-location)
+[README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
+
+**System maintenance guides**
+- [Overview](system-maintenance-overview)
+- [Clean unused system files](clean-unused-system-files)
+- [Create system backups with `timeshift`](create-system-backups-with-timeshift)
+- [System updates with `pacman` and `yay`](system-updates-with-pacman-and-yay)
+- [Mirror maintenance guide](mirror-maintenance-guide)
+- [Resolve conflicting config files](resolve-conflicting-config-files)
+
+**User tools and setup manuals**
+- [Change login background](change-login-background)
+- [Copy cursor selection to clipboard](copy-cursor-selection-to-clipboard)
+- [Enable the `cron` scheduler](enable-the-cron-scheduler)
+- [`git clone` to location](git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:
@@ -31,12 +33,16 @@ Additional information and learning resources are available at the following lin
 - [Arch Linux wiki](https://wiki.archlinux.org/title/Main_page) \- A wiki with detailed articles and common troubleshooting cases for Arch-related programs and processes
 - [DistroWatch](https://distrowatch.com/) \- A comprehensive Linux resource center that includes a weekly newsletter and terms glossary.
 
-```shell
-                                    [----c o o o o o o ]
-This guide is a work in progress!!  [-----Co o o o o o ]
-                                    [------c o o o o o ]
-```
 ---
+
+> [!NOTE]
+> 
+> ```shell
+>                                     [----c o o o o o o ]
+> This guide is a work in progress!!  [-----Co o o o o o ]
+>                                     [------c o o o o o ]
+> ```
+
 
 **README Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge

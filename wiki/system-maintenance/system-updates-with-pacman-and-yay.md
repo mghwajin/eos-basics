@@ -103,9 +103,9 @@ The terminal will list the packages available to upgrade and may ask for the use
  ==> 
  ```
 
- > [!CAUTION] 
+ > [!CAUTION]
+ >
  > Do NOT run `yay` with root permissions.
- > 
  > As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
  >  
  > Additionally, AUR packages are community-maintained and **unofficial**. It is highly recommended to check build files  for any malicious code before installation.
@@ -210,19 +210,17 @@ Popular and well-maintained packages are voted on by the community to include in
   Downloading and building an AUR package is fairly simple:
   
   1. Clone the `git` repository listed on the package's AUR page:
-   
-      ```sh
+      ```shell
       git clone https://aur.archlinux.org/package-name.git
       ```
 
   2. Change into the package directory:
-   
-      ```sh
+      ```shell
       cd <package-name>
       ```
 
   3. Build and install the package with:
-      ```sh
+      ```shell
       makepkg -si
       # or
       pacman -U package_name-version-1.0.1.pkg.tar.zst
