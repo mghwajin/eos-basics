@@ -9,17 +9,17 @@ This beginner-to-intermediate user's guide covers the basics of maintaining your
 ## Contents
 - [README](https://github.com/mghwajin/eos-basics/blob/main/README.md)
 - System maintenance guides
-  - [Overview](wiki/system-maintenance/system-maintenance-overview)
-  - [Clean unused system files](wiki/system-maintenance/clean-unused-system-files)
-  - [Create system backups with `timeshift`](wiki/system-maintenance/create-system-backups-with-timeshift)
-  - [System updates with `pacman` and `yay`](wiki/system-maintenance/system-updates-with-pacman-and-yay)
-  - [Mirror maintenance guide](wiki/system-maintenance/mirror-maintenance-guide)
-  - [Resolve conflicting config files](wiki/system-maintenance/resolve-conflicting-config-files)
+  - [Overview](system-maintenance-overview)
+  - [Clean unused system files](clean-unused-system-files)
+  - [Create system backups with `timeshift`](create-system-backups-with-timeshift)
+  - [System updates with `pacman` and `yay`](system-updates-with-pacman-and-yay)
+  - [Mirror maintenance guide](mirror-maintenance-guide)
+  - [Resolve conflicting config files](resolve-conflicting-config-files)
 - User tools and setup manuals
-  - [Change login background](wiki/user-tools-and-setup/change-login-background)
-  - [Copy cursor selection to clipboard](wiki/user-tools-and-setup/copy-cursor-selection-to-clipboard)
-  - [Enable the `cron` scheduler](wiki/user-tools-and-setup/enable-the-cron-scheduler)
-  - [`git clone` to location](wiki/user-tools-and-setup/git-clone-to-location)
+  - [Change login background](change-login-background)
+  - [Copy cursor selection to clipboard](copy-cursor-selection-to-clipboard)
+  - [Enable the `cron` scheduler](enable-the-cron-scheduler)
+  - [`git clone` to location](git-clone-to-location)
 
 ## Additional resources
 Additional information and learning resources are available at the following links:
