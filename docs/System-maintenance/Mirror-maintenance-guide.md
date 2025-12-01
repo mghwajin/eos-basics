@@ -5,7 +5,7 @@ This is a beginner's guide that overviews the definitions of mirrors and `mirror
 - [Re-rank mirrors](#re-rank-mirrors)
 - [Common issues: outdated mirrors](#common-issues-outdated-mirrors)
 - [FAQs](#faqs)
-- 
+  
 <!---------------------------------------------------------->
 
 ## Overview

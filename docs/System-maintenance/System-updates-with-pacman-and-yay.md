@@ -102,28 +102,31 @@ The terminal will list the packages available to upgrade and may ask for the use
 Enter a number (default=1): 
 ==> 
 ```
-</details>
-
----
 
 > [!CAUTION] <span>Do NOT run <code>yay</code> with root permissions.</span>
 > As an AUR helper, `yay` does not require root permissions to manage packages. **This prevents accidental (and potentially fatal) system changes.**
 > 
 > Additionally, AUR packages are community-maintained and **unofficial**, and may potentially contain malicious code despite preventative measures.
+</details>
+
+---
+
+> [!NOTE]
+> See: [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>,  [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
+
+
 
 <!----------------------------------------->
 
 ## `eos-update`
 EndeavourOS provides an optional update script that utilizes `pacman` and `yay`, and provides additional functionalities.
-
-Update the system with:
 ```shell
 eos-update
 ```
 
-<details open> 
+<details> 
   <summary><span>
-  Information provided by running <code>eos-update --help</code> in the terminal:
+  Here is a summary provided by running <code>eos-update --help</code> in the terminal:
   </summary>
 
 ```sh
@@ -189,13 +192,14 @@ However, it is not necessary to use "double" `pacman` commands in most circumsta
 ---
 
 ### What is the AUR?
+AUR stands for the *Arch User Repository*, which is a large library of user-produced packages for Arch Linux. You can find many useful tools here that are created and maintained by the Arch community.
+  
+  Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
 
 ---
 
 ### How do I download and install AUR packages?
-AUR stands for the *Arch User Repository*, which is a large library of user-produced packages for Arch Linux. You can find many useful tools here that are created and maintained by the Arch community.
-  
-  Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.
+
 
   Downloading and building an AUR package is fairly simple:
   
@@ -211,20 +215,16 @@ AUR stands for the *Arch User Repository*, which is a large library of user-prod
       cd <package-name>
       ```
 
-  3. **Always review the installation files (i.e. `PKGBUILD`) for any malicious commands!!** Good standing is required for users publishing packages to AUR, but this is not a foolproof screening method.
-
-  4. Build and install the package with:
+  3. Build and install the package with:
       ```sh
       makepkg -si
       # or
       pacman -U package_name-version-1.0.1.pkg.tar.zst
       ```
 
-  > See [Arch User Repository (AUR) homepage](https://aur.archlinux.org/) | [AUR packages](https://aur.archlinux.org/packages) | [AUR wiki](https://wiki.archlinux.org/title/Arch_User_Repository)
+> [!WARNING] 
+> **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages to AUR, but this is not a foolproof screening method.
 
-</details> <!-- ##### END ##### -->
-<br/>
+---
 
-> See [**`yay`**](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>| [Arch User Repository (AUR)](https://aur.archlinux.org/) | [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
-
-
+<!-- EOF -->
