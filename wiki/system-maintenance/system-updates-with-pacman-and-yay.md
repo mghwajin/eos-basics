@@ -12,7 +12,7 @@ There are 3 basic commands that EndeavourOS users should regularly run to keep t
 ## `sudo pacman -Syu`
 `pacman` is the package manager used to install and update programs in Arch Linux. To perform a **full system update and refresh**, run:
 
-```shell
+```sh
 sudo pacman -Syu
 ```
 
@@ -24,7 +24,7 @@ sudo pacman -Syu
  <summary><code>sudo pacman -Syu</code> terminal output example:
  </summary>
 
- ```shell
+ ```sh
  [user@computer ~] $ sudo pacman -Syu
  [sudo password for user]:
 
@@ -71,7 +71,7 @@ Other basic `pacman` commands include:
 [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup> stands for "yet another yogurt" and it is one of the most popular **AUR helpers** used in Arch Linux community. It simplifies the process of downloading, installing, updating, and removing AUR software.
   
 To update the system's native and AUR packages, run:
-```shell
+```sh
 yay
 ```
 > [!IMPORTANT]
@@ -88,7 +88,7 @@ The terminal will list the packages available to upgrade and may ask for the use
  <summary>Example terminal output of <code>yay</code> waiting for user selection:
  </summary>
  
- ```shell
+ ```sh
  [user@computer ~]$ yay
  [sudo] password for user: 
  :: Synchronizing package databases...
@@ -126,7 +126,7 @@ The terminal will list the packages available to upgrade and may ask for the use
 ## `eos-update`
 EndeavourOS provides an optional update script that utilizes `pacman` and `yay` to run basic system updates with additional options.
 
-```shell
+```sh
 eos-update
 ```
 
@@ -134,7 +134,7 @@ eos-update
  <summary><span>Here is a summary provided by running <code>eos-update --help</code> in the terminal:
  </summary>
 
- ```shell
+ ```sh
  eos-update is a package updater for EndeavourOS and Arch.
 
  eos-update is implemented as a wrapper around commands pacman and optionally yay/paru.
@@ -215,28 +215,28 @@ Popular and well-maintained packages are voted on by the community to include in
 
   Downloading and building an AUR package is fairly simple:
   
-  1. Clone the `git` repository listed on the package's AUR page:
+1. Clone the `git` repository listed on the package's AUR page:
    
-      ```shell
-      git clone https://aur.archlinux.org/package-name.git
-      ```
+   ```sh
+   git clone https://aur.archlinux.org/package-name.git
+   ```
 
-  2. Change into the package directory:
-   
-      ```shell
-      cd <package-name>
-      ```
+2. Change into the package directory:
 
-  3. Build and install the package with:
+    ```sh
+    cd <package-name>
+    ```
+
+3. Build and install the package with:
    
-      ```shell
-      makepkg -si
-      # or
-      pacman -U package_name-version-1.0.1.pkg.tar.zst
-      ```
+   ```sh
+   makepkg -si
+   # or
+   pacman -U package_name-version-1.0.1.pkg.tar.zst
+   ```
 
 > [!WARNING]
 > 
-> **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages on AUR, but is not a foolproof screening method.
+> **Always review the installation files (i.e. `PKGBUILD`) for any malicious code.** Good user standing is required to maintain packages on AUR, but this is not a foolproof preventative measure.
 
 <!-- EOF -->

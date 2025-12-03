@@ -33,7 +33,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 1. Update the Arch `mirrorlist` by running the command:
    
-    ```shell
+    ```sh
     reflector-simple
     ```
 
@@ -51,7 +51,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 5. **Refresh the system** to sync the newly obtained mirrors with the Arch package databases:
    
-    ```shell
+    ```sh
     yay -Syyu
     ```
 
@@ -74,7 +74,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 1. Update the EndeavourOS ` mirrorlist` by entering:
    
-    ```shell
+    ```sh
     eos-rankmirrors
     ```
 
@@ -94,7 +94,7 @@ To update a `mirrorlist` configuration, users should run commands to **re-rank m
 
 7. After confirming any mirrorlist changes, refresh the system with:
    
-    ```shell
+    ```sh
     yay -Syyu
     ```
 
@@ -135,7 +135,7 @@ If `pacman` runs into these errors during a system update, **be sure to [re-rank
 
 ## FAQs
 Useful links:
-- [Arch wiki: Mirrors](https://wiki.archlinux.org/title/Mirrors)
+- [Arch mirrors wiki](https://wiki.archlinux.org/title/Mirrors)
 - [Official Arch mirror status](https://archlinux.org/mirrors/status/)
 - `reflector`<sup>[AUR](https://archlinux.org/packages/?name=reflector)</sup> | [`reflector` wiki](https://wiki.archlinux.org/title/Reflector)
 
@@ -169,7 +169,7 @@ EOS uses uses `reflector` as its default mirror management program.`reflector-si
   
 To update to and save the **latest 20 mirrors** sorted by **speed**, enter:
 
-```shell
+```sh
 reflector --latest 20 --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
