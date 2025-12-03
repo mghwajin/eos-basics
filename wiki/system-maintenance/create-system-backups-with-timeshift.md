@@ -6,13 +6,13 @@ These snapshots can be used to restore the system to a prior state if the curren
 ## Create a snapshot
 Create a snapshot **on demand** (unscheduled) by using:
 
-```shell
+```sh
 sudo timeshift --create
 ```
 
 To first check if a snapshot is due, then create one if needed, use:
 
-```shell
+```sh
 sudo timeshift --check
 ```
 

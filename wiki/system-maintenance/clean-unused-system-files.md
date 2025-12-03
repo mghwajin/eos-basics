@@ -15,7 +15,7 @@ By default, `pacman` stores package files in the `/var/cache/pacman/pkg` cache. 
 
 The `paccache` utility tool is used to remove old packages from the `pacman` cache while retaining the 3 most recent versions:
 
-```shell
+```sh
 paccache -r
 ```
 
@@ -40,7 +40,7 @@ It is generally **not recommended** to delete all past versions unless disk spac
 
 Use this command to clear all cached AUR packages and untracked files:
 
-```shell
+```sh
 yay -Sc
 ```
 
@@ -50,7 +50,7 @@ yay -Sc
  <summary>Example <code>yay -Sc</code> output below:
  </summary>
  
- ```shell
+ ```sh
  Packages to keep:
   All locally installed packages
 
@@ -81,7 +81,7 @@ yay -Sc
 
 To maintain a log of the past 6 weeks while clearing excess logs, run:
 
-```shell
+```sh
 journalctl --vacuum-time=6weeks
 ```
 
@@ -103,7 +103,7 @@ It is recommended to **keep 4 weeks of logs at minimum**, but the number of week
 
 This combined command will list orphans (unused package dependencies). After user confirmation, and recursively removes them along with their configuration files:
 
-```shell
+```sh
 sudo pacman -Qdtq | sudo pacman -Rns -
 ```
 
@@ -118,7 +118,7 @@ After running `sudo pacman -Qdtq | sudo pacman -Rns -`, enter `Y` to confirm rem
 > If the terminal outputs `error: argument '-' specified with empty stdin`, this means there are **no orphans** to remove.
 
 If there are orphan dependencies that you wish to **keep**, specify beforehand which ones should be excluded from removal with this command:
-```shell
+```sh
 sudo pacman -D --asexplicit <package-name>
 ```
 

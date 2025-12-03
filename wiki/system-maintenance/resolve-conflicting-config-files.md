@@ -3,7 +3,7 @@
 # Resolve conflicting config files
 During or after an system update with `sudo pacman -Syu`, the system may notify you of conflicting configuration files.
 
-```shell
+```sh
 warning: /etc/pacman.d/xyz installed as /etc/pacman.d/xyz.pacnew
 
 warning: /etc/pacman.d/abc installed as /etc/pacman.d/abc.pacsave
@@ -22,7 +22,7 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
 ## `eos-pacdiff`
 1. When notified by the system about conflicting config files, run:
    
-    ```shell
+    ```sh
     eos-pacdiff
     ```
 
@@ -49,7 +49,7 @@ The `eos-pacdiff` script is used to resolve these conflicting files. It utilizes
 
 To run the process manually, use:
 
-```shell
+```sh
 DIFFPROG=meld pacdiff -s
 ```
 

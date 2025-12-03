@@ -27,19 +27,19 @@ To create access without changing permission settings, move the desired image in
 
 1. **As root**, move the intended background file into the display manager's background folder:
    
-   ```shell
+   ```sh
    sudo pacman mv /my/bg-file.png /usr/share/endeavouros/backgrounds
    ```
 
 2. Then, use `sudo nano` to edit the `slick-greeter` config file. If this file doesn't exist, a new one will be created:
 
-    ```shell
+    ```sh
     sudo nano /etc/lightdm/slick-greeter.conf
     ```
 
 3. Apply the changes in the section with the `[Greeter]` heading.
    
-    ```shell
+    ```sh
     [Greeter]
     draw-grid=false
     background=/usr/share/endeavouros/backgrounds/bg-file.png
