@@ -27,7 +27,7 @@ This guide for beginner-to-intermediate users of [**EndeavourOS**](https://endea
 ## Additional resources
 Additional information and learning resources are available at the following links:
 
-- [Mercury Neo 6.13.7](https://endeavouros.com/news/mercury-neo-with-linux-6-13-7-and-arch-mirror-ranking-bug-fix/) \- The most recent ISO release of EOS, released on March 23, 2025.
+- [Ganymede 2025.11.24](https://endeavouros.com/news/the-long-wait-is-over-ganymede-has-arrived/) \- The most recent ISO release is EOS Ganymede, released on November 29, 2025.
 - [EOS README](https://gitlab.com/endeavouros-filemirror/Important-news/blob/main/README.md) \- Where you can find important news and EOS updates
 - [EOS knowledge base](https://discovery.endeavouros.com/) \- A library of various tutorials and introductions to Linux tools
 - [EOS forums](https://forum.endeavouros.com/) \- A place to read up on EOS system updates, ask for troubleshooting help, and connect with the community
