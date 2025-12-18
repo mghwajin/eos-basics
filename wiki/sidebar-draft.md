@@ -1,11 +1,10 @@
 <!-- wiki sidebar using internal css stylesheet -->
-<!DOCTYPE html>
-<html lang="en">
+
 <!--   INTERNAL STYLESHEET -->
+<!-- 12/18/25 - commenting out css styling since it doesn't display in the wiki -->
+<!--
 <head>
   <title>Endeavour OS Beginner Basics</title>
-
-  <!-- ## internal css styling ## -->
   <style>
   :root {
     font-size: 15px;
@@ -94,7 +93,7 @@
   details[open] summary {
     background-color: #000091;
     color: #dfdfff; 
-    font-weight: 550;
+    font-weight: 500;
     padding: 2px;
   }
   summary:hover {
@@ -121,10 +120,12 @@
   }
   </style>
 </head>
+-->
 
+
+<!-- TO REFORMAT INTO PURE GITHUB MARKDOWN -->
 <!-- SIDEBAR CONTENT START --->
 <body>
-
   <h1>Endeavour OS Beginner Basics</h1>
   <p>
     <a href="https://github.com/mghwajin/eos-basics/wiki">Wiki home</a>
@@ -151,10 +152,8 @@
     <details class="subtopics">
       <summary>Create system backups with <code>timeshift</code></summary>
       <ul>
-        <li><a href="a "> </a></li>
-        <li><a href="a"> </a></li>
-        <li><a href="a"> </a></li>
-        <li><a href="a"> </a></li>
+        <li><a href="create-system-backups-with-timeshift#create-a-snapshot"> </a></li>
+        <li><a href="create-system-backups-with-timeshift#timeshift-options"> </a></li>
       </ul>
     </details>
   </div>
@@ -163,10 +162,10 @@
     <details class="subtopics">
       <summary>System updates with <code>pacman</code> and <code>yay</code></summary>
       <ul>
-        <li><a href="a "> </a></li>
-        <li><a href="a"> </a></li>
-        <li><a href="a"> </a></li>
-        <li><a href="a"> </a></li>
+        <li><a href="system-updates-with-pacman-and-yay#sudo-pacman--Syu"></a></li>
+        <li><a href="system-updates-with-pacman-and-yay#yay"> </a></li>
+        <li><a href="system-updates-with-pacman-and-yay#eos-update"> </a></li>
+        <li><a href="system-updates-with-pacman-and-yay#faqs"> </a></li>
       </ul>
     </details>
   </div>
@@ -175,7 +174,7 @@
     <details class="subtopics">
       <summary>Mirror maintenance guide</summary>
       <ul>
-        <li><a href="a "> </a></li>
+        <li><a href="mirror-maintenance-guide#overview">Overview</a></li>
         <li><a href="a"> </a></li>
         <li><a href="a"> </a></li>
         <li><a href="a"> </a></li>

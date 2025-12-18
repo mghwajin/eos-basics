@@ -50,6 +50,7 @@ Additional information and learning resources are available at the following lin
 
 **Revision History**
 - 2025/11 - Rework of docs content and structure, new-format branch merge
+- 2025/12 - Added terms and shell commands glossary to overview wiki page
 
 ---
 
