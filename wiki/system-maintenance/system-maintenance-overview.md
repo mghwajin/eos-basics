@@ -20,10 +20,10 @@ Guides
 | Term | Description |
 |:-----|:------------|
 | Arch Linux | A rolling-release distribution of Linux that is known for its bleeding-edge and customizeable environment. It uses the `pacman` package manager and AUR packages. |
-| AUR | The *Arch User Repository* is a large library containing many useful tools that are created and maintained by the Arch community. Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository.|
-| Command-line interface | Also known as the `terminal`. This is a text‑based way to interact with the operating system through specific system or program commands and options. |	
+| AUR | The *Arch User Repository* is a large library containing many useful tools that are created and maintained by the Arch community. Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository. |
+| Command-line interpreter | Also known as the CLI or shell, this is the layer where users enter text commands for the system to execute. On Linux, common shells include Bash and Zsh. |
 | Configuration files | These files are found in the /etc (or user's home) directory for program or system settings. |	
-| Distro/distribution | An operating system that is based off a Linux kernel (which can vary) that comes with specific packages, a package manager, default desktop environments, and other system settings. EndeavourOS is a Arch-based distro.|	
+| Distro/distribution | An operating system that is based off a Linux kernel (which can vary) that comes with specific packages, a package manager, default desktop environments, and other system settings. EndeavourOS is a Arch-based distro. |	
 | Display manager | This sets up the system's login screen and interface, and also launches the desktop session. |
 | GUI tool| A graphical tool that provides a visual interface to apply command line options. This is also called a "GUI wrapper". |	
 | GnuPG | [GnuPG](https://www.gnupg.org/documentation/index.html) is a command-line interface (CLI) tool. As a universal crypto engine, it is often used as the crypto backend for many applications.|
@@ -36,7 +36,9 @@ Guides
 | Package dependency | Dependencies are additional packages or libraries required for a specific software to build, run, and maintain a stable and secure runtime. |	
 | Package manager | This system tool is what downloads, installs/uninstalls, upgrades, and verifies packages. Arch-based systems use the `pacman` package manager. |
 | Rolling-release | These are unscheduled updates that are continuously released, usually as soon as they are available. These updates are smaller and more frequent (with the chance to run into some issues), which means the user doesn't have to install a large update 1-2 times a year.|
+| Shell | Also known as the CLI (command-line interpreter), this is the layer where users enter text commands for the system to execute. On Linux, common shells include Bash and Zsh. |
 | System daemon	| A background service/process that starts upon system boot (or on user demand) and provide important functions suchs as timed scheduling (ex. system backups) and logging (like `systemd journal`). |
+| Terminal | The interface that allows users to send commands and recieve text output from the computer system. Terminals emulate how users interacted with old-style physical computers by  dedicated hardware terminals. |
 | Terminal command | An instruction entered into the command-line interface (CLI) that invokes the system or specific programs. These often include specific options.  |	
 | Timeshift | A system backup utility tool that created "snapshots" (RSYNC or BTRFS files). By default, it saves important system settings and config files, allowing users to restore to a previous state if the current one is unbootable. |
 
