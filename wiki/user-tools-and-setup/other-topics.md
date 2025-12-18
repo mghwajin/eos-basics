@@ -2,7 +2,7 @@
 
 > [!NOTE]
 > 
-> ```shell
+> ```sh
 >                                    [----c o o o o o o ]
 > This guide is a work in progress!! [-----Co o o o o o ]
 >                                    [------c o o o o o ]
@@ -15,7 +15,7 @@
 ### Autosave fullscreen screenshot
 
 The command to automatically save a fullscreen screenshot without being prompted to enter a filename is:
-  ```shell
+  ```sh
   xfce4-screenshooter -f -s "$HOME/Desktop/Screenshot_$(date +%Y-%m-%d_%H-%M-%S).png"
   ```
 

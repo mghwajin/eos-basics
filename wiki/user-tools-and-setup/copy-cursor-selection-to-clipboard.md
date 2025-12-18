@@ -5,7 +5,7 @@ You can set up a keyboard shortcut that copies a selected area to the clipboard 
 
 This shortcut runs the `xfce4-screenshooter` program and applies the additional `-r` and `-c` options:
 
-```shell
+```sh
 xfce-screenshooter -rc
 ```
 
@@ -25,7 +25,7 @@ xfce-screenshooter -rc
 
 3. Enter the following script into the command field:
 
-    ```shell
+    ```sh
     xfce4-screenshooter -rc
     ```
 
