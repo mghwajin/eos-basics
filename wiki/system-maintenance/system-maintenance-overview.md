@@ -72,6 +72,7 @@ Below is a quick reference table of common maintenance commands and the recommen
 | `yay -Sc` | Clear the `yay` cache | As needed |
 |`journalctl --vacuum-time=6weeks` | Clear the `systemd` journal and retain logs for the past 6 weeks | Every 1-2 months
 |`sudo pacman -Qdtq \| sudo pacman -Rns -` | Lists orphaned dependencies (`pacman -Qqtd`), then removes with user confirmation (`sudo pacman -Rns -`) | Every 1-2 months |
+|`eos-shifttime` | A temporary solution to revert to a system status at a set date, which may be useful if a recent update causes issues with a program. | As needed |
 
 ---
 
