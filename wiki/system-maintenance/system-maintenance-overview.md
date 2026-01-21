@@ -23,7 +23,7 @@ Guides
 | AUR | The *Arch User Repository* is a large library containing many useful tools that are created and maintained by the Arch community. Popular and well-maintained packages are voted on by the community to include in the official Arch *extra* repository. |
 | Command-line interpreter | Also known as the CLI or shell, this is the layer where users enter text commands for the system to execute. On Linux, common shells include Bash and Zsh. |
 | Configuration files | These files are found in the /etc (or user's home) directory for program or system settings. |	
-| Distro/distribution | An operating system that is based off a Linux kernel (which can vary) that comes with specific packages, a package manager, default desktop environments, and other system settings. EndeavourOS is a Arch-based distro. |	
+| Distro/distribution | An operating system that is based off a Linux kernel (which can vary) that comes with specific packages, a package manager, default desktop environments, and other system settings. EndeavourOS is an Arch-based distro. |	
 | Display manager | This sets up the system's login screen and interface, and also launches the desktop session. |
 | GUI tool| A graphical tool that provides a visual interface to apply command line options. This is also called a "GUI wrapper". |	
 | GnuPG | [GnuPG](https://www.gnupg.org/documentation/index.html) is a command-line interface (CLI) tool. As a universal crypto engine, it is often used as the crypto backend for many applications.|
@@ -45,15 +45,6 @@ Guides
 <!--------------------------------------------->
 
 ## Maintenance cheatsheet
-> [!TIP] 
-> 
-> For users unfamiliar with terminal usage or needing quick system fixes, the [**EOS Welcome App**](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) Assistant is a helpful alternative to running maintenance tasks.
-
-Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command.
-
-![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./images/eos-welcome.png)
-
----
 
 Below is a quick reference table of common maintenance commands and the recommended usage frequency.
 
@@ -73,6 +64,16 @@ Below is a quick reference table of common maintenance commands and the recommen
 |`journalctl --vacuum-time=6weeks` | Clear the `systemd` journal and retain logs for the past 6 weeks | Every 1-2 months
 |`sudo pacman -Qdtq \| sudo pacman -Rns -` | Lists orphaned dependencies (`pacman -Qqtd`), then removes with user confirmation (`sudo pacman -Rns -`) | Every 1-2 months |
 |`eos-shifttime` | A temporary solution to revert to a system status at a set date, which may be useful if a recent update causes issues with a program. | As needed |
+
+---
+
+> [!TIP] 
+> 
+> For users unfamiliar with terminal usage or needing quick system fixes, the [**EOS Welcome App**](https://discovery.endeavouros.com/endeavouros-tools/welcome/2021/03/) Assistant is a helpful alternative to running maintenance tasks.
+
+Open the **Welcome App** from System Applications, or with the `eos-welcome` terminal command.
+
+![EOS Welcome program v25.10.3-1 with a list of update scripts on the Assistant tab.](./images/eos-welcome.png)
 
 ---
 
