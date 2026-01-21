@@ -40,6 +40,17 @@ Additional information and learning resources are available at the following lin
 
 ---
 
+**Revision History**
+- 2025/11 - Rework of docs content and structure, new-format branch merge
+- 2025/12 - Added terms and shell commands glossary to overview wiki page, Ganymede ISO release
+- 2026/01 - Typo and formatting fixes
+
+**Credits**
+- EndeavourOS Branding: https://github.com/endeavouros-team/Branding
+- EndeavourOS Development: https://github.com/endeavouros-team
+
+---
+
 > [!NOTE]
 > 
 > ```shell
@@ -47,13 +58,3 @@ Additional information and learning resources are available at the following lin
 > This guide is a work in progress!! [-----Co o o o o o ]
 >                                    [------c o o o o o ]
 > ```
-
-**Revision History**
-- 2025/11 - Rework of docs content and structure, new-format branch merge
-- 2025/12 - Added terms and shell commands glossary to overview wiki page
-
----
-
-**Credits**
-- EndeavourOS Branding: https://github.com/endeavouros-team/Branding
-- EndeavourOS Development: https://github.com/endeavouros-team
