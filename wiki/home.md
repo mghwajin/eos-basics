@@ -2,7 +2,7 @@
 
 ![Endeavour OS logo and text for a dark background](./images/endeavouros-logo-text-dark.svg)
 
-[**Endeavour OS**](https://endeavouros.com/) is an resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience alongside the classic Arch installation process for power users.
+[**Endeavour OS**](https://endeavouros.com/) is a resource-light and terminal-centric Linux distribution based on [Arch Linux](https://archlinux.org/). It provides a beginner-friendly setup experience (using the Calamares installation tool) alongside the classic Arch installation process for power users.
 
 This guide for beginner-to-intermediate users of [**Endeavour OS**](https://endeavouros.com/) overviews how to complete basic system maintenance tasks using shell commands in the terminal.
 
