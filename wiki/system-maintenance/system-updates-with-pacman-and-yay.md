@@ -178,6 +178,25 @@ For the purposes of this example guide, the update errors are caused by issues w
 
 ---
 
+### Error: failed to commit transaction (conflicting files)
+Running a `sudo pacman -Syu` update may fail and display the following errors:
+
+```sh
+error: failed to commit transaction (conflicting files)
+<example>: /example exists in filesystem (owned by filesystem)
+<example>: /lib/systemd/system/example.service exists in filesystem
+```
+
+These issues can be resolved with manual intervention. Uninstall and remove the package from the system, then reinstall:
+```sh
+sudo pacman -Rdd <example>
+sudo pacman -Syu <example>
+```
+
+You can also uninstall/remove the package, then run a full system update with `pacman` instead.
+
+---
+
 ### What does the `-Syu` option mean?
 Here are some excerpts from the `pacman` manpage:
 
