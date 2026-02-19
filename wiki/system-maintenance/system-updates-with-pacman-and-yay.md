@@ -68,8 +68,9 @@ Other basic `pacman` commands include:
 <!------------------------------------------------------>
 
 ## `yay`
-[`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup> stands for "yet another yogurt" and it is one of the most popular **AUR helpers** used in Arch Linux community. It simplifies the process of downloading, installing, updating, and removing AUR software.
-  
+`yay`<sup>[AUR](https://aur.archlinux.org/packages/yay)</sup> stands for "yet another yogurt" and it is one of the most popular **AUR helpers** used in the Arch Linux community. It functions like the `pacman` package manager, simplifying the process of downloading, installing, updating, and removing AUR-specific software.
+ - FAQ: [What is the Arch User Repository (AUR)?](#what-is-the-aur)
+
 To update the system's native and AUR packages, run:
 ```sh
 yay
@@ -117,7 +118,7 @@ The terminal will list the packages available to upgrade and may ask for the use
 
 > [!NOTE]
 > 
-> See: [`yay`](https://aur.archlinux.org/packages/yay)<sup>AUR</sup>, [`yay` commands](https://linuxcommandlibrary.com/man/yay), [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
+> See: `yay`<sup>[AUR]((https://aur.archlinux.org/packages/yay))</sup>, [`yay` commands](https://linuxcommandlibrary.com/man/yay), [Arch User Repository (AUR)](https://aur.archlinux.org/), [AUR helpers](https://wiki.archlinux.org/title/AUR_helpers)
 
 
 
